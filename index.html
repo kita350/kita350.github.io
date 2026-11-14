@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikita Skino — автоматизация для малого бизнеса</title>
+<meta name="description" content="Онлайн-запись, чат-боты, сайты и CRM для ресторанов, гостевых домов и салонов красоты в Армении.">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --accent:#2f6fed; --bg:#f7f8fb; --card:#fff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  header { padding:56px 0 40px; }
+  .lang { float:right; font-size:14px; }
+  .lang a { color:var(--muted); text-decoration:none; margin-left:12px; }
+  .lang a.on { color:var(--ink); font-weight:600; }
+  h1 { font-size:clamp(28px,5vw,42px); line-height:1.2; margin:24px 0 12px; }
+  .lead { font-size:19px; color:var(--muted); max-width:640px; }
+  .btn { display:inline-block; margin-top:20px; background:var(--accent); color:#fff; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:600; }
+  section { padding:32px 0; }
+  h2 { font-size:26px; margin:0 0 20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid #e3e6ee; border-radius:12px; padding:22px; }
+  .card h3 { margin:0 0 8px; font-size:19px; }
+  .card p, .card li { color:var(--muted); margin:0; }
+  .card ul { padding-left:18px; margin:8px 0 0; }
+  ol.steps { padding-left:20px; color:var(--muted); }
+  ol.steps li { margin-bottom:8px; }
+  footer { padding:32px 0 48px; color:var(--muted); font-size:14px; border-top:1px solid #e3e6ee; margin-top:24px; }
+  footer a { color:var(--muted); }
+  [data-l] { display:none; }
+  body.ru [data-l="ru"], body.en [data-l="en"] { display:revert; }
+</style>
+</head>
+<body class="ru">
+<div class="wrap">
+  <header>
+    <div class="lang">
+      <a href="#" id="l-ru" class="on" onclick="setLang('ru');return false;">RU</a>
+      <a href="#" id="l-en" onclick="setLang('en');return false;">EN</a>
+    </div>
+    <strong>Nikita Skino</strong>
+    <h1 data-l="ru">Меньше ручной работы — больше клиентов</h1>
+    <h1 data-l="en">Less manual work, more customers</h1>
+    <p class="lead" data-l="ru">Настраиваю онлайн-запись, чат-ботов, простые сайты и учёт клиентов для ресторанов, гостевых домов и салонов красоты в Армении.</p>
+    <p class="lead" data-l="en">I set up online booking, chatbots, simple websites and customer tracking for restaurants, guest houses and beauty salons in Armenia.</p>
+    <a class="btn" href="#contact" data-l="ru">Бесплатный разбор</a>
+    <a class="btn" href="#contact" data-l="en">Free review</a>
+  </header>
+
+  <section>
+    <h2 data-l="ru">Чем помогаю</h2>
+    <h2 data-l="en">What I do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3 data-l="ru">Рестораны и кафе</h3><h3 data-l="en">Restaurants and cafés</h3>
+        <ul data-l="ru"><li>Онлайн-меню по QR-коду</li><li>Бронь столов через бота</li><li>Сбор отзывов</li></ul>
+        <ul data-l="en"><li>QR-code online menu</li><li>Table booking via a bot</li><li>Review collection</li></ul>
+      </div>
+      <div class="card">
+        <h3 data-l="ru">Гостевые дома и гостиницы</h3><h3 data-l="en">Guest houses and hotels</h3>
+        <ul data-l="ru"><li>Страница с номерами и ценами</li><li>Бот для брони на нескольких языках</li><li>Ответы на частые вопросы гостей</li></ul>
+        <ul data-l="en"><li>Rooms and prices page</li><li>Multilingual booking bot</li><li>Answers to common guest questions</li></ul>
+      </div>
+      <div class="card">
+        <h3 data-l="ru">Салоны красоты и мастера</h3><h3 data-l="en">Beauty salons and masters</h3>
+        <ul data-l="ru"><li>Онлайн-запись</li><li>Напоминания клиентам против неявок</li><li>Автоответы в директ</li></ul>
+        <ul data-l="en"><li>Online appointments</li><li>Client reminders to reduce no-shows</li><li>Auto-replies to direct messages</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-l="ru">Как работаем</h2>
+    <h2 data-l="en">How it works</h2>
+    <ol class="steps" data-l="ru">
+      <li>Бесплатно смотрю, как клиенты находят вас и записываются сейчас.</li>
+      <li>Предлагаю одно-два конкретных улучшения с ценой и сроком.</li>
+      <li>Настраиваю и показываю, как этим пользоваться.</li>
+    </ol>
+    <ol class="steps" data-l="en">
+      <li>A free look at how customers find and book you today.</li>
+      <li>One or two concrete improvements with price and timeline.</li>
+      <li>I set it up and show you how to use it.</li>
+    </ol>
+  </section>
+
+  <section id="contact">
+    <h2 data-l="ru">Контакты</h2>
+    <h2 data-l="en">Contact</h2>
+    <div class="card">
+      <p>WhatsApp / <span data-l="ru">телефон</span><span data-l="en">phone</span>: <a href="https://wa.me/37498337187">+374 98 337 187</a></p>
+      <p>Email: <a href="mailto:skino.nik@mail.ru">skino.nik@mail.ru</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span data-l="ru">ИП Скино Никита Владимирович · ИНН 20453381 · Котайк, Армения</span>
+    <span data-l="en">Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia</span>
+    · <a href="privacy.html" data-l="ru">Политика конфиденциальности</a><a href="privacy.html" data-l="en">Privacy Policy</a>
+  </footer>
+</div>
+<script>
+function setLang(l){
+  document.body.className = l;
+  document.documentElement.lang = l;
+  document.getElementById('l-ru').className = l==='ru' ? 'on' : '';
+  document.getElementById('l-en').className = l==='en' ? 'on' : '';
+}
+if ((navigator.language||'').slice(0,2) === 'en') setLang('en');
+</script>
+</body>
+</html>
