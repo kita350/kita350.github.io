@@ -12,7 +12,7 @@
       checkIn: "Ժամանում", checkOut: "Մեկնում", guests: "Հյուրեր", chooseRoom: "Գտնել համար", calPickIn: "Ընտրեք ժամանման օրը", calPickOut: "Հիմա՝ մեկնման օրը", calDone: "Պատրաստ է", calPrev: "Նախորդ ամիս", calNext: "Հաջորդ ամիս", calAria: "Ամսաթվերի ընտրություն", noDate: "Ընտրեք",
       guestsN: "{n} հյուր", nights: "{n} գիշեր", nightsLine: "{in} — {out}, {nights}", badDates: "Մեկնման օրը պետք է լինի ժամանումից հետո",
       viewTitle: "Տեսարան պատուհանից",
-      viewText: "Առավոտը սկսվում է լեռներով․ համարների մեծ մասի պատուհանները նայում են անտառին և լեռնաշղթային։",
+      viewText: "Առավոտը սկսվում է լեռներով․ համարների մեծ մասի պատուհանները նայում են անտառին և լեռնաշղթային։", viewTextUrban: "Պատուհանները նայում են քաղաքին կամ հանգիստ բակին։ Պարզ եղանակին վերին հարկերից երևում է Արարատը։", altWindowUrban: "Տեսարան պատուհանից՝ քաղաքը և Արարատը",
       viewNote: "Այստեղ կլինեն ձեր հյուրանոցի իրական լուսանկարները՝ համարներ, տեսարան, տարածք։",
       roomsTitle: "Համարներ", roomsSub: "Գինը մեկ գիշերվա համար է՝ նախաճաշով։ Ընտրված ամսաթվերի ընդհանուր գումարը հաշվվում է ավտոմատ։",
       sqm: "{n} մ²", maxG: "մինչև {n} հյուր", perNight: "գիշերը", totalFor: "{nights}՝ {sum}", pickDates: "Ընտրեք ամսաթվերը՝ գումարը տեսնելու համար",
@@ -39,7 +39,7 @@
       checkIn: "Заезд", checkOut: "Выезд", guests: "Гости", chooseRoom: "Найти номер", calPickIn: "Выберите дату заезда", calPickOut: "Теперь — дату выезда", calDone: "Готово", calPrev: "Предыдущий месяц", calNext: "Следующий месяц", calAria: "Выбор дат", noDate: "Выберите",
       guestsN: "{n}", nights: "{n} {w}", nightsLine: "{in} — {out}, {nights}", badDates: "Дата выезда должна быть позже заезда",
       viewTitle: "Вид из окна",
-      viewText: "Утро начинается с гор: окна большинства номеров выходят на лес и хребет.",
+      viewText: "Утро начинается с гор: окна большинства номеров выходят на лес и хребет.", viewTextUrban: "Окна выходят на город или на тихий двор. В ясную погоду с верхних этажей виден Арарат.", altWindowUrban: "Вид из окна на город и Арарат",
       viewNote: "Здесь будут настоящие фотографии вашей гостиницы — номера, вид, территория.",
       roomsTitle: "Номера", roomsSub: "Цена за ночь с завтраком. Сумма за выбранные даты считается автоматически.",
       sqm: "{n} м²", maxG: "до {n} гостей", perNight: "за ночь", totalFor: "За {nights}: {sum}", pickDates: "Выберите даты, чтобы увидеть сумму",
@@ -66,7 +66,7 @@
       checkIn: "Check-in", checkOut: "Check-out", guests: "Guests", chooseRoom: "Find a room", calPickIn: "Choose your check-in date", calPickOut: "Now choose your check-out date", calDone: "Done", calPrev: "Previous month", calNext: "Next month", calAria: "Choose dates", noDate: "Choose",
       guestsN: "{n}", nights: "{n} {w}", nightsLine: "{in} — {out}, {nights}", badDates: "Check-out must be after check-in",
       viewTitle: "The view from the window",
-      viewText: "Mornings start with the mountains: most rooms face the forest and the ridge.",
+      viewText: "Mornings start with the mountains: most rooms face the forest and the ridge.", viewTextUrban: "Windows look out over the city or onto a quiet courtyard. On a clear day, Ararat is visible from the upper floors.", altWindowUrban: "City and Ararat seen from a window",
       viewNote: "Real photos of your hotel go here — rooms, view, grounds.",
       roomsTitle: "Rooms", roomsSub: "Prices are per night with breakfast. The total for your dates is calculated automatically.",
       sqm: "{n} m²", maxG: "up to {n} guests", perNight: "per night", totalFor: "{nights}: {sum}", pickDates: "Choose dates to see the total",
@@ -259,6 +259,18 @@
     var c = D.city(), l = LI[D.lang];
     // Ереван — городской подзаголовок без «вида на лес и горы»; остальные города — как есть.
     $("lead").textContent = !c ? D.t("lead") : D.cityKey() === "yerevan" ? D.t("leadUrban") : D.t("leadCity");
+    // «Вид из окна»: для Еревана — город и Арарат, без леса и хребта.
+    var urban = D.cityKey() === "yerevan", vn = urban ? "window-yerevan" : "window", vi = $("viewImg");
+    $("viewText").textContent = D.t(urban ? "viewTextUrban" : "viewText");
+    if (vi.getAttribute("data-v") !== vn) {
+      vi.setAttribute("data-v", vn);
+      vi.src = "img/" + vn + "-480.webp";
+      vi.srcset = "img/" + vn + "-480.webp 480w, img/" + vn + "-960.webp 960w";
+      vi.height = urban ? 720 : 356;
+      vi.setAttribute("style", D.bg(vn));
+      vi.classList.toggle("tall", urban);
+    }
+    vi.alt = D.t(urban ? "altWindowUrban" : "altWindow");
     $("addr").textContent = c ? D.t("addrCity") : D.t("addr");
     var ul = $("amenList"); ul.textContent = "";
     AMEN.forEach(function (a) { var li = el("li"); li.appendChild(el("b", null, a[0][l])); li.appendChild(el("span", null, a[1][l])); ul.appendChild(li); });
