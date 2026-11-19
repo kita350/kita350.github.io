@@ -109,6 +109,7 @@ h2{margin:0 0 12px;font:300 clamp(36px,9vw,68px)/1.04 var(--serif);letter-spacin
 /* вид */
 .view{display:grid;gap:28px}
 .view img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.view img.tall{aspect-ratio:4/5}
 .view p.big{margin:0;font:300 27px/1.4 var(--serif)}
 [data-lang="hy"] .view p.big{font-size:23px}
 
@@ -224,10 +225,10 @@ footer li{overflow-wrap:anywhere}
 
   <section>
     <div class="wrap view">
-      <img style="background-color:#3c4038" src="img/window-480.webp" srcset="img/window-480.webp 480w, img/window-960.webp 960w" sizes="(min-width:760px) 50vw, 100vw" width="480" height="629" loading="lazy" decoding="async" alt="" data-i-alt="altWindow">
+      <img id="viewImg" style="background-color:#3c4038" src="img/window-480.webp" srcset="img/window-480.webp 480w, img/window-960.webp 960w" sizes="(min-width:760px) 50vw, 100vw" width="480" height="356" loading="lazy" decoding="async" alt="">
       <div>
         <h2 data-i="viewTitle"></h2>
-        <p class="big" data-i="viewText"></p>
+        <p class="big" id="viewText"></p>
         <p class="sub" style="margin:18px 0 0" data-i="viewNote"></p>
       </div>
     </div>
