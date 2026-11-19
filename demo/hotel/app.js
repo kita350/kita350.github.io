@@ -29,7 +29,7 @@
       revTitle: "Կարծիքներ", revSub: "Այստեղ կլինեն ձեր հյուրերի իրական կարծիքները։", example: "օրինակ",
       footer: "Սա կայքի օրինակ է SKIYAR-ից։ Համարները, գները և կարծիքները՝ օրինակի համար։",
       credits: "Լուսանկարներ՝ Unsplash (ազատ լիցենզիա)",
-      altHero: "Կանաչ լեռներ ամպերի տակ", altWindow: "Լեռների տեսարան պատուհանից", altBreakfast: "Նախաճաշ՝ ձու, լոլիկ, պանիր, մուրաբա"
+      altHero: "Կանաչ լեռներ ամպերի տակ", altHeroUrban: "Երևանը և Արարատը մայրամուտին", altWindow: "Լեռների տեսարան պատուհանից", altBreakfast: "Նախաճաշ՝ ձու, լոլիկ, պանիր, մուրաբա"
     },
     ru: {
       _title: "{name} — номера и бронирование", _noName: "Ваша гостиница",
@@ -56,7 +56,7 @@
       revTitle: "Отзывы", revSub: "Здесь будут настоящие отзывы ваших гостей.", example: "пример",
       footer: "Это пример сайта от SKIYAR. Номера, цены и отзывы — для примера.",
       credits: "Фото: Unsplash (свободная лицензия)",
-      altHero: "Зелёные горы под облаками", altWindow: "Вид на горы из окна", altBreakfast: "Завтрак: яичница, томаты, сыр, варенье"
+      altHero: "Зелёные горы под облаками", altHeroUrban: "Ереван и Арарат на закате", altWindow: "Вид на горы из окна", altBreakfast: "Завтрак: яичница, томаты, сыр, варенье"
     },
     en: {
       _title: "{name} — rooms and booking", _noName: "Your hotel",
@@ -83,7 +83,7 @@
       revTitle: "Reviews", revSub: "Your guests’ real reviews go here.", example: "example",
       footer: "This is a sample website by SKIYAR. Rooms, prices and reviews are examples.",
       credits: "Photos: Unsplash (free licence)",
-      altHero: "Green mountains under clouds", altWindow: "Mountain view through a window", altBreakfast: "Breakfast: eggs, tomatoes, cheese, jam"
+      altHero: "Green mountains under clouds", altHeroUrban: "Yerevan and Mount Ararat at sunset", altWindow: "Mountain view through a window", altBreakfast: "Breakfast: eggs, tomatoes, cheese, jam"
     }
   };
   var NIGHT_WORDS = { ru: { one: "ночь", few: "ночи", many: "ночей", other: "ночи" }, en: { one: "night", other: "nights" } };
@@ -261,6 +261,7 @@
     $("lead").textContent = !c ? D.t("lead") : D.cityKey() === "yerevan" ? D.t("leadUrban") : D.t("leadCity");
     // «Вид из окна»: для Еревана — город и Арарат, без леса и хребта.
     var urban = D.cityKey() === "yerevan", vn = urban ? "window-yerevan" : "window", vi = $("viewImg");
+    $("heroImg").alt = D.t(window.HERO && HERO.urban ? "altHeroUrban" : "altHero");
     $("viewText").textContent = D.t(urban ? "viewTextUrban" : "viewText");
     if (vi.getAttribute("data-v") !== vn) {
       vi.setAttribute("data-v", vn);

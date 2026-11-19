@@ -7,7 +7,21 @@
 <title>Ձեր հյուրանոցը — համարներ և ամրագրում</title>
 <meta name="description" content="Пример сайта гостиницы от SKIYAR: номера с фото и ценами, выбор дат, заявка на бронь через WhatsApp.">
 <meta name="theme-color" content="#fbfbf8">
-<link rel="preload" as="image" href="img/hero-800.webp" imagesrcset="img/hero-800.webp 800w, img/hero-1200.webp 1200w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
+<script>
+/* Главное фото выбирается до загрузки страницы: для Еревана — город и Арарат, для остальных — горы.
+   Так браузер скачивает только нужный кадр. */
+(function () {
+  var c = (new URLSearchParams(location.search).get("city") || "").toLowerCase().replace(/[\s.\-]/g, "").replace(/եւ/g, "և");
+  var urban = /^(yerevan|ереван|երևան)$/.test(c), n = urban ? "hero-yerevan" : "hero";
+  var set = ["800", "1200", "1600", "2000"].map(function (w) { return "img/" + n + "-" + w + ".webp " + w + "w"; }).join(", ");
+  window.HERO = { name: n, urban: urban, srcset: set, bg: urban ? "#4f4e58" : "#6c734f" };
+  var l = document.createElement("link");
+  l.rel = "preload"; l.as = "image"; l.href = "img/" + n + "-800.webp";
+  l.setAttribute("imagesrcset", set); l.setAttribute("imagesizes", "100vw"); l.setAttribute("fetchpriority", "high");
+  document.head.appendChild(l);
+  if (urban) document.documentElement.classList.add("urban");
+})();
+</script>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/noto-sans-armenian-armenian-xzhvodur.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geologica-latin-ckuwe1le.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/noto-serif-armenian-armenian-bfh8e2ew.woff2" crossorigin>
@@ -61,6 +75,7 @@ button,input,select{font:inherit;color:inherit}
 .hero-media{position:relative;height:54vh;min-height:340px;max-height:760px;overflow:hidden;background:#3c5244}
 .hero-media img{position:absolute;inset:auto 0 0 0;width:100%;height:122%;object-fit:cover;object-position:50% 72%}
 .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,24,19,0) 38%,rgba(14,24,19,.66) 100%)}
+.urban .hero-media img{inset:0;height:100%;object-position:70% 35%}
 .hero-txt{position:absolute;left:0;right:0;bottom:0;z-index:1;padding-bottom:20px;color:#fff}
 h1{margin:0;font:300 clamp(50px,14vw,132px)/.95 var(--serif);letter-spacing:-.02em;overflow-wrap:anywhere}
 [data-lang="hy"] h1{font-size:clamp(36px,10vw,86px);letter-spacing:0;line-height:1.1}
@@ -203,7 +218,8 @@ footer li{overflow-wrap:anywhere}
 <main>
   <div class="hero">
     <div class="hero-media">
-      <img style="background-color:#6c734f" src="img/hero-800.webp" srcset="img/hero-800.webp 800w, img/hero-1200.webp 1200w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" sizes="100vw" width="800" height="450" alt="" data-i-alt="altHero" fetchpriority="high">
+      <img id="heroImg" sizes="100vw" width="800" height="450" alt="" fetchpriority="high">
+      <script>(function () { var i = document.getElementById("heroImg"); i.style.backgroundColor = HERO.bg; i.srcset = HERO.srcset; i.src = "img/" + HERO.name + "-800.webp"; })();</script>
       <div class="hero-txt">
         <div class="wrap">
           <h1 data-i="h1"></h1>
