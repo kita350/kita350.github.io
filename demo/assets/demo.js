@@ -57,9 +57,22 @@
     onRender: null,
     city: function (l) {
       if (!D.cityRaw) return "";
-      var c = CITIES[D.cityRaw.toLowerCase().replace(/[^a-z]/g, "")];
-      return c ? c[LANGS.indexOf(l || D.lang)] : D.cityRaw;
+      var k = D.cityKey();
+      return k ? CITIES[k][LANGS.indexOf(l || D.lang)] : D.cityRaw;
     },
+    // Ключ города из ссылки в любом написании: «Yerevan», «Ереван», «Երևան» → "yerevan"; неизвестный город → "".
+    cityKey: function () {
+      var raw = (D.cityRaw || "").toLowerCase();
+      var lat = raw.replace(/[^a-z]/g, "");
+      if (CITIES[lat]) return lat;
+      var norm = raw.replace(/[\s\-.]/g, "").replace(/ե՛|եւ/g, "և");
+      for (var k in CITIES) {
+        for (var i = 0; i < 2; i++) if (CITIES[k][i].toLowerCase().replace(/[\s\-.]/g, "") === norm) return k;
+      }
+      return "";
+    },
+    // Фон-заглушка в средний цвет фото (window.IMG_BG из img/colors.js), пока картинка грузится.
+    bg: function (name) { var c = (window.IMG_BG || {})[name]; return c ? "background-color:" + c : ""; },
     locale: function () { return LOCALE[D.lang]; },
     // Текст по ключу с подстановкой {name}, {city}, {place} и своих значений.
     t: function (key, vars) {

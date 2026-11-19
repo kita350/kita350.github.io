@@ -8,7 +8,7 @@
       _title: "{name} — համարներ և ամրագրում", _noName: "Ձեր հյուրանոցը",
       brand: "{name}", h1: "{name}", langAria: "Կայքի լեզուն",
       lead: "Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։",
-      leadCity: "{city}։ Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։",
+      leadCity: "{city}։ Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։", leadUrban: "{city}։ Համարներ քաղաքում, նախաճաշ՝ տեղական մթերքներից։",
       checkIn: "Ժամանում", checkOut: "Մեկնում", guests: "Հյուրեր", chooseRoom: "Գտնել համար", calPickIn: "Ընտրեք ժամանման օրը", calPickOut: "Հիմա՝ մեկնման օրը", calDone: "Պատրաստ է", calPrev: "Նախորդ ամիս", calNext: "Հաջորդ ամիս", calAria: "Ամսաթվերի ընտրություն", noDate: "Ընտրեք",
       guestsN: "{n} հյուր", nights: "{n} գիշեր", nightsLine: "{in} — {out}, {nights}", badDates: "Մեկնման օրը պետք է լինի ժամանումից հետո",
       viewTitle: "Տեսարան պատուհանից",
@@ -35,7 +35,7 @@
       _title: "{name} — номера и бронирование", _noName: "Ваша гостиница",
       brand: "{name}", h1: "{name}", langAria: "Язык сайта",
       lead: "Номера с видом на лес и горы, завтрак из местных продуктов.",
-      leadCity: "{city}. Номера с видом на лес и горы, завтрак из местных продуктов.",
+      leadCity: "{city}. Номера с видом на лес и горы, завтрак из местных продуктов.", leadUrban: "{city}. Номера в городе, завтрак из местных продуктов.",
       checkIn: "Заезд", checkOut: "Выезд", guests: "Гости", chooseRoom: "Найти номер", calPickIn: "Выберите дату заезда", calPickOut: "Теперь — дату выезда", calDone: "Готово", calPrev: "Предыдущий месяц", calNext: "Следующий месяц", calAria: "Выбор дат", noDate: "Выберите",
       guestsN: "{n}", nights: "{n} {w}", nightsLine: "{in} — {out}, {nights}", badDates: "Дата выезда должна быть позже заезда",
       viewTitle: "Вид из окна",
@@ -62,7 +62,7 @@
       _title: "{name} — rooms and booking", _noName: "Your hotel",
       brand: "{name}", h1: "{name}", langAria: "Site language",
       lead: "Rooms looking out on forest and mountains, breakfast from local produce.",
-      leadCity: "{city}. Rooms looking out on forest and mountains, breakfast from local produce.",
+      leadCity: "{city}. Rooms looking out on forest and mountains, breakfast from local produce.", leadUrban: "{city}. Rooms in the city, breakfast from local produce.",
       checkIn: "Check-in", checkOut: "Check-out", guests: "Guests", chooseRoom: "Find a room", calPickIn: "Choose your check-in date", calPickOut: "Now choose your check-out date", calDone: "Done", calPrev: "Previous month", calNext: "Next month", calAria: "Choose dates", noDate: "Choose",
       guestsN: "{n}", nights: "{n} {w}", nightsLine: "{in} — {out}, {nights}", badDates: "Check-out must be after check-in",
       viewTitle: "The view from the window",
@@ -211,7 +211,7 @@
       var ph = el("div", { "class": "ph" });
       ph.appendChild(el("img", {
         src: "img/" + r[1] + "-480.webp", srcset: "img/" + r[1] + "-480.webp 480w, img/" + r[1] + "-960.webp 960w",
-        sizes: "(min-width:760px) 58vw, 100vw", width: "480", height: String(r[2]), loading: "lazy", decoding: "async", alt: r[6][l]
+        sizes: "(min-width:760px) 58vw, 100vw", width: "480", height: String(r[2]), loading: "lazy", decoding: "async", alt: r[6][l], style: D.bg(r[1])
       }));
       row.appendChild(ph);
       var tx = el("div");
@@ -257,7 +257,8 @@
 
   function renderStatic() {
     var c = D.city(), l = LI[D.lang];
-    $("lead").textContent = c ? D.t("leadCity") : D.t("lead");
+    // Ереван — городской подзаголовок без «вида на лес и горы»; остальные города — как есть.
+    $("lead").textContent = !c ? D.t("lead") : D.cityKey() === "yerevan" ? D.t("leadUrban") : D.t("leadCity");
     $("addr").textContent = c ? D.t("addrCity") : D.t("addr");
     var ul = $("amenList"); ul.textContent = "";
     AMEN.forEach(function (a) { var li = el("li"); li.appendChild(el("b", null, a[0][l])); li.appendChild(el("span", null, a[1][l])); ul.appendChild(li); });

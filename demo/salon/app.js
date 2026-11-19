@@ -180,7 +180,7 @@
       a.appendChild(el("img", {
         src: "img/" + m[1] + "-480.webp", srcset: "img/" + m[1] + "-480.webp 480w, img/" + m[1] + "-960.webp 960w",
         sizes: "(min-width:760px) 25vw, 68vw", width: "480", height: String(MASTER_IMG_H[m[1]]),
-        loading: "lazy", decoding: "async", alt: D.t("altMaster")
+        loading: "lazy", decoding: "async", alt: D.t("altMaster"), style: D.bg(m[1])
       }));
       f.appendChild(a);
       f.appendChild(el("h3", null, m[4][LI[D.lang]]));

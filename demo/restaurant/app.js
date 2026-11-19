@@ -22,7 +22,7 @@
       var fig = el("figure");
       fig.appendChild(el("img", {
         src: "img/" + c.photo + "-480.webp", srcset: "img/" + c.photo + "-480.webp 480w, img/" + c.photo + "-960.webp 960w",
-        sizes: "(min-width:760px) 50vw, 100vw", width: "480", height: String(c.h), loading: "lazy", decoding: "async", alt: c.name[l]
+        sizes: "(min-width:760px) 50vw, 100vw", width: "480", height: String(c.h), loading: "lazy", decoding: "async", alt: c.name[l], style: D.bg(c.photo)
       }));
       sec.appendChild(fig);
       var list = el("div");
