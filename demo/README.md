@@ -25,4 +25,4 @@
 
 - Фото — Unsplash, бесплатная лицензия Unsplash; список с ссылками на источники — `*/img/credits.json` (и в подвале каждой страницы).
 - QR-код (`restaurant/qr-menu.svg`, `.png`) ведёт на `https://kita350.github.io/demo/restaurant/menu.html`, создан библиотекой segno.
-- Шрифты — Google Fonts (SIL Open Font License), размещены локально в `assets/fonts`: Cormorant Garamond, Jost, Forum, EB Garamond, Geologica, Noto Serif Armenian, Noto Sans Armenian. Армянский текст набирается Noto Armenian, не системным шрифтом.
+- Шрифты — Google Fonts (SIL Open Font License), размещены локально в `assets/fonts`: Cormorant Garamond, Jost, Forum, EB Garamond, Geologica, Spectral, Noto Serif Armenian, Noto Sans Armenian. Армянский текст набирается Noto Armenian, не системным шрифтом.
