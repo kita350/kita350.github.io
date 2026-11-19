@@ -79,7 +79,29 @@
     $("tag").textContent = c ? D.t("tagCity") : D.t("tag");
     $("addr").textContent = c ? D.t("addrCity") : D.t("addr");
     $("qrLink").href = "menu.html" + location.search;
+    renderLead();
     renderDays(); fillTimes(); fillPlaces(); updateLink();
+  }
+
+  // Публичные данные конкретного заведения из ссылки (?wa= ?ig= ?fb= ?hours= ?rating= ?reviews=).
+  // Без них — нейтральные заглушки. Бронь в демо всё равно открывает WhatsApp без номера.
+  function renderLead() {
+    var L = D.lead;
+    $("hours").textContent = L.hours ? D.t("hoursDaily", { from: L.hours[0], to: L.hours[1] }) : D.t("hours");
+    $("kitchen").textContent = L.hours ? "" : D.t("kitchen");
+    var r = $("rating");
+    r.hidden = !L.rating;
+    if (L.rating) {
+      var rv = L.rating.replace(".", D.lang === "en" ? "." : ",");
+      r.textContent = L.reviews ? D.t("ratingLine", { r: rv, n: L.reviews }) : D.t("ratingOnly", { r: rv });
+    }
+    var pb = $("phoneBox"); pb.textContent = ""; pb.className = L.wa ? "" : "muted";
+    if (L.wa) pb.appendChild(el("a", { href: "https://wa.me/" + L.wa, target: "_blank", rel: "noopener" }, D.t("waLink", { p: D.phone(L.wa) })));
+    else pb.textContent = D.t("phoneText");
+    var sb = $("socialBox"); sb.textContent = "";
+    if (L.ig) sb.appendChild(el("a", { href: "https://www.instagram.com/" + L.ig + "/", target: "_blank", rel: "noopener" }, "Instagram"));
+    if (L.fb) sb.appendChild(el("a", { href: "https://www.facebook.com/" + L.fb, target: "_blank", rel: "noopener" }, "Facebook"));
+    sb.hidden = !(L.ig || L.fb);
   }
 
   // Даты — полоса из 14 дней, как в салоне (без стандартного поля браузера).

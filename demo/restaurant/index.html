@@ -138,6 +138,11 @@ h2{margin:0 0 14px;font:400 clamp(40px,10vw,76px)/1 var(--display)}
 .info h3{margin:0 0 6px;font:400 22px/1.2 var(--display);letter-spacing:.04em;color:var(--brass)}
 .info p{margin:0}
 .muted{color:var(--muted)}
+.rating{margin:12px 0 0;font-size:18px;color:var(--paper)}
+.tagx{display:inline-block;padding:2px 12px;border:1px solid var(--line);border-radius:999px;font:400 15px/1.4 var(--serif);letter-spacing:0;color:var(--muted);vertical-align:middle}
+.info a{color:var(--paper);text-decoration-color:var(--brass);text-underline-offset:4px}
+#socialBox{margin-top:14px}
+#socialBox a{display:inline-block;margin-right:18px}
 
 footer{padding:36px 0 56px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}
 footer summary{cursor:pointer;margin-top:8px}
@@ -190,6 +195,7 @@ footer li{overflow-wrap:anywhere}
     <div class="hero-txt wrap">
       <h1 data-i="h1"></h1>
       <p class="tag" id="tag"></p>
+      <p class="rating" id="rating" hidden></p>
       <div class="cta">
         <a class="btn" href="#book" data-i="ctaBook"></a>
         <a class="btn ghost" href="#menu" data-i="ctaMenu"></a>
@@ -209,7 +215,8 @@ footer li{overflow-wrap:anywhere}
 
   <section id="menu" style="padding-top:0">
     <div class="wrap">
-      <h2 data-i="menuTitle"></h2>
+      <h2><span data-i="menuTitle"></span> <span class="tagx" data-i="example"></span></h2>
+      <p class="sub" data-i="menuNote"></p>
       <div class="menu-bar">
         <nav class="menu-nav" id="menuNav" data-i-aria="menuNavAria"></nav>
         <button type="button" class="scroll-more" data-scroll-for="menuNav" data-i-aria="moreTabs" hidden>›</button>
@@ -276,9 +283,9 @@ footer li{overflow-wrap:anywhere}
     <div class="wrap">
       <h2 data-i="contactsTitle"></h2>
       <div class="info" style="margin-top:30px">
-        <div><h3 data-i="hoursTitle"></h3><p data-i="hours"></p><p class="muted" data-i="kitchen"></p></div>
+        <div><h3 data-i="hoursTitle"></h3><p id="hours"></p><p class="muted" id="kitchen"></p></div>
         <div><h3 data-i="addrTitle"></h3><p id="addr"></p></div>
-        <div><h3 data-i="phoneTitle"></h3><p class="muted" data-i="phoneText"></p></div>
+        <div><h3 data-i="phoneTitle"></h3><p id="phoneBox"></p><p id="socialBox" hidden></p></div>
       </div>
     </div>
   </section>

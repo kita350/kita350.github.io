@@ -1,6 +1,7 @@
 /* Тексты демо-ресторана (index.html и menu.html). HY — на проверку Ани. */
 window.I18N = {
   hy: {
+    example: "օրինակ", menuNote: "Ուտեստները և գները՝ օրինակ։ Այստեղ կլինի ձեր մենյուն։", hoursDaily: "Ամեն օր՝ {from}–{to}", ratingLine: "Google-ում՝ {r}, {n} կարծիք", ratingOnly: "Google-ում՝ {r}", waLink: "WhatsApp՝ {p}",
     todayShort: "Այսօր", moreTabs: "Մենյուի այլ բաժիններ", moreDays: "Այլ օրեր",
     _title: "{name} — մենյու և սեղանի ամրագրում", _titleMenu: "{name} — մենյու", _noName: "Ձեր ռեստորանը",
     brand: "{name}", h1: "{name}", langAria: "Կայքի լեզուն",
@@ -31,6 +32,7 @@ window.I18N = {
     altHero: "Տոլման դասավորում են կաթսայի մեջ", altHall: "Երեկոյան ռեստորանի սրահ", altTable: "Լյուլա քյաբաբ լավաշով", altQr: "Մենյուի QR-կոդ"
   },
   ru: {
+    example: "пример", menuNote: "Блюда и цены — пример. Здесь будет ваше меню.", hoursDaily: "Ежедневно {from}–{to}", ratingLine: "{r} в Google, отзывов: {n}", ratingOnly: "{r} в Google", waLink: "WhatsApp: {p}",
     todayShort: "Сегодня", moreTabs: "Ещё разделы меню", moreDays: "Ещё даты",
     _title: "{name} — меню и бронь столика", _titleMenu: "{name} — меню", _noName: "Ваш ресторан",
     brand: "{name}", h1: "{name}", langAria: "Язык сайта",
@@ -61,6 +63,7 @@ window.I18N = {
     altHero: "Долму укладывают в кастрюлю", altHall: "Вечерний зал ресторана", altTable: "Люля-кебаб с лавашом", altQr: "QR-код меню"
   },
   en: {
+    example: "example", menuNote: "Dishes and prices are an example. Your menu goes here.", hoursDaily: "Daily {from}–{to}", ratingLine: "{r} on Google, {n} reviews", ratingOnly: "{r} on Google", waLink: "WhatsApp: {p}",
     todayShort: "Today", moreTabs: "More menu sections", moreDays: "More dates",
     _title: "{name} — menu and table booking", _titleMenu: "{name} — menu", _noName: "Your restaurant",
     brand: "{name}", h1: "{name}", langAria: "Site language",
