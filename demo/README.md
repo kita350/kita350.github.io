@@ -1,0 +1,28 @@
+# Демо-сайты SKIYAR
+
+Статические примеры для продаж: `salon/`, `restaurant/` (+ `restaurant/menu.html` — QR-меню), `hotel/`.
+Закрыты от индексации: `<meta name="robots" content="noindex, nofollow">` на каждой странице и `Disallow: /demo/` в `/robots.txt`.
+
+## Персонализация из ссылки
+
+- `?name=` — название заведения (вставляется только как текст, до 60 символов);
+- `?city=` — город латиницей; частые города Армении переводятся (`Yerevan` → Ереван / Երևան);
+- `?lang=hy|ru|en` — язык, по умолчанию `hy`.
+
+Пример: `https://kita350.github.io/demo/salon/?name=Michelle&city=Yerevan&lang=ru`.
+Без параметров — «Ваш салон / Ваш ресторан / Ваша гостиница».
+
+Ничего не сохраняется и не отправляется на сервер. Заявки — ссылка `wa.me/?text=…` без номера (в демо WhatsApp сам предложит, кому отправить).
+
+## Тексты на армянском — на проверку Ани
+
+- `salon/app.js` — блок `hy` и армянские названия услуг и мастеров;
+- `restaurant/i18n.js` (блок `hy`) и `restaurant/menu-data.js` (первый элемент каждой позиции);
+- `hotel/app.js` — блок `hy`, армянские названия номеров, удобств, отзывов;
+- `assets/demo.js` — плашка SKIYAR, названия городов, месяцы и дни недели.
+
+## Фото и шрифты
+
+- Фото — Unsplash, бесплатная лицензия Unsplash; список с ссылками на источники — `*/img/credits.json` (и в подвале каждой страницы).
+- QR-код (`restaurant/qr-menu.svg`, `.png`) ведёт на `https://kita350.github.io/demo/restaurant/menu.html`, создан библиотекой segno.
+- Шрифты — Google Fonts (SIL Open Font License), размещены локально в `assets/fonts`: Cormorant Garamond, Jost, Forum, EB Garamond, Geologica, Spectral, Noto Serif Armenian, Noto Sans Armenian. Армянский текст набирается Noto Armenian, не системным шрифтом.
