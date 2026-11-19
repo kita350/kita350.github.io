@@ -22,7 +22,7 @@
       inName: " «{name}»-ում",
       amenTitle: "Ինչ կա հյուրանոցում",
       aroundTitle: "Շրջակայքը և ինչպես հասնել", aroundSub: "Այստեղ կլինեն ձեր շրջակայքի տեսարժան վայրերը և ճանապարհի նկարագրությունը։",
-      capLake: "Լիճ՝ անտառի մեջ", capMonastery: "Հին վանքեր", capMeadow: "Լեռնային արահետներ",
+      capLake: "Լիճ՝ անտառի մեջ", capCascade: "Կասկադ", capRepublic: "Հանրապետության հրապարակ", capMatenadaran: "Մատենադարան", capMonastery: "Հին վանքեր", capMeadow: "Լեռնային արահետներ",
       addrTitle: "Հասցե", addr: "Այստեղ կլինի հյուրանոցի հասցեն", addrCity: "{city}, այստեղ կլինի հյուրանոցի հասցեն",
       carTitle: "Մեքենայով", carText: "Քարտեզի կետը և երթուղին՝ մեկ սեղմումով։",
       transferTitle: "Տրանսֆեր", transferText: "Դիմավորում «Զվարթնոց» օդանավակայանում՝ նախնական հայտով։",
@@ -49,7 +49,7 @@
       inName: " в «{name}»",
       amenTitle: "Что есть в гостинице",
       aroundTitle: "Окрестности и как добраться", aroundSub: "Здесь будут места рядом с вашей гостиницей и описание дороги.",
-      capLake: "Озеро в лесу", capMonastery: "Старые монастыри", capMeadow: "Горные тропы",
+      capLake: "Озеро в лесу", capCascade: "Каскад", capRepublic: "Площадь Республики", capMatenadaran: "Матенадаран", capMonastery: "Старые монастыри", capMeadow: "Горные тропы",
       addrTitle: "Адрес", addr: "Здесь будет адрес гостиницы", addrCity: "{city}, здесь будет адрес гостиницы",
       carTitle: "На машине", carText: "Точка на карте и маршрут в одно касание.",
       transferTitle: "Трансфер", transferText: "Встреча в аэропорту «Звартноц» по предварительной заявке.",
@@ -76,7 +76,7 @@
       inName: " at “{name}”",
       amenTitle: "At the hotel",
       aroundTitle: "Around us and getting here", aroundSub: "Places near your hotel and directions go here.",
-      capLake: "A forest lake", capMonastery: "Old monasteries", capMeadow: "Mountain trails",
+      capLake: "A forest lake", capCascade: "The Cascade", capRepublic: "Republic Square", capMatenadaran: "Matenadaran", capMonastery: "Old monasteries", capMeadow: "Mountain trails",
       addrTitle: "Address", addr: "Your hotel’s address goes here", addrCity: "{city}, your hotel’s address goes here",
       carTitle: "By car", carText: "Map pin and directions in one tap.",
       transferTitle: "Transfer", transferText: "Pick-up at Zvartnots airport on request.",
@@ -271,6 +271,23 @@
       vi.classList.toggle("tall", urban);
     }
     vi.alt = D.t(urban ? "altWindowUrban" : "altWindow");
+    // «Окрестности»: для Еревана — Каскад, площадь Республики, Матенадаран; иначе — природа.
+    var AROUND = urban
+      ? [["cascade", "capCascade", 263], ["republic", "capRepublic", 320], ["matenadaran", "capMatenadaran", 720]]
+      : [["lake", "capLake", 320], ["monastery", "capMonastery", 320], ["meadow", "capMeadow", 320]];
+    var figs = $("aroundList").querySelectorAll("figure");
+    AROUND.forEach(function (a, i) {
+      var img = figs[i].querySelector("img"), cap = D.t(a[1]);
+      if (img.getAttribute("data-v") !== a[0]) {
+        img.setAttribute("data-v", a[0]);
+        img.src = "img/" + a[0] + "-480.webp";
+        img.srcset = "img/" + a[0] + "-480.webp 480w, img/" + a[0] + "-960.webp 960w";
+        img.height = a[2];
+        img.setAttribute("style", D.bg(a[0]));
+      }
+      img.alt = cap;
+      figs[i].querySelector("figcaption").textContent = cap;
+    });
     $("addr").textContent = c ? D.t("addrCity") : D.t("addr");
     var ul = $("amenList"); ul.textContent = "";
     AMEN.forEach(function (a) { var li = el("li"); li.appendChild(el("b", null, a[0][l])); li.appendChild(el("span", null, a[1][l])); ul.appendChild(li); });
