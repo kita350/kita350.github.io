@@ -42,7 +42,7 @@
 
   function fillTimes() {
     var sel = $("bTime"), keep = sel.value || "19:00", now = new Date();
-    var isToday = $("bDate").value === iso(now);
+    var isToday = st.day === iso(now);
     sel.textContent = "";
     for (var m = 12 * 60; m <= 22 * 60 + 30; m += 30) {
       if (isToday && m <= now.getHours() * 60 + now.getMinutes() + 30) continue;
@@ -62,7 +62,7 @@
   }
 
   function updateLink() {
-    var btn = $("bookBtn"), dv = $("bDate").value, tv = $("bTime").value;
+    var btn = $("bookBtn"), dv = st.day, tv = $("bTime").value;
     $("gCount").textContent = st.guests;
     if (!dv || !tv) { btn.removeAttribute("href"); btn.setAttribute("aria-disabled", "true"); btn.style.opacity = ".45"; return; }
     var p = dv.split("-"), d = new Date(+p[0], +p[1] - 1, +p[2], 12);
@@ -79,12 +79,32 @@
     $("tag").textContent = c ? D.t("tagCity") : D.t("tag");
     $("addr").textContent = c ? D.t("addrCity") : D.t("addr");
     $("qrLink").href = "menu.html" + location.search;
-    fillTimes(); fillPlaces(); updateLink();
+    renderDays(); fillTimes(); fillPlaces(); updateLink();
   }
 
-  var today = new Date(), max = new Date(today.getTime() + 60 * 864e5);
-  $("bDate").min = iso(today); $("bDate").max = iso(max); $("bDate").value = iso(today);
-  $("bDate").addEventListener("change", function () { fillTimes(); updateLink(); });
+  // Даты — полоса из 14 дней, как в салоне (без стандартного поля браузера).
+  function dayFrom(k) { var p = k.split("-"); return new Date(+p[0], +p[1] - 1, +p[2], 12); }
+  function renderDays() {
+    var box = $("dayOpts"), now = new Date(), base = new Date(); base.setHours(12, 0, 0, 0);
+    var skipToday = now.getHours() * 60 + now.getMinutes() > 22 * 60;   // кухня закрывается — бронь с завтра
+    var keepScroll = box.scrollLeft;
+    box.textContent = "";
+    for (var i = skipToday ? 1 : 0; i < 15; i++) {
+      (function (d, first) {
+        var k = iso(d);
+        if (!st.day) st.day = k;
+        var b = el("button", { type: "button", "class": "day", role: "radio", "aria-checked": String(st.day === k), "aria-label": D.date(d, "long") });
+        b.appendChild(el("small", null, first && !skipToday ? D.t("todayShort") : D.date(d, "wd")));
+        b.appendChild(el("b", null, String(d.getDate())));
+        b.addEventListener("click", function () { st.day = k; renderDays(); fillTimes(); updateLink(); });
+        box.appendChild(b);
+      })(new Date(base.getTime() + i * 864e5), i === 0);
+    }
+    box.scrollLeft = keepScroll;
+    $("picked").textContent = D.cap(D.date(dayFrom(st.day), "long"));
+    D.scrollHint(box);
+  }
+
   $("bTime").addEventListener("change", updateLink);
   $("bPlace").addEventListener("change", updateLink);
   $("gMinus").addEventListener("click", function () { if (st.guests > 1) st.guests--; updateLink(); });
@@ -97,5 +117,5 @@
     }).catch(function () {});
   });
 
-  D.init(window.I18N, function () { renderStatic(); renderMenu(); });
+  D.init(window.I18N, function () { renderStatic(); renderMenu(); D.scrollHint($("menuNav")); });
 })();

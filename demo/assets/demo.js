@@ -73,6 +73,31 @@
     // Разряды тонким пробелом во всех языках: 64 000 ֏
     fmtNum: function (n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " "); },
     price: function (n) { return D.fmtNum(n) + " ֏"; },
+    // Горизонтальная лента (вкладки, даты): затухание у краёв и стрелка «›», пока есть что листать.
+    // Кнопка-стрелка ищется по data-scroll-for="<id ленты>".
+    scrollHint: function (el) {
+      if (!el) return;
+      var btn = document.querySelector('[data-scroll-for="' + el.id + '"]');
+      function upd() {
+        var max = el.scrollWidth - el.clientWidth;
+        var r = el.scrollLeft < max - 4;
+        el.classList.toggle("fade-l", el.scrollLeft > 4);
+        el.classList.toggle("fade-r", r);
+        if (btn) btn.hidden = !r;
+      }
+      if (!el._hint) {
+        el._hint = true;
+        el.addEventListener("scroll", upd, { passive: true });
+        window.addEventListener("resize", upd);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(upd);
+        if (btn) btn.addEventListener("click", function () {
+          var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+          el.scrollBy({ left: Math.max(160, el.clientWidth * 0.7), behavior: still ? "auto" : "smooth" });
+        });
+      }
+      upd();
+    },
+    cap: function (s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; },
     wa: function (text) { return "https://wa.me/?text=" + encodeURIComponent(text); },
     render: function () {
       document.documentElement.lang = D.lang;

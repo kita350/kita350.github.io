@@ -1,6 +1,7 @@
 /* Тексты демо-ресторана (index.html и menu.html). HY — на проверку Ани. */
 window.I18N = {
   hy: {
+    todayShort: "Այսօր", moreTabs: "Մենյուի այլ բաժիններ", moreDays: "Այլ օրեր",
     _title: "{name} — մենյու և սեղանի ամրագրում", _titleMenu: "{name} — մենյու", _noName: "Ձեր ռեստորանը",
     brand: "{name}", h1: "{name}", langAria: "Կայքի լեզուն",
     tag: "Հայկական խոհանոց, խորոված և տնական գինի", tagCity: "Հայկական խոհանոց և խորոված, {city}",
@@ -30,6 +31,7 @@ window.I18N = {
     altHero: "Տոլման դասավորում են կաթսայի մեջ", altHall: "Երեկոյան ռեստորանի սրահ", altTable: "Լյուլա քյաբաբ լավաշով", altQr: "Մենյուի QR-կոդ"
   },
   ru: {
+    todayShort: "Сегодня", moreTabs: "Ещё разделы меню", moreDays: "Ещё даты",
     _title: "{name} — меню и бронь столика", _titleMenu: "{name} — меню", _noName: "Ваш ресторан",
     brand: "{name}", h1: "{name}", langAria: "Язык сайта",
     tag: "Армянская кухня, мангал и домашнее вино", tagCity: "Армянская кухня и мангал, {city}",
@@ -59,6 +61,7 @@ window.I18N = {
     altHero: "Долму укладывают в кастрюлю", altHall: "Вечерний зал ресторана", altTable: "Люля-кебаб с лавашом", altQr: "QR-код меню"
   },
   en: {
+    todayShort: "Today", moreTabs: "More menu sections", moreDays: "More dates",
     _title: "{name} — menu and table booking", _titleMenu: "{name} — menu", _noName: "Your restaurant",
     brand: "{name}", h1: "{name}", langAria: "Site language",
     tag: "Armenian cooking, open fire and house wine", tagCity: "Armenian cooking and open fire, {city}",

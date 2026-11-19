@@ -74,7 +74,14 @@ h2{margin:0 0 14px;font:400 clamp(40px,10vw,76px)/1 var(--display)}
 .intro .note{font-size:18px;color:var(--muted)}
 
 /* меню */
-.menu-nav{position:sticky;top:44px;z-index:5;display:flex;gap:22px;overflow-x:auto;margin:0 calc(-1*var(--gut));padding:12px var(--gut);background:var(--bg);border-bottom:1px solid var(--line);scrollbar-width:none;white-space:nowrap}
+.menu-bar{position:sticky;top:44px;z-index:5;margin:0 calc(-1*var(--gut));background:var(--bg);border-bottom:1px solid var(--line)}
+.menu-nav{display:flex;gap:22px;overflow-x:auto;padding:12px var(--gut);scrollbar-width:none;white-space:nowrap;scroll-behavior:smooth}
+/* затухание у края, пока вкладки листаются (классы ставит demo.js) */
+.menu-nav.fade-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 72px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 72px),transparent)}
+.menu-nav.fade-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 48px);mask-image:linear-gradient(90deg,transparent,#000 48px)}
+.menu-nav.fade-l.fade-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 48px,#000 calc(100% - 72px),transparent);mask-image:linear-gradient(90deg,transparent,#000 48px,#000 calc(100% - 72px),transparent)}
+.scroll-more{position:absolute;top:0;right:0;bottom:0;width:48px;border:0;background:linear-gradient(90deg,rgba(33,27,22,0),var(--bg) 55%);color:var(--brass);font:400 30px/1 var(--serif);cursor:pointer;padding:0 12px 4px 0;text-align:right}
+.scroll-more[hidden]{display:none}
 .menu-nav::-webkit-scrollbar{display:none}
 .menu-nav a{text-decoration:none;color:var(--muted);font-size:18px}
 .menu-nav a:hover{color:var(--paper)}
@@ -108,6 +115,22 @@ h2{margin:0 0 14px;font:400 clamp(40px,10vw,76px)/1 var(--display)}
 .guests button{width:54px;height:52px;background:none;border:0;font-size:24px;cursor:pointer;color:var(--brass)}
 .guests output{flex:1;text-align:center;font-size:20px}
 .form .btn{width:100%}
+.field select{-webkit-appearance:none;appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c9a56b' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center}
+.strip{position:relative;min-width:0}
+.book-grid>*,.form>*,.row2>*{min-width:0}
+.days{display:grid;grid-auto-flow:column;grid-auto-columns:64px;gap:8px;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}
+.days::-webkit-scrollbar{display:none}
+.days.fade-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 72px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 72px),transparent)}
+.days.fade-l.fade-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 72px),transparent);mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 72px),transparent)}
+.days.fade-l:not(.fade-r){-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px);mask-image:linear-gradient(90deg,transparent,#000 40px)}
+.day{display:grid;place-items:center;align-content:center;gap:4px;height:76px;padding:0;border:1px solid var(--line);background:var(--bg);cursor:pointer}
+.day small{font-size:14px;color:var(--muted);line-height:1}
+.day b{font:400 26px/1 var(--display)}
+.day[aria-checked="true"]{background:var(--brass);border-color:var(--brass);color:#211b16}
+.day[aria-checked="true"] small{color:#3b2f22}
+.strip .scroll-more{width:44px;padding:0 6px 0 0;background:linear-gradient(90deg,rgba(42,34,27,0),var(--bg-2) 55%)}
+.picked{margin:10px 0 0;color:var(--brass);font-style:italic}
+[data-lang="hy"] .picked{font-style:normal}
 .hint{margin:0;color:var(--muted);font-size:16px}
 .book-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
 
@@ -132,11 +155,14 @@ footer li{overflow-wrap:anywhere}
   .info{grid-template-columns:repeat(3,1fr)}
 }
 @media (min-width:960px){
-  .hero{display:grid;grid-template-columns:1fr 46%;min-height:calc(100vh - 120px);max-height:900px}
-  .hero-img{order:2;aspect-ratio:auto;max-height:none;height:100%}
-  h1{font-size:clamp(96px,10vw,156px)}
+  /* первый экран целиком в окне: высота = окно минус плашка и шапка */
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) 46%;height:calc(100vh - 112px);min-height:560px;max-height:920px}
+  .hero-img{order:2;aspect-ratio:auto;max-height:none;height:100%;min-height:0}
+  .hero-img img{position:absolute;inset:0}
+  h1{font-size:clamp(84px,8.4vw,136px)}
+  [data-lang="hy"] h1{font-size:clamp(56px,5.6vw,88px)}
   .hero-img:after{background:linear-gradient(90deg,rgba(33,27,22,.55) 0%,rgba(33,27,22,0) 30%)}
-  .hero-txt{margin:0;align-self:end;padding:0 56px 72px var(--gut)}
+  .hero-txt{margin:0;align-self:center;padding:0 56px 24px var(--gut)}
   .hero-txt{padding-left:max(var(--gut),calc((100vw - var(--max))/2 + var(--gut)))}
   section{padding:110px 0}
 }
@@ -184,7 +210,10 @@ footer li{overflow-wrap:anywhere}
   <section id="menu" style="padding-top:0">
     <div class="wrap">
       <h2 data-i="menuTitle"></h2>
-      <nav class="menu-nav" id="menuNav" data-i-aria="menuNavAria"></nav>
+      <div class="menu-bar">
+        <nav class="menu-nav" id="menuNav" data-i-aria="menuNavAria"></nav>
+        <button type="button" class="scroll-more" data-scroll-for="menuNav" data-i-aria="moreTabs" hidden>›</button>
+      </div>
       <div id="courses"></div>
       <p class="per" data-i="per"></p>
     </div>
@@ -213,16 +242,23 @@ footer li{overflow-wrap:anywhere}
         <h2 data-i="bookTitle"></h2>
         <p class="sub" data-i="bookSub"></p>
         <form class="form" id="bookForm" novalidate>
-          <div class="row2">
-            <div class="field"><label for="bDate" data-i="date"></label><input type="date" id="bDate" required></div>
-            <div class="field"><label for="bTime" data-i="time"></label><select id="bTime"></select></div>
-          </div>
           <div class="field">
-            <label id="gLabel" data-i="guests"></label>
-            <div class="guests" role="group" aria-labelledby="gLabel">
-              <button type="button" id="gMinus" aria-label="−">−</button>
-              <output id="gCount" aria-live="polite">2</output>
-              <button type="button" id="gPlus" aria-label="+">+</button>
+            <label id="dLabel" data-i="date"></label>
+            <div class="strip">
+              <div class="days" id="dayOpts" role="radiogroup" aria-labelledby="dLabel"></div>
+              <button type="button" class="scroll-more" data-scroll-for="dayOpts" data-i-aria="moreDays" hidden>›</button>
+            </div>
+            <p class="picked" id="picked" aria-live="polite"></p>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="bTime" data-i="time"></label><select id="bTime"></select></div>
+            <div class="field">
+              <label id="gLabel" data-i="guests"></label>
+              <div class="guests" role="group" aria-labelledby="gLabel">
+                <button type="button" id="gMinus" aria-label="−">−</button>
+                <output id="gCount" aria-live="polite">2</output>
+                <button type="button" id="gPlus" aria-label="+">+</button>
+              </div>
             </div>
           </div>
           <div class="field"><label for="bPlace" data-i="place"></label><select id="bPlace"></select></div>

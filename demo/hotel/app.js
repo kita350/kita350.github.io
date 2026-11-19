@@ -7,9 +7,9 @@
     hy: {
       _title: "{name} — համարներ և ամրագրում", _noName: "Ձեր հյուրանոցը",
       brand: "{name}", h1: "{name}", langAria: "Կայքի լեզուն",
-      lead: "Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։ Ընտրեք ամսաթվերը և ամրագրեք WhatsApp-ով։",
-      leadCity: "{city}։ Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։ Ընտրեք ամսաթվերը և ամրագրեք WhatsApp-ով։",
-      checkIn: "Ժամանում", checkOut: "Մեկնում", guests: "Հյուրեր", chooseRoom: "Ընտրել համարը",
+      lead: "Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։",
+      leadCity: "{city}։ Համարներ՝ անտառի և լեռների տեսարանով, նախաճաշ տեղական մթերքներից։",
+      checkIn: "Ժամանում", checkOut: "Մեկնում", guests: "Հյուրեր", chooseRoom: "Գտնել համար", calPickIn: "Ընտրեք ժամանման օրը", calPickOut: "Հիմա՝ մեկնման օրը", calDone: "Պատրաստ է", calPrev: "Նախորդ ամիս", calNext: "Հաջորդ ամիս", calAria: "Ամսաթվերի ընտրություն", noDate: "Ընտրեք",
       guestsN: "{n} հյուր", nights: "{n} գիշեր", nightsLine: "{in} — {out}, {nights}", badDates: "Մեկնման օրը պետք է լինի ժամանումից հետո",
       viewTitle: "Տեսարան պատուհանից",
       viewText: "Առավոտը սկսվում է լեռներով․ համարների մեծ մասի պատուհանները նայում են անտառին և լեռնաշղթային։",
@@ -34,9 +34,9 @@
     ru: {
       _title: "{name} — номера и бронирование", _noName: "Ваша гостиница",
       brand: "{name}", h1: "{name}", langAria: "Язык сайта",
-      lead: "Номера с видом на лес и горы, завтрак из местных продуктов. Выберите даты и забронируйте в WhatsApp.",
-      leadCity: "{city}. Номера с видом на лес и горы, завтрак из местных продуктов. Выберите даты и забронируйте в WhatsApp.",
-      checkIn: "Заезд", checkOut: "Выезд", guests: "Гости", chooseRoom: "Выбрать номер",
+      lead: "Номера с видом на лес и горы, завтрак из местных продуктов.",
+      leadCity: "{city}. Номера с видом на лес и горы, завтрак из местных продуктов.",
+      checkIn: "Заезд", checkOut: "Выезд", guests: "Гости", chooseRoom: "Найти номер", calPickIn: "Выберите дату заезда", calPickOut: "Теперь — дату выезда", calDone: "Готово", calPrev: "Предыдущий месяц", calNext: "Следующий месяц", calAria: "Выбор дат", noDate: "Выберите",
       guestsN: "{n}", nights: "{n} {w}", nightsLine: "{in} — {out}, {nights}", badDates: "Дата выезда должна быть позже заезда",
       viewTitle: "Вид из окна",
       viewText: "Утро начинается с гор: окна большинства номеров выходят на лес и хребет.",
@@ -61,9 +61,9 @@
     en: {
       _title: "{name} — rooms and booking", _noName: "Your hotel",
       brand: "{name}", h1: "{name}", langAria: "Site language",
-      lead: "Rooms looking out on forest and mountains, breakfast from local produce. Pick your dates and book on WhatsApp.",
-      leadCity: "{city}. Rooms looking out on forest and mountains, breakfast from local produce. Pick your dates and book on WhatsApp.",
-      checkIn: "Check-in", checkOut: "Check-out", guests: "Guests", chooseRoom: "Choose a room",
+      lead: "Rooms looking out on forest and mountains, breakfast from local produce.",
+      leadCity: "{city}. Rooms looking out on forest and mountains, breakfast from local produce.",
+      checkIn: "Check-in", checkOut: "Check-out", guests: "Guests", chooseRoom: "Find a room", calPickIn: "Choose your check-in date", calPickOut: "Now choose your check-out date", calDone: "Done", calPrev: "Previous month", calNext: "Next month", calAria: "Choose dates", noDate: "Choose",
       guestsN: "{n}", nights: "{n} {w}", nightsLine: "{in} — {out}, {nights}", badDates: "Check-out must be after check-in",
       viewTitle: "The view from the window",
       viewText: "Mornings start with the mountains: most rooms face the forest and the ridge.",
@@ -93,7 +93,7 @@
     ["std", "white", 300, 24, 2, 28000, ["Ստանդարտ՝ անտառի տեսարանով", "Стандарт с видом на лес", "Standard, forest view"], ["Մեկ մեծ մահճակալ", "Одна большая кровать", "One large bed"], ["Լուսավոր համար՝ փայտե առաստաղով և աշխատանքային սեղանով։", "Светлый номер с деревянным потолком и рабочим столом.", "A bright room with a timber ceiling and a desk."]],
     ["attic", "attic", 320, 30, 3, 32000, ["Ձեղնահարկ՝ երկու մահճակալով", "Мансарда с двумя кроватями", "Attic room, two beds"], ["Երկու մահճակալ", "Две кровати", "Two beds"], ["Ամբողջովին փայտից՝ թեք առաստաղով և կլոր պատուհանով։", "Вся в дереве, со скошенным потолком и полукруглым окном.", "All in wood, with a sloped ceiling and an arched window."]],
     ["balcony", "sun", 320, 32, 2, 38000, ["Համար պատշգամբով", "Номер с балконом", "Room with a balcony"], ["Մեկ մեծ մահճակալ", "Одна большая кровать", "One large bed"], ["Ապակե դռներ դեպի պատշգամբ. սուրճը՝ արևի առաջին ճառագայթների հետ։", "Стеклянные двери на балкон — кофе с первыми лучами солнца.", "Glass doors to the balcony — coffee with the first light."]],
-    ["suite", "snow", 720, 48, 4, 55000, ["Ընտանեկան լյուքս՝ լեռների տեսարանով", "Семейный люкс с видом на горы", "Family suite, mountain view"], ["Մեծ մահճակալ և բազմոց-մահճակալ", "Большая кровать и диван-кровать", "Large bed and a sofa bed"], ["Երկու սենյակ, պատուհան՝ լեռնաշղթային, տեղ երեխաների համար։", "Две комнаты, окно на хребет, место для детей.", "Two rooms, a window onto the ridge, space for children."]]
+    ["suite", "suite", 320, 48, 4, 55000, ["Ընտանեկան լյուքս", "Семейный люкс", "Family suite"], ["Մեծ մահճակալ և բազմոց-մահճակալ", "Большая кровать и диван-кровать", "Large bed and a sofa bed"], ["Երկու սենյակ, տեսարան՝ դեպի այգի և անտառ, տեղ երեխաների համար։", "Две комнаты, вид на сад и лес, место для детей.", "Two rooms, a view of the garden and forest, space for children."]]
   ];
   var AMEN = [
     [["Նախաճաշը ներառված է", "Завтрак включён", "Breakfast included"], ["Տեղական պանիր, ձու, մեղր, տնական մուրաբա", "Местный сыр, яйца, мёд, домашнее варенье", "Local cheese, eggs, honey, home-made jam"]],
@@ -109,7 +109,17 @@
     [["Հանգիստ վայր երեխաների հետ. տեռասը և երեկոյան խորովածը՝ լավագույնը։", "Тихое место для отдыха с детьми, терраса и вечерний шашлык — лучшее.", "A quiet place with kids; the terrace and the evening barbecue were the best part."], ["Sarah, London", "Sarah, London", "Sarah, London"]]
   ];
 
-  var st = { guests: 2 };
+  var MONTHS = {
+    hy: ["Հունվար", "Փետրվար", "Մարտ", "Ապրիլ", "Մայիս", "Հունիս", "Հուլիս", "Օգոստոս", "Սեպտեմբեր", "Հոկտեմբեր", "Նոյեմբեր", "Դեկտեմբեր"],
+    ru: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  };
+  var WD = { hy: ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրբ", "Շբթ", "Կիր"], ru: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], en: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"] };
+  function day0(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 12); }
+  function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return day0(x); }
+  var TODAY = day0(new Date()), LAST = addDays(TODAY, 365);
+  var st = { guests: 2, a: addDays(TODAY, 7), b: addDays(TODAY, 9) };
+  var cal = { open: false, pick: "in", month: null };
   function $(id) { return document.getElementById(id); }
   function el(tag, attrs, text) {
     var e = document.createElement(tag);
@@ -117,9 +127,6 @@
     if (text != null) e.textContent = text;
     return e;
   }
-  function pad(n) { return (n < 10 ? "0" : "") + n; }
-  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
-  function parse(v) { if (!v) return null; var p = v.split("-"); return new Date(+p[0], +p[1] - 1, +p[2], 12); }
   function fmt(d) { return D.date(d, "dm"); }
   function nightsText(n) {
     var w = NIGHT_WORDS[D.lang];
@@ -127,10 +134,73 @@
     return D.t("nights", { n: n, w: word });
   }
   function stay() {
-    var a = parse($("dIn").value), b = parse($("dOut").value);
-    if (!a || !b) return null;
-    var n = Math.round((b - a) / 864e5);
-    return n > 0 ? { a: a, b: b, n: n } : { bad: true };
+    if (!st.a || !st.b) return null;
+    var n = Math.round((st.b - st.a) / 864e5);
+    return n > 0 ? { a: st.a, b: st.b, n: n } : { bad: true };
+  }
+
+  // Календарь: свой, без стандартного поля браузера. Первый клик — заезд, второй — выезд.
+  function monthStart(d) { return new Date(d.getFullYear(), d.getMonth(), 1, 12); }
+  function openCal(which) {
+    cal.open = !(cal.open && cal.pick === which);
+    cal.pick = which;
+    cal.month = monthStart(which === "out" && st.b ? st.b : st.a || TODAY);
+    renderCal();
+  }
+  function closeCal() { if (cal.open) { cal.open = false; renderCal(); } }
+  function pickDay(d) {
+    if (cal.pick === "in" || !st.a || d <= st.a) { st.a = d; st.b = null; cal.pick = "out"; }
+    else { st.b = d; cal.open = false; }
+    all();
+    if (!cal.open) $("outBtn").focus();
+  }
+  function renderCal() {
+    var box = $("cal");
+    $("inBtn").setAttribute("aria-expanded", String(cal.open && cal.pick === "in"));
+    $("outBtn").setAttribute("aria-expanded", String(cal.open && cal.pick === "out"));
+    box.hidden = !cal.open;
+    if (!cal.open) return;
+    box.textContent = "";
+    var two = window.matchMedia && matchMedia("(min-width:760px)").matches;
+    var top = el("div", { "class": "cal-top" });
+    top.appendChild(el("p", null, D.t(cal.pick === "in" ? "calPickIn" : "calPickOut")));
+    var nav = el("div", { "class": "cal-nav" });
+    var prev = el("button", { type: "button", "aria-label": D.t("calPrev") }, "\u2039");
+    var next = el("button", { type: "button", "aria-label": D.t("calNext") }, "\u203a");
+    prev.disabled = cal.month <= monthStart(TODAY);
+    next.disabled = cal.month >= monthStart(LAST);
+    prev.addEventListener("click", function () { cal.month = new Date(cal.month.getFullYear(), cal.month.getMonth() - 1, 1, 12); renderCal(); });
+    next.addEventListener("click", function () { cal.month = new Date(cal.month.getFullYear(), cal.month.getMonth() + 1, 1, 12); renderCal(); });
+    nav.appendChild(prev); nav.appendChild(next); top.appendChild(nav); box.appendChild(top);
+    var months = el("div", { "class": "cal-months" });
+    for (var k = 0; k < (two ? 2 : 1); k++) {
+      var m = new Date(cal.month.getFullYear(), cal.month.getMonth() + k, 1, 12);
+      var wrap = el("div", { "class": "cal-m" });
+      wrap.appendChild(el("h4", null, MONTHS[D.lang][m.getMonth()] + " " + m.getFullYear()));
+      var g = el("div", { "class": "cal-g" });
+      WD[D.lang].forEach(function (w) { g.appendChild(el("span", { "class": "wd", "aria-hidden": "true" }, w)); });
+      for (var i = 0; i < (m.getDay() + 6) % 7; i++) g.appendChild(el("span"));
+      for (var d = new Date(m); d.getMonth() === m.getMonth(); d = addDays(d, 1)) {
+        (function (day) {
+          var c = [];
+          if (st.a && +day === +st.a) c.push("start");
+          if (st.b && +day === +st.b) c.push("end");
+          if (st.a && st.b && day > st.a && day < st.b) c.push("mid");
+          if (+day === +TODAY) c.push("today");
+          var sel = c.indexOf("start") >= 0 || c.indexOf("end") >= 0;
+          var b = el("button", { type: "button", "class": c.join(" "), "aria-label": D.date(day, "long"), "aria-pressed": String(sel) }, String(day.getDate()));
+          if (day < TODAY || day > LAST || (cal.pick === "out" && st.a && +day === +st.a)) b.disabled = true;
+          b.addEventListener("click", function () { pickDay(day); });
+          g.appendChild(b);
+        })(d);
+      }
+      wrap.appendChild(g); months.appendChild(wrap);
+    }
+    box.appendChild(months);
+    var foot = el("div", { "class": "cal-foot" });
+    var done = el("button", { type: "button", "class": "btn line" }, D.t("calDone"));
+    done.addEventListener("click", closeCal);
+    foot.appendChild(done); box.appendChild(foot);
   }
 
   function renderRooms() {
@@ -179,7 +249,10 @@
     for (var i = 1; i <= 6; i++) sel.appendChild(el("option", { value: String(i) }, String(i)));
     sel.value = String(keep);
     var s = stay();
+    $("inVal").textContent = st.a ? fmt(st.a) : D.t("noDate");
+    $("outVal").textContent = st.b ? fmt(st.b) : D.t("noDate");
     $("nights").textContent = !s ? "" : s.bad ? D.t("badDates") : D.t("nightsLine", { "in": fmt(s.a), out: fmt(s.b), nights: nightsText(s.n) });
+    renderCal();
   }
 
   function renderStatic() {
@@ -201,15 +274,11 @@
 
   function all() { renderBar(); renderRooms(); }
 
-  var t = new Date(), inD = new Date(t.getTime() + 7 * 864e5), outD = new Date(t.getTime() + 9 * 864e5);
-  $("dIn").min = iso(t); $("dOut").min = iso(new Date(t.getTime() + 864e5));
-  $("dIn").value = iso(inD); $("dOut").value = iso(outD);
-  $("dIn").addEventListener("change", function () {
-    var a = parse($("dIn").value);
-    if (a) { var m = new Date(a.getTime() + 864e5); $("dOut").min = iso(m); if (!stay() || stay().bad) $("dOut").value = iso(m); }
-    all();
-  });
-  $("dOut").addEventListener("change", all);
+  $("inBtn").addEventListener("click", function () { openCal("in"); });
+  $("outBtn").addEventListener("click", function () { openCal(st.a ? "out" : "in"); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeCal(); });
+  document.addEventListener("click", function (e) { if (cal.open && e.target.isConnected && !$("bar").contains(e.target)) closeCal(); });
+  $("findBtn").addEventListener("click", closeCal);
   $("gSel").addEventListener("change", function () { st.guests = +$("gSel").value; all(); });
 
   document.querySelector("footer details").addEventListener("toggle", function () {

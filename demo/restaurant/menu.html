@@ -40,7 +40,13 @@ header{padding:28px 0 6px;text-align:center}
 h1{margin:0;font:400 clamp(44px,13vw,72px)/.95 var(--display);overflow-wrap:anywhere}
 [data-lang="hy"] h1{font-size:clamp(34px,10vw,56px);line-height:1.1}
 .tag{margin:10px 0 0;color:var(--brass);font-style:italic}
-nav{position:sticky;top:44px;z-index:5;display:flex;gap:20px;overflow-x:auto;margin-top:22px;padding:12px var(--gut);background:var(--bg);border-bottom:1px solid var(--line);white-space:nowrap;scrollbar-width:none}
+.menu-bar{position:sticky;top:44px;z-index:5;margin-top:22px;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;gap:20px;overflow-x:auto;padding:12px var(--gut);white-space:nowrap;scrollbar-width:none;scroll-behavior:smooth}
+nav.fade-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 72px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 72px),transparent)}
+nav.fade-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 48px);mask-image:linear-gradient(90deg,transparent,#000 48px)}
+nav.fade-l.fade-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 48px,#000 calc(100% - 72px),transparent);mask-image:linear-gradient(90deg,transparent,#000 48px,#000 calc(100% - 72px),transparent)}
+.scroll-more{position:absolute;top:0;right:0;bottom:0;width:48px;border:0;background:linear-gradient(90deg,rgba(33,27,22,0),var(--bg) 55%);color:var(--brass);font:400 30px/1 var(--serif);cursor:pointer;padding:0 12px 4px 0;text-align:right}
+.scroll-more[hidden]{display:none}
 nav::-webkit-scrollbar{display:none}
 nav a{text-decoration:none;color:var(--muted)}
 h2{margin:44px 0 6px;font:400 34px/1.05 var(--display);text-align:center}
@@ -69,7 +75,10 @@ h2{margin:44px 0 6px;font:400 34px/1.05 var(--display);text-align:center}
   <h1 data-i="h1"></h1>
   <p class="tag" data-i="menuTitle"></p>
 </header>
-<nav id="menuNav" data-i-aria="menuNavAria"></nav>
+<div class="menu-bar">
+  <nav id="menuNav" data-i-aria="menuNavAria"></nav>
+  <button type="button" class="scroll-more" data-scroll-for="menuNav" data-i-aria="moreTabs" hidden>›</button>
+</div>
 <main class="wrap" id="courses"></main>
 <div class="wrap">
   <p class="per" data-i="per"></p>
@@ -106,6 +115,7 @@ h2{margin:44px 0 6px;font:400 34px/1.05 var(--display);text-align:center}
     var q = location.search;
     document.getElementById("toBook").href = "index.html" + q + "#book";
     document.getElementById("toSite").href = "index.html" + q;
+    D.scrollHint(nav);
   });
 })();
 </script>

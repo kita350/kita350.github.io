@@ -1,9 +1,9 @@
 [
  {
   "file": "hero",
-  "w": 1800,
-  "h": 1013,
-  "url": "https://unsplash.com/photos/green-mountains-under-white-clouds-during-daytime-pGqnPNhGjv8"
+  "w": 2000,
+  "h": 1125,
+  "url": "https://unsplash.com/photos/green-trees-on-mountain-during-daytime-FITkkKxP1RU"
  },
  {
   "file": "meadow",
@@ -13,9 +13,9 @@
  },
  {
   "file": "window",
-  "w": 1800,
-  "h": 2357,
-  "url": "https://unsplash.com/photos/wooden-deck-overlooking-green-mountains-WlCLGJOihzQ"
+  "w": 2000,
+  "h": 1336,
+  "url": "https://unsplash.com/photos/mountains-viewed-through-open-window-IYdQUnj2C_Q"
  },
  {
   "file": "lake",
@@ -42,10 +42,10 @@
   "url": "https://unsplash.com/photos/white-bed-linen-with-brown-wooden-bed-frame-67-sOi7mVIk"
  },
  {
-  "file": "snow",
+  "file": "suite",
   "w": 1800,
-  "h": 2700,
-  "url": "https://unsplash.com/photos/cozy-room-with-a-window-view-of-snowy-mountains-s7B6jin6pIM"
+  "h": 1200,
+  "url": "https://unsplash.com/photos/hotel-bedroom-with-wooden-bed-T5pL6ciEn-I"
  },
  {
   "file": "breakfast",
