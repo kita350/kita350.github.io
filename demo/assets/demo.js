@@ -32,10 +32,26 @@
     areni: ["Արենի", "Арени", "Areni"], garni: ["Գառնի", "Гарни", "Garni"], aghveran: ["Աղվերան", "Агверан", "Aghveran"]
   };
 
+  // Необязательные публичные данные лида — только из ссылки, в репозиторий не попадают.
+  // Каждое значение проверяется по строгому шаблону; неподходящее просто игнорируется.
+  function pick(name, re) { var v = (P.get(name) || "").trim(); return re.test(v) ? v : ""; }
+  var hoursRaw = pick("hours", /^\d{1,2}:\d{2}-\d{1,2}:\d{2}$/);
+  var LEAD = {
+    wa: pick("wa", /^\d{8,15}$/),                       // WhatsApp заведения, цифры с кодом страны
+    ig: pick("ig", /^[A-Za-z0-9._]{1,60}$/),            // имя профиля Instagram
+    fb: pick("fb", /^[A-Za-z0-9.]{1,80}$/),             // имя страницы Facebook
+    hours: hoursRaw ? hoursRaw.split("-") : null,       // ежедневно «10:00-23:00»
+    rating: pick("rating", /^[0-5](\.\d)?$/),           // рейтинг Google
+    reviews: pick("reviews", /^\d{1,5}$/)               // число отзывов
+  };
+
   var langParam = (P.get("lang") || "").toLowerCase();
   var D = (window.DEMO = {
     name: clean(P.get("name")),
     cityRaw: clean(P.get("city")),
+    lead: LEAD,
+    // +37494764642 → «+374 94 764 642»
+    phone: function (d) { return d.indexOf("374") === 0 && d.length === 11 ? "+374 " + d.slice(3, 5) + " " + d.slice(5, 8) + " " + d.slice(8) : "+" + d; },
     lang: LANGS.indexOf(langParam) >= 0 ? langParam : "hy",
     dict: null,
     onRender: null,
