@@ -1,6 +1,8 @@
 # Демо-сайты SKIYAR
 
-Статические примеры для продаж: `salon/`, `restaurant/` (+ `restaurant/menu.html` — QR-меню), `hotel/`.
+Статические примеры для продаж: `salon/`, `restaurant/` (+ `restaurant/menu.html` — QR-меню), `hotel/`,
+а также (23.11.2026): `nails/` — ногтевая студия (код салона, фото из `salon/img`), `barber/` — барбершоп (без фото, монограммы мастеров),
+`start/` — одностраничник для пакета Start (пекарня), `reminder/` — как выглядит напоминание в WhatsApp.
 Закрыты от индексации: `<meta name="robots" content="noindex, nofollow">` на каждой странице и `Disallow: /demo/` в `/robots.txt`.
 
 ## Персонализация из ссылки
@@ -34,3 +36,7 @@
 - Фото — Unsplash, бесплатная лицензия Unsplash; список с ссылками на источники — `*/img/credits.json` (и в подвале каждой страницы).
 - QR-код (`restaurant/qr-menu.svg`, `.png`) ведёт на `https://kita350.github.io/demo/restaurant/menu.html`, создан библиотекой segno.
 - Шрифты — Google Fonts (SIL Open Font License), размещены локально в `assets/fonts`: Cormorant Garamond, Jost, Forum, EB Garamond, Geologica, Spectral, Noto Serif Armenian, Noto Sans Armenian. Армянский текст набирается Noto Armenian, не системным шрифтом.
+
+## Новые демо (23.11.2026) — тексты HY на проверку Ани
+
+Армянские строки нового сайта — в `src/text/*.js` (блок `hy`), новых демо — в `demo/start/`, `demo/reminder/`, `demo/nails/app.js`, `demo/barber/app.js`.

@@ -1,0 +1,370 @@
+/* собрано tools/build.mjs — не править руками */
+window.T={"hy":{"_title":"SKIYAR — առցանց ադմինիստրատոր բիզնեսի համար","_desc":"Կայք, առցանց գրանցում և հիշեցումներ WhatsApp-ով ձեր բիզնեսի համար՝ հայերեն, ռուսերեն և անգլերեն։ Գներ, օրինակներ և անվճար օրինակ ձեր անունով։","navPk":"Փաթեթներ","navDemo":"Դեմո","navFaq":"Հարցեր","navCta":"Ստանալ օրինակ","langAria":"Կայքի լեզուն","h1":"Ադմինիստրատոր, որը չի քնում","sub":"Կայք, առցանց գրանցում և հիշեցումներ <span class=nw>WhatsApp-ով</span>՝ երեք լեզվով։ Ամեն ինչ վարում ենք մենք։","cta1":"Ստանալ օրինակ անվճար","cta2":"Դիտել փաթեթները","waHello":"Բարև ձեզ։ Ուզում եմ անվճար օրինակ իմ բիզնեսի անունով։","pilot":"<b>Պիլոտ՝ 5 տեղ</b><span>Միացումն անվճար, առաջին ամսվա վճարը՝ գործարկումից հետո</span>","price":"35 000 ֏ ամսական","shot":"../assets/img/shot-salon-hy.webp","shotAlt":"Liora Beauty սրահի կայքի օրինակը հեռախոսում","nTime":"23:47","nTitle":"Նոր գրանցում կայքից","nBody":"Մատնահարդարում գել-լաքով\nՎաղը, 11:00 · Նարինե","bWho":"Տիկին Ռուզան","bAct":"գրանցվում է կայքում","bSvc":"Մատնահարդարում գել-լաքով","bWhen":"Ուրբաթ, 11:00","bBtn":"Գրանցվել","bDone":"Գրանցված է։ Հիշեցումը կգա <span class=nw>WhatsApp-ով</span> նախորդ օրը։","bNote":"Սրահը փակ է։ Գրանցումը՝ ոչ։","stTitle":"Մեկ գրանցում՝ սկզբից մինչև վերջ","stAria":"Պատմության քայլերը","st1t":"Չորեքշաբթի, 23:47","st1p":"Տիկին Ռուզանը հիշեց մատնահարդարման մասին։ Սրահը փակ է, բոլորը քնած են։","st2t":"Նույն րոպեին","st2p":"Նա անմիջապես ստանում է ավտոպատասխան՝ գրանցման հղումով։ Ոչ ոք չարթնացավ։","st3t":"Մեկ րոպե անց","st3p":"Վարպետին և ժամը նա ընտրում է ինքը՝ ուրբաթ, 11:00։","st4t":"Հինգշաբթի, 09:12","st4p":"Առավոտյան Նարինեն բացում է գրաֆիկը՝ գրանցումն արդեն այնտեղ է։","st5t":"Հինգշաբթի, 18:00","st5p":"WhatsApp-ը հիշեցնում է այցի մասին։ Ռուզանը պատասխանում է՝ «Կգամ»։","st6t":"Ուրբաթ, 11:00","st6p":"Ռուզանը բազկաթոռին է։ Գորը ոչ տետր թերթեց, ոչ էլ որևէ մեկին զանգեց։","stNote":"Շուտով՝ ԱԲ ադմինիստրատոր, որն ինքն է պատասխանում հարցերին Instagram-ում և WhatsApp-ում։ Հիմա՝ պիլոտ։","pChat":"Liora Beauty","pChatSub":"Instagram · հաղորդագրություններ","pMsg1":"Բարև ձեզ, ուրբաթ օրը մատնահարդարման ազատ ժամ կա՞","pAuto":"Ավտոպատասխան","pMsg2":"Բարև ձեզ։ Հիմա փակ ենք, բայց ազատ ժամերը կարող եք տեսնել այստեղ և գրանցվել ինքներդ։","pMsg2Btn":"Գրանցվել առցանց","pBook":"Գրանցում","pSvc":"Մատնահարդարում գել-լաքով","pMaster":"Վարպետ՝ Նարինե","pD1":"Չրք","pD2":"Հնգ","pD3":"Ուրբ","pD4":"Շբթ","pBookBtn":"Գրանցվել","pBookSum":"Ուրբաթ, 27 նոյեմբերի, 11:00 · Նարինե","pC5n":"Մերի","pC5s":"Մատնահարդարում գել-լաքով","pCal":"Նարինե","pCalDay":"Ուրբաթ, 27 նոյեմբերի","pC1n":"Մարինե","pC1s":"Ոտնահարդարում","pC2n":"Տիկին Ռուզան","pC2s":"Մատնահարդարում գել-լաքով","pNew":"Նոր · կայքից, 23:48","pCame":"Եկավ","pC3n":"Ազատ","pC4n":"Անի","pC4s":"Մատնահարդարում","pWaFrom":"Liora Beauty","pWaLabel":"Հիշեցում WhatsApp-ով","pWaRem":"Բարև ձեզ, տիկին Ռուզան։ Հիշեցնում ենք՝ վաղը՝ ուրբաթ, ժամը 11:00-ին, մատնահարդարում Նարինեի մոտ։ Կգա՞ք։","pWaYes":"Այո, կգամ","pWaMove":"Տեղափոխել","pReply":"Այո, կգամ","bnTitle":"Ինչ եք ստանում","bnLangT":"Երեք լեզու","bnLangP":"Սեղմեք ցանկացած տողի վրա՝ այս կայքը կփոխի լեզուն։ Հայերենը՝ հիմնական։ Ռուսերենն ու անգլերենը՝ զբոսաշրջիկների և նոր բնակիչների համար։","bnDayT":"Գրանցում՝ 24 ժամ","bnDayP":"Սրահը բաց է 10:00–21:00։ Կայքը գրանցումներ է ընդունում նաև գիշերը։","bnDaySalon":"Սրահ","bnDayBook":"Գրանցում","bnRemT":"Հիշեցում նախորդ օրը","bnRemLink":"Ինչպես է այն երևում հեռախոսում","bnRemMsg":"Վաղը 11:00-ին սպասում ենք ձեզ։ Կգա՞ք։","bnRemYes":"Այո","bnRemMove":"Տեղափոխել","bnRemP":"Ավտոմատ, WhatsApp-ով։ Հաճախորդը հաստատում կամ տեղափոխում է մեկ սեղմումով։","bnGuarT":"2 ամսում 20-ից քիչ գրանցո՞ւմ։ Երրորդ ամիսն անվճար է։","bnGuarP":"Արդյունքի երաշխիք։ Հաշվում ենք գրանցման համակարգի տվյալներով, եթե հղումը կա Instagram-ում և Google-ում, իսկ ադմինիստրատորը գրանցումներն ընդունում է համակարգով։","bnGuarS":"«Online · Գրանցում» փաթեթի համար։ Մյուս տարբերակների շեմերը՝ փաթեթներում։","bnGuarUnit":"գրանցում 2 ամսում","bnRepT":"Հաշվետվություն ամեն ամիս","bnRepP":"Ամսի 1-ին՝ WhatsApp-ով. քանի գրանցում է եկել, երբ և որտեղից։","bnRepHead":"Liora Beauty · նոյեմբեր","bnRepEx":"օրինակ","bnRep1":"Առցանց գրանցումներ","bnRep2":"Դրանցից 21:00-ից հետո","bnRep3":"Դրանցից Instagram-ից","bnDomT":"12 ամիս հետո կայքը ձերն է","bnDomP":"Դոմենն առաջին օրից գրանցվում է ձեր անունով։ 12 ամիս հետո կայքը կարող եք վերցնել անվճար։","tyTitle":"Ձեր կայքը՝ ձեր անունով","tySub":"Գրեք բիզնեսի անունը, ընտրեք տեսակը և բացեք օրինակը՝ արդեն ձեր անունով։","tyName":"Բիզնեսի անունը","tyPh":"Օրինակ՝ Գոհար սրահ","tyKind":"Բիզնեսի տեսակը","tyKSalon":"Սրահ","tyKRest":"Ռեստորան","tyKHotel":"Հյուրանոց","tyOpen":"Բացել օրինակը","tyWa":"Գրել WhatsApp-ով","tyWaMsg":"Բարև ձեզ։ Տեսա կայքի օրինակը{for}։ Ուզում եմ իմանալ գինը և ժամկետը։","tyFor":" «{name}»-ի համար","tyNote":"Անունը չենք պահում, օրինակը չի հրապարակվում։","tyMore":"Մյուս ոլորտների օրինակները՝ ներքևում։","tyLive":"Ուզո՞ւմ եք փորձել իրական գրանցումը։ Բացեք Liora Beauty-ի կենդանի դեմոն","pvSalon":"Գեղեցկության սրահ","pvRest":"Ռեստորան","pvHotel":"Հյուրանոց","pvSalonBtn":"Գրանցվել առցանց","pvRestBtn":"Ամրագրել սեղան","pvHotelBtn":"Ամրագրել համար","pvSalonNo":"Ձեր սրահը","pvRestNo":"Ձեր ռեստորանը","pvHotelNo":"Ձեր հյուրանոցը","inTitle":"Ձեր ոլորտի համար","inSub":"Նույն Online փաթեթը՝ ձեր ոլորտի օրինակով և մի քանի գործառույթով։","inAria":"Ոլորտներ","inPer":"ամսական","inSetup":"միացում","inAi":"ԱԲ ադմինիստրատորով (պիլոտ)՝ {p} ֏ ամսական, միացում՝ {f} ֏","inPilot":"Պիլոտի առաջին 5 հաճախորդների համար միացումն անվճար է։","inTerm":"Նվազագույնը 12 ամիս։ Տարեկան վճարելիս՝ −15%։","inGuar":"Երաշխիք՝ {n}","inDemo":"Դիտել օրինակը","inMore":"Նաև՝","inBarber":"բարբերշոփ","inNails":"եղունգների ստուդիա","inLive":"Կենդանի դեմո՝ իրական գրանցումով","inMenu":"QR-ճաշացանկ","inAsk":"Ստանալ օրինակ 1 օրում","inAskMsg":"Բարև ձեզ։ Ուզում եմ «{v}» փաթեթի օրինակ իմ բիզնեսի համար։","inNoDemo":"Պատրաստի օրինակ դեռ չկա. ձեր անունով կպատրաստենք 1 օրում, անվճար։","inMock":"Նկարազարդում","in1":"Գրանցում","in1w":"Սրահներ, վարսավիրանոցներ, մատնահարդարում, կոսմետոլոգիա, կլինիկաներ, ավտոսերվիսներ","in1f":"Վարպետներ, ծառայություններ և գներ|Գրանցում ժամով՝ նաև գիշերը|Հիշեցում WhatsApp-ով նախորդ օրը","in1g":"եթե 2 ամսում համակարգով եկել է 20-ից քիչ առցանց գրանցում, 3-րդ ամիսն անվճար է","in2":"Ամրագրում","in2w":"Հյուրատներ, հյուրանոցներ, տաղավարներ, բաղնիքներ, ավտոմեքենաների վարձույթ","in2f":"Համարներ, լուսանկարներ և գներ|Ազատ ամսաթվերի ընտրություն|Ուղիղ ամրագրում՝ առանց Booking-ի միջնորդավճարի","in2g":"եթե 2 ամսում համակարգով եկել է 5-ից քիչ ուղիղ ամրագրում, 3-րդ ամիսն անվճար է","in3":"Ճաշացանկ","in3w":"Ռեստորաններ և սրճարաններ","in3f":"Ճաշացանկ երեք լեզվով|QR-ճաշացանկ սեղանների համար|Սեղանի ամրագրում WhatsApp-ով","in3g":"եթե 2 ամսում համակարգով եկել է 15-ից քիչ սեղանի ամրագրում կամ պատվեր, 3-րդ ամիսն անվճար է","in3x":"Կա նաև միանվագ տարբերակ՝ 120 000 ֏, առանց բաժանորդագրության։","in4":"Հայտեր","in4w":"Վերանորոգում, կահույք, արևային վահանակներ, մաքրում","in4f":"Ծառայություններ և աշխատանքների լուսանկարներ|Մոտավոր գնի հաշվիչ|Հայտը գալիս է WhatsApp-ին","in4g":"եթե 2 ամսում համակարգով եկել է 10-ից քիչ հայտ, 3-րդ ամիսն անվճար է","in5":"Խմբեր","in5w":"Դպրոցներ, խմբակներ, ֆիթնես, պարեր","in5f":"Խմբեր և դասացուցակ|Գրանցում փորձնական դասի|Հիշեցում դասից առաջ","in5g":"եթե 2 ամսում համակարգով եկել է 10-ից քիչ գրանցում փորձնական դասի, 3-րդ ամիսն անվճար է","mk4h":"Գնի հաշվիչ","mk4a":"Ծառայություն","mk4av":"Բնակարանի վերանորոգում","mk4b":"Մակերես","mk4c":"Մոտավոր գինը","mk4d":"Ուղարկել հայտը","mk5h":"Դասացուցակ","mk5a":"Երկ, Չրք","mk5b":"Երք, Հնգ","mk5c":"Շաբաթ","mk5k1":"Երեխաներ 7–10","mk5k2":"Սկսնակներ","mk5k3":"Մեծահասակներ","mk5d":"Գրանցվել փորձնական դասի","caTitle":"Որքա՞ն են արժենում դատարկ աթոռները","caSub":"Շարժեք սահիչները՝ ձեր թվերով։","caB":"Գրանցումներ շաբաթական","caN":"Չեկածներ շաբաթական","caC":"Միջին չեկ","caPayK":"Փաթեթն իրեն արդարացնում է, եթե հիշեցումները ամսական վերադարձնեն","caVisits":"այց","caVisit":"այց","caLoss":"Չեկածների պատճառով ամսական կորցնում եք մինչև {x}","caFormula":"{n} չեկած × {c} × 4,3 շաբաթ, ձեր գրանցումների {p}%-ը","caLow":"Չեկածները քիչ են՝ գրանցումների {p}%-ը։ Ձեզ համար ավելի կարևոր են գիշերային և հանգստյան օրերի գրանցումները։","caZero":"Չեկածներ չկա՞ն։ Հիանալի է։ Այդ դեպքում փաթեթը ձեզ պետք է գիշերային գրանցումների համար։","caPkg":"Փաթեթ՝ 35 000 ֏ ամսական","caNote":"Հիշեցումները նվազեցնում են չեկածների թիվը, բայց ոչ մինչև զրո, և որոշ ազատված ժամեր զբաղեցնում են ուրիշները։ Հաշվարկը մոտավոր է։","caCta":"Ուզում եմ պիլոտ՝ միացումն անվճար","caWa":"Բարև ձեզ։ Հաշվեցի չեկածները ձեր կայքում։ Ուզում եմ միանալ պիլոտին։","pkTitle":"Փաթեթներ և գներ","pkSub":"Առանց թաքնված վճարների։ Բաժանորդագրությունը՝ 12 ամսով։","pkMain":"Հիմնական","pkHelpT":"Ո՞րն ընտրել","pkHelp":"Start՝ եթե պետք է, որ ձեզ գտնեն Google-ում։ Online՝ եթե ուզում եք, որ հաճախորդները գրանցվեն առանց զանգի։ Online AI-ն՝ միայն պիլոտ։","pkTerm":"12 ամսվա պայմանագիր","pkFirst":"առաջին տարին՝ միացումով {x}","pkNoSetup":"առանց միացման վճարի","pkYes":"Այո","pkNo":"Ոչ","pkMonth":"Ամսական","pkYear":"Տարեկան","pkSave":"−15%","pkBillAria":"Վճարման եղանակը","pkStartT":"Որպեսզի ձեզ գտնեն","pkStartDemo":"Մեկ էջանոց կայքի օրինակ","pkOnT":"Որպեսզի գրանցվեն ինքնուրույն","pkAiT":"Որպեսզի ոչ մի նամակ անպատասխան չմնա","pkOnce":"միանվագ","pkPerM":"ամսական","pkPerY":"տարեկան","pkEqM":"ամսական՝ {x}","pkSetup":"միացում՝ {x}","pkSetupFree":"միացում՝ {x}, պիլոտում՝ անվճար","pkPilotSoon":"Պիլոտ, շուտով","pkAiNote":"ԱԲ ադմինիստրատորը դեռ պատրաստ արտադրանք չէ. վաճառում ենք որպես պիլոտ։ Սկզբում այն աշխատում է Telegram-ում, WhatsApp-ը և Instagram-ը՝ ավելի ուշ։ Առանց նոր կայքի՝ AI Admin, 40 000 ֏ ամսական, նվազագույնը 6 ամիս։","pkStartPay":"վճարումը՝ հանձնելուց հետո","r6a":"1-ին տարին ներառված է","r7a":"6 000 ֏/ժամ","r9c":"Telegram","pkPick":"Ընտրել","pkAsk":"Իմանալ պիլոտի մասին","pkWaStart":"Բարև ձեզ։ Ինձ հետաքրքրում է SKIYAR Start փաթեթը։","pkWaOn":"Բարև ձեզ։ Ինձ հետաքրքրում է SKIYAR Online փաթեթը։","pkWaAi":"Բարև ձեզ։ Ուզում եմ իմանալ Online AI պիլոտի մասին։","pkMin":"Բաժանորդագրությունները՝ նվազագույնը 12 ամիս։","pkMore":"Բոլոր փաթեթները, միանվագ կայքերը և հավելումները","r1":"Google Maps քարտի ուղղում՝ հղում, ժամեր, լուսանկարներ","r2":"Մեկ էջանոց կայք՝ հայերեն, ռուսերեն, անգլերեն","r3":"Ամբողջական կայք՝ ծառայություններ, գներ, վարպետներ, կարծիքներ","r4":"Առցանց գրանցում","r4s":"WhatsApp կոճակ","r5":"Հիշեցումներ հաճախորդներին WhatsApp-ով","r6":"Դոմեն (ձեր անունով), հոսթինգ, պաշտպանված կապ","r7":"Փոփոխություններ և գների թարմացում","r7v":"մինչև 2 ժ/ամիս","r8":"Հաշվետվություն ամեն ամիս","r9":"ԱԲ-ն պատասխանում է հաճախորդներին 24/7 (Instagram-ը և WhatsApp-ը՝ ավելի ուշ)","r10":"Գործարկում","r10a":"3 օր","r10b":"7–10 օր","r10c":"10–14 օր","gTitle":"Արդյունքի երաշխիք","gText":"Եթե առաջին 2 ամսում համակարգով եկել է 20-ից քիչ առցանց գրանցում, երրորդ ամիսն անվճար է։","gCond":"Պայման՝ գրանցման հղումը կա Instagram-ում և Google-ում, ադմինիստրատորը գրանցումներն ընդունում է համակարգով։ Հաշվում ենք համակարգի տվյալներով, դուք դրանք տեսնում եք ամսական հաշվետվությունում։","pTitle":"Պիլոտ Online փաթեթի համար","pLeft":"Զբաղված է {n} տեղ 5-ից","p1":"Միացումն անվճար է","p2":"Առաջին ամսվա վճարը՝ գործարկումից հետո, երբ ամեն ինչ տեսել եք աշխատանքում","p3":"Փոխարենը՝ կարծիք, թույլտվություն ցույց տալու աշխատանքը և 2 ծանոթ սեփականատիրոջ կոնտակտ","pCta":"Զբաղեցնել տեղ պիլոտում","pWa":"Բարև ձեզ։ Ուզում եմ միանալ SKIYAR-ի պիլոտին։","wTitle":"Ազնիվ կանոններ","w1":"Դոմենը գրանցվում է ձեր անունով։","w2":"Օրինակը դուր չեկա՞վ՝ ոչինչ չեք վճարում։","w3":"12 ամիս հետո կայքը կարող եք վերցնել անվճար։","hwTitle":"Ինչպես ենք աշխատում","hwSub":"Առաջին հաղորդագրությունից մինչև գործարկում՝ մոտ երկու շաբաթ։","s1t":"Գրում եք մեզ","s1p":"Կամ պատասխանում եք մեր հաղորդագրությանը։","s1d":"օր 0","s2t":"Անվճար օրինակ","s2p":"Կայքի դեմո՝ ձեր բիզնեսի անունով, երեք լեզվով։","s2d":"օր 1","s3t":"Զանգ","s3p":"WhatsApp, Telegram կամ Google Meet։ Դիտում ենք օրինակը և հաշվում, թե որքան եք կորցնում չեկածների և գիշերային նամակների պատճառով։","s3d":"օր 1–2, 15 րոպե","s4t":"Պայմանագիր և վճարում","s4p":"Պայմանագիր 12 ամսով։ Միացում (կամ պիլոտ՝ առանց վճարի), հաշիվ ԱՁ-ի անունով։","s4d":"օր 2–3","s5t":"Գործարկում","s5p":"Դուք ուղարկում եք լուսանկարներ, գներ, վարպետների անունները։ Մնացածը մենք ենք անում։","s5d":"7–10 օր","s6t":"Ուղեկցում","s6p":"Հաշվետվություն գրանցումների մասին և փոփոխություններ ըստ պահանջի։","s6d":"ամեն ամիս","fqTitle":"Ինչ են մեզ հարցնում սեփականատերերը","q1":"Ինստագրամ ունեմ, կայք պետք չէ։","a1":"Կայքն այստեղ գլխավորը չէ։ Գլխավորն այն է, որ հաճախորդը գրանցվի ինքը, ժամը 23:00-ին, և չսպասի պատասխանի մինչև առավոտ։ Instagram-ը մնում է, գրանցման կոճակը դրվում է հենց պրոֆիլում։","q2":"Թանկ է։","a2":"Հաշվենք միասին՝ վերևի հաշվիչով։ Սովորաբար ամսական մի քանի վերադարձված այցը ծածկում է ամսավճարը։ Պիլոտում առաջին ամիսը վճարում եք գործարկումից հետո։","q3":"Արդեն ունեմ DIKIDI կամ Altegio։","a3":"Լավ է, աշխատում ենք նրանց հետ. միացնում ենք կայքին և Instagram-ին, կարգավորում ենք հիշեցումները հայերեն։ Ծրագիրը մնում է։","q4":"Ինչո՞ւ բաժանորդագրություն։","a4":"Որովհետև ամեն ամիս պատասխանատու ենք արդյունքի համար, ոչ թե հանձնում ենք կայքը և անհետանում։ Եթե բաժանորդագրություն չեք սիրում, կա միանվագ կայք՝ 160 000–200 000 ֏, 3 ամիս ուղեկցումը՝ նվեր, հետո՝ 20 000 ֏ ամսական կամ 204 000 ֏ տարեկան։","q5":"Ի՞նչ կլինի, եթե ուզենամ դադարեցնել։","a5":"Նվազագույն ժամկետը 12 ամիս է։ Դրանից հետո կարող եք դադարեցնել ցանկացած պահի՝ զգուշացնելով մեկ ամիս առաջ, և կայքը վերցնել անվճար։ Մինչև 12 ամիսը կայքը կարելի է հետ գնել մնացորդով՝ 160 000 ֏ − (վճարված ամիսներ × 10 000 ֏)։ Օրինակ՝ 6 ամիս հետո՝ 100 000 ֏։","q6":"Ի՞նչ է մտնում «մինչև 2 ժամ փոփոխություններ»-ի մեջ։","a6":"Գների, ծառայությունների, լուսանկարների և տեքստերի թարմացում։ Եթե պետք է ավելին, գինը կասենք նախքան աշխատանքը։","q7":"ԱԲ ադմինիստրատորն արդեն աշխատո՞ւմ է։","a7":"Դեռ ոչ։ Այն պիլոտի փուլում է, և չենք վաճառում այն որպես պատրաստի արտադրանք։ Մինչ այդ գիշերը հաճախորդը ստանում է ավտոպատասխան՝ գրանցման հղումով։","q8":"Ովքե՞ր եք դուք։","a8":"SKIYAR՝ անհատ ձեռնարկատեր Հայաստանում, փոքր թիմ։ Աշխատանքների օրինակները այս կայքում են, իսկ պիլոտում առաջին ամիսը վճարում եք միայն գործարկումից հետո. ռիսկը մեզ վրա է։","fnTitle":"Ձեր կայքը կարող է պատրաստ լինել վաղը՝ որպես օրինակ","fnSub":"Գրեք մեզ. մեկ օրում կպատրաստենք օրինակ ձեր անունով։ Օրինակն անվճար է և ոչնչի չի պարտավորեցնում։","fnBtn":"Ստանալ օրինակ WhatsApp-ով","fnPhone":"Հեռախոս և WhatsApp","legal":"SKIYAR — ԱՁ Սկինո Նիկիտա Վլադիմիրովիչ · ՀՎՀՀ 20453381 · Կոտայք, Հայաստան","privacy":"Գաղտնիության քաղաքականություն","fab":"Գրել WhatsApp-ով"},"ru":{"_title":"SKIYAR — онлайн-администратор для бизнеса","_desc":"Сайт, онлайн-запись и напоминания в WhatsApp для вашего бизнеса на армянском, русском и английском. Цены, примеры и бесплатный пример с вашим названием.","navPk":"Пакеты","navDemo":"Демо","navFaq":"Вопросы","navCta":"Получить пример","langAria":"Язык сайта","h1":"Администратор, который не спит","sub":"Сайт, онлайн-запись и напоминания в WhatsApp на трёх языках. Всё ведём мы.","cta1":"Получить пример бесплатно","cta2":"Посмотреть пакеты","waHello":"Здравствуйте! Хочу бесплатный пример с названием моего бизнеса.","pilot":"<b>Пилот: 5 мест</b><span>Подключение бесплатно, первый месяц оплачиваете после запуска</span>","price":"35 000 ֏ в месяц","shot":"../assets/img/shot-salon-ru.webp","shotAlt":"Пример сайта салона Liora Beauty на телефоне","nTime":"23:47","nTitle":"Новая запись с сайта","nBody":"Маникюр с гель-лаком\nЗавтра, 11:00 · Нарине","bWho":"Тикин Рузан","bAct":"записывается на сайте","bSvc":"Маникюр с гель-лаком","bWhen":"Пятница, 11:00","bBtn":"Записаться","bDone":"Записано. Напоминание придёт в WhatsApp накануне.","bNote":"Салон закрыт. Запись — нет.","stTitle":"Одна запись от начала до конца","stAria":"Шаги истории","st1t":"Среда, 23:47","st1p":"Тикин Рузан вспомнила про маникюр. Салон закрыт, все спят.","st2t":"В ту же минуту","st2p":"Ей сразу приходит автоответ со ссылкой на запись. Никто не проснулся.","st3t":"Через минуту","st3p":"Мастера и время она выбирает сама: пятница, 11:00.","st4t":"Четверг, 09:12","st4p":"Утром Нарине открывает расписание — запись уже там.","st5t":"Четверг, 18:00","st5p":"WhatsApp напоминает о визите. Рузан отвечает: «Приду».","st6t":"Пятница, 11:00","st6p":"Рузан в кресле. Гор не листал тетрадку и никому не звонил.","stNote":"Скоро: ИИ-администратор, который сам отвечает на вопросы в Instagram и WhatsApp. Сейчас это пилот.","pChat":"Liora Beauty","pChatSub":"Instagram · сообщения","pMsg1":"Здравствуйте, на маникюр в пятницу есть время?","pAuto":"Автоответ","pMsg2":"Здравствуйте! Сейчас мы закрыты, но свободное время видно здесь — можно записаться самостоятельно.","pMsg2Btn":"Записаться онлайн","pBook":"Запись","pSvc":"Маникюр с гель-лаком","pMaster":"Мастер: Нарине","pD1":"Ср","pD2":"Чт","pD3":"Пт","pD4":"Сб","pBookBtn":"Записаться","pBookSum":"Пятница, 27 ноября, 11:00 · Нарине","pC5n":"Мери","pC5s":"Маникюр с гель-лаком","pCal":"Нарине","pCalDay":"Пятница, 27 ноября","pC1n":"Марине","pC1s":"Педикюр","pC2n":"Тикин Рузан","pC2s":"Маникюр с гель-лаком","pNew":"Новая · с сайта, 23:48","pCame":"Пришла","pC3n":"Свободно","pC4n":"Ани","pC4s":"Маникюр","pWaFrom":"Liora Beauty","pWaLabel":"Напоминание в WhatsApp","pWaRem":"Здравствуйте, тикин Рузан! Напоминаем: завтра, в пятницу, в 11:00 маникюр у Нарине. Придёте?","pWaYes":"Да, приду","pWaMove":"Перенести","pReply":"Да, приду","bnTitle":"Что вы получаете","bnLangT":"Три языка","bnLangP":"Нажмите на любую строку — этот сайт сменит язык. Армянский — основной. Русский и английский — для туристов и тех, кто недавно переехал.","bnDayT":"Запись 24 часа","bnDayP":"Салон открыт 10:00–21:00. Сайт принимает записи и ночью.","bnDaySalon":"Салон","bnDayBook":"Запись","bnRemT":"Напоминание накануне","bnRemLink":"Как это выглядит в телефоне","bnRemMsg":"Ждём вас завтра в 11:00. Придёте?","bnRemYes":"Да","bnRemMove":"Перенести","bnRemP":"Автоматически, в WhatsApp. Клиент подтверждает или переносит в одно касание.","bnGuarT":"Меньше 20 записей за 2 месяца? Третий месяц бесплатно.","bnGuarP":"Гарантия результата. Считаем по данным системы записи, если ссылка стоит в Instagram и Google, а администратор принимает записи через систему.","bnGuarS":"Для «Online · Запись». Пороги других вариантов — в пакетах.","bnGuarUnit":"записей за 2 месяца","bnRepT":"Отчёт каждый месяц","bnRepP":"1-го числа в WhatsApp: сколько записей пришло, когда и откуда.","bnRepHead":"Liora Beauty · ноябрь","bnRepEx":"пример","bnRep1":"Онлайн-записей","bnRep2":"Из них после 21:00","bnRep3":"Из них из Instagram","bnDomT":"Через 12 месяцев сайт ваш","bnDomP":"Домен с первого дня оформлен на вас. После 12 месяцев сайт можно забрать бесплатно.","tyTitle":"Ваш сайт — с вашим названием","tySub":"Напишите название, выберите тип бизнеса и откройте пример — уже с вашим названием.","tyName":"Название бизнеса","tyPh":"Например, Салон Гоар","tyKind":"Тип бизнеса","tyKSalon":"Салон","tyKRest":"Ресторан","tyKHotel":"Гостиница","tyOpen":"Открыть пример","tyWa":"Написать в WhatsApp","tyWaMsg":"Здравствуйте! Посмотрел(а) пример сайта{for}. Хочу узнать цену и сроки.","tyFor":" для «{name}»","tyNote":"Мы не сохраняем название, пример не публикуется.","tyMore":"Примеры для других отраслей — ниже.","tyLive":"Хотите попробовать настоящую запись? Откройте живое демо Liora Beauty","pvSalon":"Салон красоты","pvRest":"Ресторан","pvHotel":"Гостиница","pvSalonBtn":"Записаться онлайн","pvRestBtn":"Забронировать стол","pvHotelBtn":"Забронировать номер","pvSalonNo":"Ваш салон","pvRestNo":"Ваш ресторан","pvHotelNo":"Ваша гостиница","inTitle":"Под вашу отрасль","inSub":"Один пакет Online — демо вашей отрасли и пара нужных функций.","inAria":"Отрасли","inPer":"в месяц","inSetup":"подключение","inAi":"С ИИ-администратором (пилот) — {p} ֏ в месяц, подключение {f} ֏","inPilot":"Первым 5 клиентам пилота подключение бесплатно.","inTerm":"Минимум 12 месяцев. При оплате за год — −15%.","inGuar":"Гарантия: если за 2 месяца через систему пришло меньше, чем {n}, 3-й месяц бесплатно","inDemo":"Посмотреть пример","inMore":"Ещё примеры:","inBarber":"барбершоп","inNails":"ногтевая студия","inLive":"Живое демо с настоящей записью","inMenu":"QR-меню","inAsk":"Получить пример за 1 день","inAskMsg":"Здравствуйте! Хочу пример пакета «{v}» для моего бизнеса.","inNoDemo":"Готового демо пока нет — пример с вашим названием сделаем за 1 день, бесплатно.","inMock":"Иллюстрация","in1":"Запись","in1w":"Салоны, барбершопы, ногти, косметология, клиники, автосервисы","in1f":"Мастера, услуги и цены|Запись на время — и ночью тоже|Напоминание в WhatsApp накануне","in1g":"20 онлайн-записей","in2":"Бронь","in2w":"Гестхаусы, гостиницы, беседки, бани, прокат авто","in2f":"Номера, фото и цены|Выбор свободных дат|Прямая бронь без комиссии Booking","in2g":"5 прямых броней","in3":"Меню","in3w":"Рестораны и кафе","in3f":"Меню на трёх языках|QR-меню на столы|Бронь стола в WhatsApp","in3g":"15 броней столов или заказов","in3x":"Есть и разовый вариант: 120 000 ֏ без подписки.","in4":"Заявки","in4w":"Ремонт, мебель, солнечные панели, клининг","in4f":"Услуги и фото работ|Калькулятор примерной цены|Заявка приходит в WhatsApp","in4g":"10 заявок","in5":"Группы","in5w":"Школы, кружки, фитнес, танцы","in5f":"Группы и расписание|Запись на пробное занятие|Напоминание перед занятием","in5g":"10 записей на пробное","mk4h":"Калькулятор цены","mk4a":"Услуга","mk4av":"Ремонт квартиры","mk4b":"Площадь","mk4c":"Примерная цена","mk4d":"Отправить заявку","mk5h":"Расписание","mk5a":"Пн, Ср","mk5b":"Вт, Чт","mk5c":"Суббота","mk5k1":"Дети 7–10","mk5k2":"Начинающие","mk5k3":"Взрослые","mk5d":"Записаться на пробное","caTitle":"Сколько стоят пустые кресла","caSub":"Подвигайте ползунки — с вашими цифрами.","caB":"Записей в неделю","caN":"Неявок в неделю","caC":"Средний чек","caPayK":"Пакет окупается, если напоминания вернут в месяц","caLoss":"На неявках вы теряете до {x} в месяц","caFormula":"{n} × {c} × 4,3 недели — это {p}% ваших записей","caLow":"Неявок мало — {p}% записей. Вам важнее записи ночью и в выходные.","caZero":"Неявок нет? Отлично. Тогда пакет нужен ради ночных записей.","caPkg":"Пакет: 35 000 ֏ в месяц","caNote":"Напоминания сокращают неявки, но не до нуля, а часть освободившихся окон занимают другие клиенты. Расчёт примерный.","caCta":"Хочу в пилот: подключение бесплатно","caWa":"Здравствуйте! Посчитал(а) неявки у вас на сайте. Хочу в пилот.","pkTitle":"Пакеты и цены","pkSub":"Без скрытых платежей. Подписка — на 12 месяцев.","pkMain":"Основной","pkHelpT":"Какой выбрать","pkHelp":"Start — если нужно, чтобы вас находили в Google. Online — если хотите, чтобы клиенты записывались без звонка. Online AI — пока только пилот.","pkTerm":"договор на 12 месяцев","pkFirst":"первый год с подключением — {x}","pkNoSetup":"без платы за подключение","pkYes":"Да","pkNo":"Нет","pkMonth":"Ежемесячно","pkYear":"За год","pkSave":"−15%","pkBillAria":"Способ оплаты","pkStartT":"Чтобы вас нашли","pkStartDemo":"Пример одностраничника","pkOnT":"Чтобы записывались сами","pkAiT":"Чтобы ни одно сообщение не осталось без ответа","pkOnce":"разово","pkPerM":"в месяц","pkPerY":"за год","pkEqM":"в месяц выходит {x}","pkSetup":"подключение {x}","pkSetupFree":"подключение {x}, в пилоте бесплатно","pkPilotSoon":"Пилот, скоро","pkAiNote":"ИИ-администратор ещё не готовый продукт — продаём как пилот. Сначала он работает в Telegram, WhatsApp и Instagram — позже. Без нового сайта — AI Admin, 40 000 ֏ в месяц, минимум 6 месяцев.","pkStartPay":"оплата после сдачи","r6a":"1-й год включён","r7a":"6 000 ֏/ч","r9c":"Telegram","pkPick":"Выбрать","pkAsk":"Узнать о пилоте","pkWaStart":"Здравствуйте! Интересует пакет SKIYAR Start.","pkWaOn":"Здравствуйте! Интересует пакет SKIYAR Online.","pkWaAi":"Здравствуйте! Хочу узнать о пилоте Online AI.","pkMin":"Подписки — минимум на 12 месяцев.","pkMore":"Все пакеты, разовые сайты и дополнения","r1":"Исправим карточку Google Maps: ссылка, часы, фото","r2":"Одностраничный сайт на армянском, русском, английском","r3":"Полный сайт: услуги, цены, мастера, отзывы","r4":"Онлайн-запись","r4s":"кнопка WhatsApp","r5":"Напоминания клиентам в WhatsApp","r6":"Домен (на вас), хостинг, защищённое соединение","r7":"Правки и обновление цен","r7v":"до 2 ч в месяц","r8":"Отчёт каждый месяц","r9":"ИИ отвечает клиентам 24/7 (Instagram и WhatsApp — позже)","r10":"Запуск","r10a":"3 дня","r10b":"7–10 дней","r10c":"10–14 дней","gTitle":"Гарантия результата","gText":"Если за первые 2 месяца через систему пришло меньше 20 онлайн-записей, третий месяц бесплатно.","gCond":"Условие: ссылка на запись стоит в Instagram и в Google, а администратор принимает записи через систему. Считаем по данным системы записи — вы видите их в ежемесячном отчёте.","pTitle":"Пилот для пакета Online","pLeft":"Занято {n} из 5 мест","p1":"Подключение бесплатно","p2":"Первый месяц — оплата после запуска, когда вы увидели всё в работе","p3":"Взамен — отзыв, разрешение показать работу и 2 контакта знакомых владельцев","pCta":"Занять место в пилоте","pWa":"Здравствуйте! Хочу в пилот SKIYAR.","wTitle":"Честные правила","w1":"Домен оформляется на вас.","w2":"Не понравился пример — ничего не платите.","w3":"После 12 месяцев сайт можно забрать бесплатно.","hwTitle":"Как мы работаем","hwSub":"От первого сообщения до запуска — около двух недель.","s1t":"Пишете нам","s1p":"Или отвечаете на наше сообщение.","s1d":"день 0","s2t":"Бесплатный пример","s2p":"Демо сайта с названием вашего бизнеса на трёх языках.","s2d":"день 1","s3t":"Созвон","s3p":"WhatsApp, Telegram или Google Meet. Смотрим пример и считаем, сколько вы теряете на неявках и ночных сообщениях.","s3d":"день 1–2, 15 минут","s4t":"Договор и оплата","s4p":"Договор на 12 месяцев. Подключение (или пилот без оплаты), счёт на ИП.","s4d":"день 2–3","s5t":"Запуск","s5p":"Вы присылаете фото, цены, мастеров. Остальное делаем мы.","s5d":"7–10 дней","s6t":"Сопровождение","s6p":"Отчёт о записях и правки по запросу.","s6d":"каждый месяц","fqTitle":"Что нас спрашивают владельцы","q1":"У меня есть Instagram, сайт не нужен.","a1":"Сайт здесь не главное. Главное — чтобы клиент записался сам в 23:00, а не ждал ответа до утра. Instagram остаётся, кнопка записи ставится прямо в профиль.","q2":"Дорого.","a2":"Посчитайте в калькуляторе выше: обычно пара вернувшихся визитов в месяц окупает абонентскую плату. В пилоте первый месяц вы платите после запуска.","q3":"У меня уже есть DIKIDI или Altegio.","a3":"Отлично, мы с ними работаем: подключаем к сайту и Instagram, настраиваем напоминания на армянском. Программа остаётся.","q4":"Почему подписка?","a4":"Потому что мы каждый месяц отвечаем за результат, а не сдаём сайт и пропадаем. Не любите подписки — есть разовый сайт: 160 000–200 000 ֏, 3 месяца сопровождения в подарок, дальше — 20 000 ֏ в месяц или 204 000 ֏ за год.","q5":"Что, если я захочу уйти?","a5":"Минимальный срок — 12 месяцев. После него можно отказаться в любой момент, предупредив за месяц, и забрать сайт бесплатно. До 12 месяцев сайт можно выкупить по остатку: 160 000 ֏ − (оплаченные месяцы × 10 000 ֏). Например, после 6 месяцев — 100 000 ֏.","q6":"Что входит в «правки до 2 часов в месяц»?","a6":"Обновление цен, услуг, фото и текстов. Если нужно больше — назовём цену до начала работы.","q7":"ИИ-администратор уже работает?","a7":"Пока нет. Он на стадии пилота, и мы не продаём его как готовый продукт. А ночью клиент сейчас получает автоответ со ссылкой на запись.","q8":"Кто вы вообще?","a8":"SKIYAR — индивидуальный предприниматель в Армении, небольшая команда. Примеры работ — на этом сайте, а в пилоте первый месяц вы оплачиваете только после запуска: риск на нас.","fnTitle":"Пример вашего сайта может быть готов завтра","fnSub":"Напишите нам — за день сделаем пример с вашим названием. Пример бесплатный и ни к чему не обязывает.","fnBtn":"Получить пример в WhatsApp","fnPhone":"Телефон и WhatsApp","legal":"SKIYAR — ИП Скино Никита Владимирович · ИНН 20453381 · Котайк, Армения","privacy":"Политика конфиденциальности","fab":"Написать в WhatsApp"},"en":{"_title":"SKIYAR — an online front desk for your business","_desc":"Website, online booking and WhatsApp reminders for your business in Armenian, Russian and English. Prices, samples and a free sample with your name.","navPk":"Packages","navDemo":"Demos","navFaq":"FAQ","navCta":"Get a sample","langAria":"Site language","h1":"The front desk that never sleeps","sub":"Website, online booking and WhatsApp reminders in three languages. We run all of it.","cta1":"Get a free sample","cta2":"See packages","waHello":"Hello! I'd like a free sample with my business name.","pilot":"<b>Pilot: 5 places</b><span>Free setup, first month paid after launch</span>","price":"֏35,000 a month","shot":"../assets/img/shot-salon-en.webp","shotAlt":"Sample website of Liora Beauty salon on a phone","nTime":"23:47","nTitle":"New booking from the site","nBody":"Gel manicure\nTomorrow, 11:00 · Narine","bWho":"Mrs Ruzan","bAct":"is booking on the site","bSvc":"Gel manicure","bWhen":"Friday, 11:00","bBtn":"Book","bDone":"Booked. A WhatsApp reminder comes the day before.","bNote":"The salon is closed. Booking isn’t.","stTitle":"One booking, start to finish","stAria":"Story steps","st1t":"Wednesday, 23:47","st1p":"Mrs Ruzan remembers she needs a manicure. The salon is closed, everyone’s asleep.","st2t":"The same minute","st2p":"An auto-reply with the booking link arrives right away. Nobody woke up.","st3t":"A minute later","st3p":"She picks the master and the time herself: Friday, 11:00.","st4t":"Thursday, 09:12","st4p":"In the morning Narine opens her schedule. The booking is already there.","st5t":"Thursday, 18:00","st5p":"WhatsApp reminds her about the visit. Ruzan replies: “I’ll be there.”","st6t":"Friday, 11:00","st6p":"Ruzan is in the chair. Gor didn’t open a notebook or make a single call.","stNote":"Coming soon: an AI front desk that answers questions in Instagram and WhatsApp by itself. Now in pilot.","pChat":"Liora Beauty","pChatSub":"Instagram · messages","pMsg1":"Hi, any time for a manicure on Friday?","pAuto":"Auto-reply","pMsg2":"Hello! We’re closed right now, but you can see free times here and book yourself.","pMsg2Btn":"Book online","pBook":"Booking","pSvc":"Gel manicure","pMaster":"Master: Narine","pD1":"Wed","pD2":"Thu","pD3":"Fri","pD4":"Sat","pBookBtn":"Book","pBookSum":"Friday, 27 November, 11:00 · Narine","pC5n":"Meri","pC5s":"Gel manicure","pCal":"Narine","pCalDay":"Friday, 27 November","pC1n":"Marine","pC1s":"Pedicure","pC2n":"Mrs Ruzan","pC2s":"Gel manicure","pNew":"New · from the site, 23:48","pCame":"Arrived","pC3n":"Free","pC4n":"Ani","pC4s":"Manicure","pWaFrom":"Liora Beauty","pWaLabel":"WhatsApp reminder","pWaRem":"Hello Mrs Ruzan! A reminder: tomorrow, Friday at 11:00, manicure with Narine. Will you come?","pWaYes":"Yes, I’ll be there","pWaMove":"Reschedule","pReply":"Yes, I’ll be there","bnTitle":"What you get","bnLangT":"Three languages","bnLangP":"Tap any line and this site switches language. Armenian first. Russian and English for tourists and people who have just moved here.","bnDayT":"Booking around the clock","bnDayP":"The salon is open 10:00–21:00. The site takes bookings at night too.","bnDaySalon":"Salon","bnDayBook":"Booking","bnRemT":"A reminder the day before","bnRemLink":"See it on a phone","bnRemMsg":"See you tomorrow at 11:00. Will you come?","bnRemYes":"Yes","bnRemMove":"Reschedule","bnRemP":"Automatic, on WhatsApp. The client confirms or reschedules in one tap.","bnGuarT":"Fewer than 20 bookings in 2 months? Month 3 is free.","bnGuarP":"Our result guarantee. We count with the booking system’s data, provided the link is in your Instagram and Google profile and bookings are taken through the system.","bnGuarS":"For “Online · Booking”. Thresholds for the other options are in Packages.","bnGuarUnit":"bookings in 2 months","bnRepT":"A report every month","bnRepP":"On the 1st, on WhatsApp: how many bookings came in, when and from where.","bnRepHead":"Liora Beauty · November","bnRepEx":"example","bnRep1":"Online bookings","bnRep2":"Of them after 21:00","bnRep3":"Of them from Instagram","bnDomT":"After 12 months the site is yours","bnDomP":"The domain is in your name from day one. After 12 months you can take the site with you for free.","tyTitle":"Your site, with your name on it","tySub":"Type your business name, pick the type and open the sample — already with your name on it.","tyName":"Business name","tyPh":"For example, Gohar Salon","tyKind":"Type of business","tyKSalon":"Salon","tyKRest":"Restaurant","tyKHotel":"Hotel","tyOpen":"Open the sample","tyWa":"Message on WhatsApp","tyWaMsg":"Hello! I saw the sample site{for}. I’d like to know the price and timing.","tyFor":" for “{name}”","tyNote":"We don’t save your name, and the sample isn’t published.","tyMore":"Samples for other industries are below.","tyLive":"Want to try a real booking? Open the Liora Beauty live demo","pvSalon":"Beauty salon","pvRest":"Restaurant","pvHotel":"Hotel","pvSalonBtn":"Book online","pvRestBtn":"Book a table","pvHotelBtn":"Book a room","pvSalonNo":"Your salon","pvRestNo":"Your restaurant","pvHotelNo":"Your hotel","inTitle":"Made for your industry","inSub":"The same Online package, with a demo for your industry and the features it needs.","inAria":"Industries","inPer":"a month","inSetup":"setup","inAi":"With the AI front desk (pilot): {p} ֏ a month, setup {f} ֏","inPilot":"Setup is free for the first 5 pilot clients.","inTerm":"12 months minimum. Pay yearly and save 15%.","inGuar":"Guarantee: if fewer than {n} come through the system in 2 months, month 3 is free","inDemo":"See the sample","inMore":"More samples:","inBarber":"barbershop","inNails":"nail studio","inLive":"Live demo with real booking","inMenu":"QR menu","inAsk":"Get a sample in 1 day","inAskMsg":"Hello! I’d like a sample of the “{v}” package for my business.","inNoDemo":"No ready demo yet: we’ll make a sample with your name in 1 day, free.","inMock":"Illustration","in1":"Appointments","in1w":"Salons, barbershops, nail studios, cosmetology, clinics, car services","in1f":"Masters, services and prices|Booking by time, at night too|WhatsApp reminder the day before","in1g":"20 online bookings","in2":"Stays","in2w":"Guesthouses, hotels, gazebos, saunas, car rental","in2f":"Rooms, photos and prices|Pick free dates|Direct bookings without Booking.com commission","in2g":"5 direct bookings","in3":"Menu","in3w":"Restaurants and cafés","in3f":"Menu in three languages|QR menu for the tables|Table booking on WhatsApp","in3g":"15 table bookings or orders","in3x":"There’s also a one-time option: ֏120,000, no subscription.","in4":"Requests","in4w":"Renovation, furniture, solar panels, cleaning","in4f":"Services and photos of your work|Rough price calculator|Requests arrive on WhatsApp","in4g":"10 requests","in5":"Classes","in5w":"Schools, clubs, fitness, dance","in5f":"Groups and timetable|Trial class sign-up|Reminder before the class","in5g":"10 trial sign-ups","mk4h":"Price calculator","mk4a":"Service","mk4av":"Flat renovation","mk4b":"Area","mk4c":"Estimated price","mk4d":"Send request","mk5h":"Timetable","mk5a":"Mon, Wed","mk5b":"Tue, Thu","mk5c":"Saturday","mk5k1":"Kids 7–10","mk5k2":"Beginners","mk5k3":"Adults","mk5d":"Book a trial class","caTitle":"What do empty chairs cost you","caSub":"Move the sliders to your own numbers.","caB":"Bookings a week","caN":"No-shows a week","caC":"Average bill","caPayK":"The package pays for itself if reminders bring back, each month,","caLoss":"No-shows cost you up to {x} a month","caFormula":"{n} × {c} × 4.3 weeks, {p}% of your bookings","caLow":"Few no-shows: {p}% of bookings. Night and weekend bookings matter more for you.","caZero":"No no-shows? Great. Then the package is about the bookings you get at night.","caPkg":"Package: 35 000 ֏ a month","caNote":"Reminders cut no-shows, but not to zero, and other clients fill some of the freed slots. A rough estimate.","caCta":"Join the pilot: free setup","caWa":"Hello! I did the no-show math on your site. I’d like to join the pilot.","pkTitle":"Packages and prices","pkSub":"No hidden fees. Subscriptions are for 12 months.","pkMain":"Main","pkHelpT":"Which one?","pkHelp":"Start if you need to be found on Google. Online if you want clients to book without calling. Online AI is a pilot for now.","pkTerm":"12-month contract","pkFirst":"first year with setup: {x}","pkNoSetup":"no setup fee","pkYes":"Yes","pkNo":"No","pkMonth":"Monthly","pkYear":"Yearly","pkSave":"−15%","pkBillAria":"Billing","pkStartT":"So people can find you","pkStartDemo":"One-page sample","pkOnT":"So clients book themselves","pkAiT":"So no message goes unanswered","pkOnce":"one-time","pkPerM":"a month","pkPerY":"a year","pkEqM":"{x} a month","pkSetup":"setup {x}","pkSetupFree":"setup {x}, free in the pilot","pkPilotSoon":"Pilot, coming soon","pkAiNote":"The AI front desk isn’t a finished product yet; we offer it as a pilot. It starts in Telegram, with WhatsApp and Instagram later. Without a new site: AI Admin, 40 000 ֏ a month, 6 months minimum.","pkStartPay":"pay after delivery","r6a":"1st year included","r7a":"6 000 ֏/h","r9c":"Telegram","pkPick":"Choose","pkAsk":"Ask about the pilot","pkWaStart":"Hello! I’m interested in the SKIYAR Start package.","pkWaOn":"Hello! I’m interested in the SKIYAR Online package.","pkWaAi":"Hello! I’d like to know about the Online AI pilot.","pkMin":"Subscriptions run for at least 12 months.","pkMore":"All packages, one-time sites and add-ons","r1":"Google Maps listing fixed: link, hours, photos","r2":"One-page site in Armenian, Russian, English","r3":"Full site: services, prices, masters, reviews","r4":"Online booking","r4s":"WhatsApp button","r5":"WhatsApp reminders to clients","r6":"Domain (in your name), hosting, secure connection","r7":"Edits and price updates","r7v":"up to 2 h a month","r8":"A report every month","r9":"AI replies to clients 24/7 (Instagram and WhatsApp later)","r10":"Launch","r10a":"3 days","r10b":"7–10 days","r10c":"10–14 days","gTitle":"Result guarantee","gText":"If fewer than 20 online bookings come through the system in the first 2 months, the third month is free.","gCond":"Condition: the booking link is in your Instagram and Google profile, and your front desk takes bookings through the system. We count with the booking system’s data, which you see in the monthly report.","pTitle":"Pilot for the Online package","pLeft":"{n} of 5 places taken","p1":"Free setup","p2":"First month paid after launch, once you’ve seen it all working","p3":"In return: a review, permission to show the work and 2 contacts of owners you know","pCta":"Take a pilot place","pWa":"Hello! I’d like to join the SKIYAR pilot.","wTitle":"Fair rules","w1":"The domain is registered in your name.","w2":"Don’t like the sample? You pay nothing.","w3":"After 12 months you can take the site for free.","hwTitle":"How we work","hwSub":"From the first message to launch: about two weeks.","s1t":"You message us","s1p":"Or reply to our message.","s1d":"day 0","s2t":"A free sample","s2p":"A demo site with your business name, in three languages.","s2d":"day 1","s3t":"A call","s3p":"WhatsApp, Telegram or Google Meet. We look at the sample and work out what no-shows and unanswered night messages cost you.","s3d":"day 1–2, 15 min","s4t":"Contract and payment","s4p":"A 12-month contract. Setup (or the pilot, with no payment), invoiced to our sole proprietorship.","s4d":"day 2–3","s5t":"Launch","s5p":"You send photos, prices and your masters’ names. We do the rest.","s5d":"7–10 days","s6t":"Ongoing support","s6p":"A bookings report and edits on request.","s6d":"every month","fqTitle":"What owners ask us","q1":"I have Instagram. Why would I need a site?","a1":"The site isn’t the point. The point is that a client books by themselves at 23:00 instead of waiting for a reply until morning. Instagram stays; the booking button goes right into your profile.","q2":"It’s expensive.","a2":"Try the calculator above: usually a couple of recovered visits a month cover the fee. In the pilot you pay for the first month after launch.","q3":"I already use DIKIDI or Altegio.","a3":"Great, we work with them: we connect them to your site and Instagram and set up reminders in Armenian. You keep the software.","q4":"Why a subscription?","a4":"Because we’re responsible for the result every month, rather than handing over a site and disappearing. If you don’t like subscriptions, there’s a one-time site for 160 000–200 000 ֏ with 3 months of support included, then 20 000 ֏ a month or 204 000 ֏ a year.","q5":"What if I want to leave?","a5":"The minimum term is 12 months. After that you can cancel any time with a month’s notice and take the site for free. Before 12 months you can buy the site out: 160 000 ֏ − (months paid × 10 000 ֏). For example, after 6 months it’s 100 000 ֏.","q6":"What do “edits up to 2 hours a month” cover?","a6":"Updating prices, services, photos and texts. If you need more, we’ll quote the price before we start.","q7":"Is the AI front desk working already?","a7":"Not yet. It’s in the pilot stage and we don’t sell it as a finished product. For now, at night the client gets an auto-reply with the booking link.","q8":"Who are you?","a8":"SKIYAR is a sole proprietorship in Armenia, a small team. Our sample sites are on this page, and in the pilot you pay for the first month only after launch, so the risk is on us.","fnTitle":"A sample of your site could be ready tomorrow","fnSub":"Message us and we’ll make a sample with your name within a day. The sample is free and commits you to nothing.","fnBtn":"Get a sample on WhatsApp","fnPhone":"Phone and WhatsApp","legal":"SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia","privacy":"Privacy Policy","fab":"Message on WhatsApp"}};
+/* SKIYAR — общий код сайта: языки HY (основной) / RU / EN.
+   Тексты страницы — в window.T = { hy: {...}, ru: {...}, en: {...} }.
+   Элементы: data-t="ключ" (текст), data-t-html="ключ" (разметка из нашего словаря),
+   data-t-alt / data-t-aria / data-t-href.
+   Язык: на собранных страницах (/, /ru/, /en/) — window.PAGE_LANG, переключение = переход на страницу языка;
+   в исходниках src/ — ?lang= → сохранённый → hy. */
+(function () {
+  "use strict";
+  var LANGS = ["hy", "ru", "en"];
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+  var q = (new URLSearchParams(location.search).get("lang") || "").toLowerCase();
+  var PAGE = LANGS.indexOf(window.PAGE_LANG) >= 0 ? window.PAGE_LANG : "";
+  var lang = PAGE || (LANGS.indexOf(q) >= 0 ? q : (LANGS.indexOf(store("skiyar-lang")) >= 0 ? store("skiyar-lang") : "hy"));
+
+  var S = (window.SITE = {
+    lang: function () { return lang; },
+    t: function (k) { var d = (window.T || {})[lang] || {}; return d[k] != null ? d[k] : ((window.T || {}).ru || {})[k] || ""; },
+    wa: function (text) { return "https://wa.me/37498337187?text=" + encodeURIComponent(text); },
+    onRender: [],
+    render: function (first) {
+      document.documentElement.lang = lang;
+      document.body.setAttribute("data-lang", lang);
+      var i, els;
+      // собранная страница уже содержит тексты своего языка — при первом показе их не переписываем
+      if (first === true && PAGE) { for (i = 0; i < S.onRender.length; i++) S.onRender[i](lang); return; }
+      els = document.querySelectorAll("[data-t]");
+      for (i = 0; i < els.length; i++) els[i].textContent = S.t(els[i].getAttribute("data-t"));
+      els = document.querySelectorAll("[data-t-html]");
+      for (i = 0; i < els.length; i++) els[i].innerHTML = S.t(els[i].getAttribute("data-t-html"));
+      els = document.querySelectorAll("[data-t-alt]");
+      for (i = 0; i < els.length; i++) els[i].alt = S.t(els[i].getAttribute("data-t-alt"));
+      els = document.querySelectorAll("[data-t-aria]");
+      for (i = 0; i < els.length; i++) els[i].setAttribute("aria-label", S.t(els[i].getAttribute("data-t-aria")));
+      els = document.querySelectorAll("[data-t-ph]");
+      for (i = 0; i < els.length; i++) els[i].placeholder = S.t(els[i].getAttribute("data-t-ph"));
+      els = document.querySelectorAll("[data-t-src]");
+      for (i = 0; i < els.length; i++) els[i].src = S.t(els[i].getAttribute("data-t-src"));
+      els = document.querySelectorAll("[data-wa]");
+      for (i = 0; i < els.length; i++) els[i].href = S.wa(S.t(els[i].getAttribute("data-wa")));
+      els = document.querySelectorAll("[data-lang-btn]");
+      for (i = 0; i < els.length; i++) if (els[i].tagName === "BUTTON") els[i].setAttribute("aria-pressed", String(els[i].getAttribute("data-lang-btn") === lang));
+      var tk = document.body.getAttribute("data-title-key") || "", title = S.t(tk ? "_title" + tk : "_title"); if (title) document.title = title;
+      var desc = S.t(tk ? "_desc" + tk : "_desc"), md = document.querySelector('meta[name="description"]'); if (desc && md) md.setAttribute("content", desc);
+      for (i = 0; i < S.onRender.length; i++) S.onRender[i](lang);
+    },
+    setLang: function (l) {
+      if (LANGS.indexOf(l) < 0) return;
+      lang = l; store("skiyar-lang", l);
+      var u = new URL(location.href); u.searchParams.set("lang", l); history.replaceState(null, "", u);
+      S.render();
+    }
+  });
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-lang-btn]");
+    if (!b) return;
+    var l = b.getAttribute("data-lang-btn");
+    if (PAGE) {
+      // собранная страница: переходим на страницу языка, сохраняя якорь
+      var a = b.tagName === "A" ? b : document.querySelector('a[data-lang-btn="' + l + '"][href]');
+      if (a) { e.preventDefault(); if (l !== lang) location.href = a.href.split("#")[0] + location.hash; }
+      return;
+    }
+    e.preventDefault(); S.setLang(l);
+  });
+  function boot() { S.render(true); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+
+;
+/* История одной записи: шаг выбирается по прокрутке липкого блока.
+   Только классы и opacity/transform; без JS виден первый шаг. */
+(function () {
+  "use strict";
+  var track = document.querySelector(".st-track");
+  if (!track) return;
+  var N = +getComputedStyle(track).getPropertyValue("--n") || 6;
+  var SB = ["23:47", "23:47", "23:48", "09:12", "18:00", "11:02"];
+  var stage = track.querySelector(".st-stage");
+  var box = track.querySelector(".st-ph-box");
+  var cur = 0;
+
+  function each(sel, fn) { var l = track.querySelectorAll(sel); for (var i = 0; i < l.length; i++) fn(l[i]); }
+  function has(el, s) { return (" " + el.getAttribute("data-steps") + " ").indexOf(" " + s + " ") >= 0; }
+
+  function show(s) {
+    if (s === cur) return;
+    cur = s;
+    each("[data-steps]", function (el) { el.classList.toggle("on", has(el, s)); });
+    each("[data-from]", function (el) { el.classList.toggle("on", s >= +el.getAttribute("data-from")); });
+    each(".cap", function (el) { el.classList.toggle("on", +el.getAttribute("data-step") === s); });
+    each(".st-rail button", function (el) {
+      var n = +el.getAttribute("data-go");
+      if (n === s) el.setAttribute("aria-current", "step"); else el.removeAttribute("aria-current");
+      el.classList.toggle("done", n < s);
+    });
+    var t = track.querySelector(".sb b"); if (t) t.textContent = SB[s - 1];
+  }
+
+  function fit() {
+    // масштаб телефона под свободную высоту
+    var ph = track.querySelector(".st-phone");
+    var h = ph.clientHeight, w = track.querySelector(".st-grid").clientWidth - (innerWidth >= 900 ? 600 : 130);
+    var k = Math.min(innerWidth >= 900 ? 1.2 : 1.1, h / 546, w / 264);
+    box.style.setProperty("--k", Math.max(0.5, k).toFixed(3));
+  }
+
+  function onScroll() {
+    var r = track.getBoundingClientRect();
+    var total = track.offsetHeight - stage.offsetHeight;
+    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    show(Math.min(N, Math.floor(p * N) + 1));
+  }
+
+  each(".st-rail button", function (b) {
+    b.addEventListener("click", function () {
+      var n = +b.getAttribute("data-go");
+      var total = track.offsetHeight - stage.offsetHeight;
+      var y = track.getBoundingClientRect().top + window.scrollY + total * ((n - 0.5) / N);
+      window.scrollTo({ top: y, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+  });
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", function () { fit(); onScroll(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+  show(1);
+  onScroll();
+})();
+
+;
+/* «Посмотрите свой сайт»: название → живое превью → демо с ?name=&lang=.
+   Название вставляется только как текст и только в ссылку; ничего не сохраняется. */
+(function () {
+  "use strict";
+  var box = document.getElementById("try");
+  if (!box) return;
+  var base = box.getAttribute("data-demo-base") || "demo/";
+  var input = box.querySelector("#tyName");
+  var pv = box.querySelector(".pv");
+  var link = box.querySelector("#tyOpen");
+  var wa = box.querySelector("#tyWa");
+  var K = { salon: ["pvSalon", "pvSalonBtn", "pvSalonNo"], restaurant: ["pvRest", "pvRestBtn", "pvRestNo"], hotel: ["pvHotel", "pvHotelBtn", "pvHotelNo"] };
+  var kind = "salon";
+
+  function clean(s) { return (s || "").replace(/[\u0000-\u001f\u007f<>{}]/g, "").replace(/\s+/g, " ").trim().slice(0, 60); }
+  // латиница для адреса: армянский и русский транслитом
+  var TR = { "ա":"a","բ":"b","գ":"g","դ":"d","ե":"e","զ":"z","է":"e","ը":"y","թ":"t","ժ":"zh","ի":"i","լ":"l","խ":"kh","ծ":"ts","կ":"k","հ":"h","ձ":"dz","ղ":"gh","ճ":"ch","մ":"m","յ":"y","ն":"n","շ":"sh","ո":"o","չ":"ch","պ":"p","ջ":"j","ռ":"r","ս":"s","վ":"v","տ":"t","ր":"r","ց":"ts","ւ":"v","փ":"p","ք":"q","և":"ev","օ":"o","ֆ":"f",
+    "а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ё":"e","ж":"zh","з":"z","и":"i","й":"y","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"kh","ц":"ts","ч":"ch","ш":"sh","щ":"sh","ы":"y","э":"e","ю":"yu","я":"ya" };
+  function slug(s) {
+    var x = s.toLowerCase().replace(/ու/g, "u").replace(/./g, function (c) { return TR[c] != null ? TR[c] : c; }).replace(/[^a-z0-9]+/g, "");
+    return x.slice(0, 24);
+  }
+
+  function upd() {
+    var t = window.SITE.t, name = clean(input.value), k = K[kind];
+    pv.setAttribute("data-kind", kind);
+    pv.querySelector(".pv-name").textContent = name || t(k[2]);
+    pv.querySelector(".pv-kind").textContent = t(k[0]);
+    pv.querySelector(".pv-btn").textContent = t(k[1]);
+    pv.querySelector(".pv-url b").textContent = slug(name) || "yourname";
+    pv.querySelector(".pv-img").src = base + kind + "/img/hero-800.webp";
+    var q = new URLSearchParams();
+    if (name) q.set("name", name);
+    q.set("lang", window.SITE.lang());
+    link.href = base + kind + "/?" + q.toString();
+    var forName = name ? t("tyFor").split("{name}").join(name) : "";
+    wa.href = window.SITE.wa(t("tyWaMsg").split("{for}").join(forName));
+    var bs = box.querySelectorAll("[data-kind-btn]");
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute("aria-checked", String(bs[i].getAttribute("data-kind-btn") === kind));
+  }
+
+  box.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-kind-btn]");
+    if (b) { kind = b.getAttribute("data-kind-btn"); upd(); }
+  });
+  input.addEventListener("input", upd);
+  box.querySelector("form").addEventListener("submit", function (e) { e.preventDefault(); window.open(link.href, "_blank", "noopener"); });
+  window.SITE.onRender.push(upd);
+  upd();
+})();
+
+;
+/* Под вашу отрасль: вкладки (стрелки ←/→), скриншоты и ссылки на демо по языку сайта. */
+(function () {
+  "use strict";
+  var box = document.getElementById("demos");
+  if (!box) return;
+  var base = box.getAttribute("data-demo-base") || "demo/";
+  var tabs = box.querySelectorAll('[role="tab"]');
+
+  function select(tab, focus) {
+    for (var i = 0; i < tabs.length; i++) {
+      var on = tabs[i] === tab;
+      tabs[i].setAttribute("aria-selected", String(on));
+      tabs[i].tabIndex = on ? 0 : -1;
+      document.getElementById(tabs[i].getAttribute("aria-controls")).hidden = !on;
+    }
+    if (focus) tab.focus();
+    if (tab.scrollIntoView && box.querySelector(".in-tabs").scrollWidth > box.querySelector(".in-tabs").clientWidth) {
+      tab.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    }
+  }
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener("click", function () { select(this); });
+    tabs[i].addEventListener("keydown", function (e) {
+      var n = Array.prototype.indexOf.call(tabs, this);
+      if (e.key === "ArrowRight") { e.preventDefault(); select(tabs[(n + 1) % tabs.length], true); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); select(tabs[(n - 1 + tabs.length) % tabs.length], true); }
+    });
+  }
+
+  function render(lang) {
+    var t = window.SITE.t, i, els;
+    els = box.querySelectorAll("img[data-shot]");
+    for (i = 0; i < els.length; i++) els[i].src = (box.getAttribute("data-img-base") || "../assets/img/") + "shot-" + els[i].getAttribute("data-shot") + "-" + lang + ".webp";
+    els = box.querySelectorAll("[data-demo]");
+    for (i = 0; i < els.length; i++) els[i].href = base + els[i].getAttribute("data-demo") + "?lang=" + lang;
+    els = box.querySelectorAll("[data-ask]");
+    for (i = 0; i < els.length; i++) els[i].href = window.SITE.wa(t("inAskMsg").split("{v}").join("Online · " + t(els[i].getAttribute("data-ask"))));
+    els = box.querySelectorAll("[data-list]");
+    for (i = 0; i < els.length; i++) {
+      els[i].textContent = "";
+      t(els[i].getAttribute("data-list")).split("|").forEach(function (x) { var li = document.createElement("li"); li.textContent = x; els[i].appendChild(li); });
+    }
+    els = box.querySelectorAll("[data-ai]");
+    for (i = 0; i < els.length; i++) {
+      var v = els[i].getAttribute("data-ai").split("|");
+      els[i].textContent = t("inAi").split("{p}").join(v[0].replace(" ", "\u00a0")).split("{f}").join(v[1].replace(" ", "\u00a0"));
+    }
+    els = box.querySelectorAll("[data-guar]");
+    for (i = 0; i < els.length; i++) els[i].textContent = t("inGuar").split("{n}").join(t(els[i].getAttribute("data-guar")));
+  }
+  window.SITE.onRender.push(render);
+  render(window.SITE.lang());
+})();
+
+;
+/* Посчитайте сами. Главное — сколько визитов в месяц окупают пакет (35 000 / средний чек).
+   Потери: неявки × чек × 4,3 недели, «до» — часть окон занимают другие клиенты.
+   Число меняется плавно (кроме reduced motion). */
+(function () {
+  "use strict";
+  var box = document.getElementById("calc");
+  if (!box) return;
+  var PRICE = 35000, WEEKS = 4.3;
+  var $ = function (s) { return box.querySelector(s); };
+  var b = $("#caB"), n = $("#caN"), c = $("#caC");
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var shown = 0, raf = 0;
+
+  function fmt(x) { return String(Math.round(x)).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+  function unit(k, lang) {
+    if (lang === "ru") { var m = k % 10, h = k % 100; return m === 1 && h !== 11 ? "визит" : m >= 2 && m <= 4 && (h < 12 || h > 14) ? "визита" : "визитов"; }
+    if (lang === "en") return k === 1 ? "visit" : "visits";
+    return "այց";
+  }
+  function animate(to) {
+    cancelAnimationFrame(raf);
+    if (still) { shown = to; $("#caOut").textContent = fmt(to); return; }
+    var from = shown, t0 = performance.now();
+    (function step(t) {
+      var p = Math.min(1, (t - t0) / 320), e = 1 - Math.pow(1 - p, 3);
+      shown = from + (to - from) * e;
+      $("#caOut").textContent = fmt(shown);
+      if (p < 1) raf = requestAnimationFrame(step);
+    })(t0);
+  }
+  function upd() {
+    var t = window.SITE.t, lang = window.SITE.lang();
+    if (+n.value > +b.value) n.value = b.value;
+    var B = +b.value, N = +n.value, C = +c.value;
+    $("#caBv").textContent = B; $("#caNv").textContent = N; $("#caCv").textContent = fmt(C) + " ֏";
+    var loss = N * C * WEEKS, k = Math.ceil(PRICE / C), p = B ? Math.round(N / B * 100) : 0;
+    animate(k);
+    $("#caUnit").textContent = unit(k, lang);
+    $("#caLoss").textContent = t("caLoss").split("{x}").join(fmt(loss) + " ֏");
+    $("#caFormula").textContent = t("caFormula").split("{n}").join(N).split("{c}").join(fmt(C) + " ֏").split("{p}").join(p);
+    var msg = !N ? t("caZero") : (N / B < 0.03 ? t("caLow").split("{p}").join(p) : "");
+    $("#caMsg").textContent = msg; $("#caMsg").hidden = !msg;
+    box.classList.toggle("ca-quiet", !N || N / B < 0.03);
+    var max = Math.max(loss, PRICE, 1);
+    $("#caBarL").style.transform = "scaleX(" + (loss / max) + ")";
+    $("#caBarS").style.transform = "scaleX(" + (PRICE / max) + ")";
+    [b, n, c].forEach(function (el) { el.style.setProperty("--p", ((el.value - el.min) / (el.max - el.min) * 100) + "%"); });
+  }
+  [b, n, c].forEach(function (el) { el.addEventListener("input", upd); });
+  window.SITE.onRender.push(upd);
+  upd();
+})();
+
+;
+/* Пакеты и цены: «Ежемесячно / За год −15%» (цены меняются плавно), выбор колонки на телефоне,
+   счётчик занятых мест в пилоте — из data-taken на секции (сейчас 0). */
+(function () {
+  "use strict";
+  var box = document.getElementById("packages");
+  if (!box) return;
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function num(s) { return +String(s).replace(/\D/g, ""); }
+  function fmt(x) { return String(Math.round(x)).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+  function tween(el, to) {
+    var from = num(el.textContent) || to;
+    if (still || from === to) { el.textContent = fmt(to); return; }
+    var t0 = performance.now();
+    (function step(t) {
+      var p = Math.min(1, (t - t0) / 380), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(from + (to - from) * e);
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function render(animate) {
+    var t = window.SITE.t, y = box.getAttribute("data-bill") === "y", i, els;
+    els = box.querySelectorAll(".pl-p[data-m]");
+    for (i = 0; i < els.length; i++) {
+      var v = num(els[i].getAttribute(y ? "data-y" : "data-m")), x = els[i].querySelector(".pl-x");
+      if (animate) tween(x, v); else x.textContent = fmt(v);
+      els[i].querySelector("[data-per]").textContent = t(y ? "pkPerY" : "pkPerM");
+    }
+    els = box.querySelectorAll(".pl-eq[data-eq]");
+    for (i = 0; i < els.length; i++) els[i].textContent = y ? t("pkEqM").split("{x}").join(fmt(num(els[i].getAttribute("data-eq")) / 12) + " ֏") : "";
+    els = box.querySelectorAll(".pl-s[data-setup]");
+    for (i = 0; i < els.length; i++) els[i].textContent = t(els[i].hasAttribute("data-free") ? "pkSetupFree" : "pkSetup").split("{x}").join(els[i].getAttribute("data-setup") + " ֏");
+    els = box.querySelectorAll("[data-bill] [role=radio], .bill [role=radio]");
+    for (i = 0; i < els.length; i++) els[i].setAttribute("aria-checked", String(els[i].getAttribute("data-bill") === (y ? "y" : "m")));
+    els = box.querySelectorAll("[data-first]");
+    for (i = 0; i < els.length; i++) {
+      var f = els[i].getAttribute("data-first").split(",").map(Number);
+      var total = (y ? f[1] : f[0] * 12) + f[2];
+      els[i].textContent = t("pkTerm") + ", " + t("pkFirst").split("{x}").join(fmt(total) + "\u00a0֏");
+    }
+    var taken = +box.getAttribute("data-taken");
+    box.querySelector("#pkLeft").textContent = t("pLeft").split("{n}").join(taken);
+    var seats = box.querySelector(".seats"); seats.textContent = "";
+    for (i = 0; i < 5; i++) { var s = document.createElement("i"); if (i < taken) s.className = "taken"; seats.appendChild(s); }
+  }
+
+  box.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".bill [data-bill]");
+    if (b) { box.setAttribute("data-bill", b.getAttribute("data-bill")); render(true); return; }
+    var c = e.target.closest && e.target.closest("[data-col]");
+    if (c) {
+      box.setAttribute("data-sel", c.getAttribute("data-col"));
+      var bs = box.querySelectorAll("[data-col]");
+      for (var i = 0; i < bs.length; i++) bs[i].setAttribute("aria-pressed", String(bs[i] === c));
+    }
+  });
+  window.SITE.onRender.push(function () { render(false); });
+  render(false);
+})();
+
+;
+/* Плавающая кнопка WhatsApp (только телефон).
+   Показывается, только когда на экране нет первого экрана, истории с телефоном, финального блока, подвала
+   и ни одной другой главной кнопки — чтобы не закрывать текст и не дублировать кнопку рядом. */
+(function () {
+  "use strict";
+  var fab = document.getElementById("fab");
+  if (!fab || !("IntersectionObserver" in window)) return;
+  var zones = document.querySelectorAll(".hero, .pg-head, .st-track, #contact, footer, main .btn-main, .ty-btns, .in-btns");
+  var visible = new Set();
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target); });
+    fab.classList.toggle("on", visible.size === 0);
+  });
+  for (var i = 0; i < zones.length; i++) io.observe(zones[i]);
+})();
