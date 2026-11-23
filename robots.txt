@@ -1,2 +1,6 @@
 User-agent: *
 Disallow: /demo/
+Disallow: /src/
+Disallow: /tools/
+
+Sitemap: https://kita350.github.io/sitemap.xml

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://kita350.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://kita350.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kita350.github.io/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kita350.github.io/en/"/>
+  </url>
+  <url><loc>https://kita350.github.io/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://kita350.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kita350.github.io/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kita350.github.io/en/"/>
+  </url>
+  <url><loc>https://kita350.github.io/en/</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://kita350.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kita350.github.io/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kita350.github.io/en/"/>
+  </url>
+  <url><loc>https://kita350.github.io/packages.html</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://kita350.github.io/packages.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kita350.github.io/ru/packages.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kita350.github.io/en/packages.html"/>
+  </url>
+  <url><loc>https://kita350.github.io/ru/packages.html</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://kita350.github.io/packages.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kita350.github.io/ru/packages.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kita350.github.io/en/packages.html"/>
+  </url>
+  <url><loc>https://kita350.github.io/en/packages.html</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://kita350.github.io/packages.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kita350.github.io/ru/packages.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kita350.github.io/en/packages.html"/>
+  </url>
+</urlset>
