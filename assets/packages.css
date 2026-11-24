@@ -813,3 +813,4 @@ html[lang="hy"] .t-lang .shots img:nth-child(1),html[lang="ru"] .t-lang .shots i
 @media (max-width:899px){ .p3{width:360px;max-width:none;margin-left:calc(50% - 180px);margin-right:0} }
 @media (max-width:899px){ .p3{flex:none} .in-phone{justify-content:center;overflow:visible} .p3{margin-left:0} }
 @media (max-width:899px){ .in-phone .p3{margin-left:calc(50% - 180px);margin-right:calc(50% - 180px)} }
+@media (max-width:899px){ .in-panel{grid-template-columns:minmax(0,1fr)} .in-phone{min-width:0} }
