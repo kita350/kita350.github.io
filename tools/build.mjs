@@ -18,14 +18,14 @@ const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
     text: ["hero", "story", "bento", "try", "ind", "calc", "pk", "end"],
-    css: ["site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end"],
+    css: ["site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3"],
     js: ["site", "story", "try", "ind", "calc", "pk", "fab"],
   },
 ];
 if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
   src: "src/packages.html", out: "packages.html", og: "og",
   text: ["hero", "pk", "end", "pkpage"],
-  css: ["site", "pk", "end", "pkpage"],
+  css: ["site", "pk", "end", "pkpage", "v3"],
   js: ["site", "pk", "fab"],
 });
 

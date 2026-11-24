@@ -33,8 +33,7 @@
     if (name) q.set("name", name);
     q.set("lang", window.SITE.lang());
     link.href = base + kind + "/?" + q.toString();
-    var forName = name ? t("tyFor").split("{name}").join(name) : "";
-    wa.href = window.SITE.wa(t("tyWaMsg").split("{for}").join(forName));
+    wa.href = window.SITE.wa(t("tyWaMsg").split("{n}").join(name || "—").split("{k}").join(t(k[0])));
     var bs = box.querySelectorAll("[data-kind-btn]");
     for (var i = 0; i < bs.length; i++) bs[i].setAttribute("aria-checked", String(bs[i].getAttribute("data-kind-btn") === kind));
   }
@@ -44,7 +43,7 @@
     if (b) { kind = b.getAttribute("data-kind-btn"); upd(); }
   });
   input.addEventListener("input", upd);
-  box.querySelector("form").addEventListener("submit", function (e) { e.preventDefault(); window.open(link.href, "_blank", "noopener"); });
+  box.querySelector("form").addEventListener("submit", function (e) { e.preventDefault(); window.open(wa.href, "_blank", "noopener"); });
   window.SITE.onRender.push(upd);
   upd();
 })();

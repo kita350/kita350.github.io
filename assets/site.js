@@ -50,6 +50,13 @@
       S.render();
     }
   });
+  // меню на телефоне
+  document.addEventListener("click", function (e) {
+    var nav = document.getElementById("nav"), m = e.target.closest && e.target.closest(".nav-burger");
+    if (!nav) return;
+    if (m) { var o = !nav.classList.contains("open"); nav.classList.toggle("open", o); m.setAttribute("aria-expanded", String(o)); return; }
+    if (nav.classList.contains("open") && e.target.closest(".nav-links a")) { nav.classList.remove("open"); nav.querySelector(".nav-burger").setAttribute("aria-expanded", "false"); }
+  });
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-lang-btn]");
     if (!b) return;

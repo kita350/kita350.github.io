@@ -89,4 +89,4 @@
 }
 .bn-link{margin-top:12px!important}
 .bn-link a{color:var(--white);text-underline-offset:3px}
-.bn-link a::after{content:" ↗";color:var(--sky)}
+

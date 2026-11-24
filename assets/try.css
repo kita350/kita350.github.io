@@ -18,7 +18,7 @@
 .ty-btns .btn{width:100%}
 .ty-live{margin:12px 0 0;font-size:15px}
 .ty-live a{color:var(--white);text-underline-offset:3px}
-.ty-live a::after{content:" ↗";color:var(--sky)}
+
 .ty-note{margin:14px 0 0;font-size:14.5px;color:#a9b3c7}
 
 /* превью */

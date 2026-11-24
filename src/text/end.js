@@ -3,6 +3,7 @@
 (function () {
   var E = {
     hy: {
+      ftSite: "Կայքում",
       hwTitle: "Ինչպես ենք աշխատում",
       hwSub: "Առաջին հաղորդագրությունից մինչև գործարկում՝ մոտ երկու շաբաթ։",
       s1t: "Գրում եք մեզ", s1p: "Կամ պատասխանում եք մեր հաղորդագրությանը։", s1d: "օր 0",
@@ -29,13 +30,14 @@
       q8: "Ովքե՞ր եք դուք։",
       a8: "SKIYAR՝ անհատ ձեռնարկատեր Հայաստանում, փոքր թիմ։ Աշխատանքների օրինակները այս կայքում են, իսկ պիլոտում առաջին ամիսը վճարում եք միայն գործարկումից հետո. ռիսկը մեզ վրա է։",
       fnTitle: "Ձեր կայքը կարող է պատրաստ լինել վաղը՝ որպես օրինակ",
-      fnSub: "Գրեք մեզ. մեկ օրում կպատրաստենք օրինակ ձեր անունով։ Օրինակն անվճար է և ոչնչի չի պարտավորեցնում։", fnBtn: "Ստանալ օրինակ WhatsApp-ով",
+      fnSub: "Գրեք մեզ. մեկ օրում կպատրաստենք օրինակ ձեր անունով։ Օրինակն անվճար է և ոչնչի չի պարտավորեցնում։", fnBtn: "Գրել ԴԵՄՈ WhatsApp-ով",
       fnPhone: "Հեռախոս և WhatsApp",
       legal: "SKIYAR — ԱՁ Սկինո Նիկիտա Վլադիմիրովիչ · ՀՎՀՀ 20453381 · Կոտայք, Հայաստան",
       privacy: "Գաղտնիության քաղաքականություն",
       fab: "Գրել WhatsApp-ով"
     },
     ru: {
+      ftSite: "На сайте",
       hwTitle: "Как мы работаем",
       hwSub: "От первого сообщения до запуска — около двух недель.",
       s1t: "Пишете нам", s1p: "Или отвечаете на наше сообщение.", s1d: "день 0",
@@ -62,13 +64,14 @@
       q8: "Кто вы вообще?",
       a8: "SKIYAR — индивидуальный предприниматель в Армении, небольшая команда. Примеры работ — на этом сайте, а в пилоте первый месяц вы оплачиваете только после запуска: риск на нас.",
       fnTitle: "Пример вашего сайта может быть готов завтра",
-      fnSub: "Напишите нам — за день сделаем пример с вашим названием. Пример бесплатный и ни к чему не обязывает.", fnBtn: "Получить пример в WhatsApp",
+      fnSub: "Напишите нам — за день сделаем пример с вашим названием. Пример бесплатный и ни к чему не обязывает.", fnBtn: "Написать ДЕМО в WhatsApp",
       fnPhone: "Телефон и WhatsApp",
       legal: "SKIYAR — ИП Скино Никита Владимирович · ИНН 20453381 · Котайк, Армения",
       privacy: "Политика конфиденциальности",
       fab: "Написать в WhatsApp"
     },
     en: {
+      ftSite: "On the site",
       hwTitle: "How we work",
       hwSub: "From the first message to launch: about two weeks.",
       s1t: "You message us", s1p: "Or reply to our message.", s1d: "day 0",
@@ -95,7 +98,7 @@
       q8: "Who are you?",
       a8: "SKIYAR is a sole proprietorship in Armenia, a small team. Our sample sites are on this page, and in the pilot you pay for the first month only after launch, so the risk is on us.",
       fnTitle: "A sample of your site could be ready tomorrow",
-      fnSub: "Message us and we’ll make a sample with your name within a day. The sample is free and commits you to nothing.", fnBtn: "Get a sample on WhatsApp",
+      fnSub: "Message us and we’ll make a sample with your name within a day. The sample is free and commits you to nothing.", fnBtn: "Send DEMO on WhatsApp",
       fnPhone: "Phone and WhatsApp",
       legal: "SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia",
       privacy: "Privacy Policy",

@@ -34,16 +34,18 @@
 <script src="../assets/packages.js" defer></script>
 </head>
 <body data-lang="hy" data-title-key="Pk">
-<header class="nav">
+<header class="nav" id="nav">
   <div class="wrap">
     <a class="logo" href="./"><i>S</i>SKIYAR</a>
-    <nav class="nav-links"><a href="#packages" data-t="navPk">Packages</a><a href="./#demos" data-t="navDemo">Demos</a><a href="./#faq" data-t="navFaq">FAQ</a></nav>
-    <div class="nav-end">
+    <div class="nav-panel" id="navPanel">
+      <nav class="nav-links"><a href="#packages" data-t="navPk">Packages</a><a href="./#demos" data-t="navDemo">Demos</a><a href="./#faq" data-t="navFaq">FAQ</a></nav>
       <div class="langs" role="group" data-t-aria="langAria" aria-label="Site language">
         <a href="../packages.html" hreflang="hy" data-lang-btn="hy">Հայ</a><a href="../ru/packages.html" hreflang="ru" data-lang-btn="ru">Рус</a><a href="../en/packages.html" hreflang="en" data-lang-btn="en" aria-current="page">Eng</a>
       </div>
-      <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name." data-t="navCta">Get a sample</a>
     </div>
+    <span class="nav-clock" aria-hidden="true">23:47</span>
+    <a class="nav-demo" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20" data-t="navCta" data-t-aria="navCtaAria" aria-label="Send DEMO on WhatsApp">DEMO</a>
+    <button type="button" class="nav-burger" aria-expanded="false" aria-controls="navPanel" data-t-aria="menuAria" aria-label="Menu"><i></i></button>
   </div>
 </header>
 
@@ -59,7 +61,7 @@
 <section class="pk" id="packages" data-sel="b" data-bill="m" data-taken="0">
   <div class="wrap">
     <div class="pk-head">
-      <div><h2 data-t="pkTitle">Packages and prices</h2><p class="lead" data-t="pkSub">No hidden fees. Subscriptions are for 12 months.</p></div>
+      <div><h2 data-t="pkTitle">Packages and prices</h2><p class="lead" data-t="pkSub">Subscriptions run for 12 months. Prices are right here.</p></div>
       <div class="bill" role="radiogroup" data-t-aria="pkBillAria" aria-label="Billing">
         <button type="button" role="radio" data-bill="m" aria-checked="true" data-t="pkMonth">Monthly</button>
         <button type="button" role="radio" data-bill="y" aria-checked="false"><span data-t="pkYear">Yearly</span> <em data-t="pkSave">−15%</em></button>
@@ -242,19 +244,28 @@
     <div>
       <h2 data-t="fnTitle">A sample of your site could be ready tomorrow</h2>
       <p class="lead" data-t="fnSub">Message us and we’ll make a sample with your name within a day. The sample is free and commits you to nothing.</p>
-      <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name." data-t="fnBtn">Get a sample on WhatsApp</a>
+      <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20" data-t="fnBtn">Send DEMO on WhatsApp</a>
     </div>
     <div class="fin-c">
-      <div><small data-t="fnPhone">Phone and WhatsApp</small><a href="https://wa.me/37498337187" target="_blank" rel="noopener">+374 98 337 187 ↗</a></div>
+      <div><small data-t="fnPhone">Phone and WhatsApp</small><a href="https://wa.me/37498337187" target="_blank" rel="noopener">+374 98 337 187</a></div>
       <div><small>Email</small><a href="mailto:skiyar.technologies@gmail.com">skiyar.technologies@gmail.com</a></div>
-      <div><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR ↗</a></div>
+      <div><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR</a></div>
     </div>
   </div>
 </section>
 </main>
 <footer class="foot">
-  <div class="wrap"><span data-t="legal">SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia</span><a href="../privacy.html" data-t="privacy">Privacy Policy</a></div>
+  <div class="wrap">
+    <p class="foot-big" data-t="h1">The front desk that never sleeps</p>
+    <div class="foot-cols">
+      <div><small>WhatsApp</small><a href="https://wa.me/37498337187" target="_blank" rel="noopener">+374 98 337 187</a></div>
+      <div><small>Email</small><a href="mailto:skiyar.technologies@gmail.com">skiyar.technologies@gmail.com</a></div>
+      <div><small data-t="ftSite">On the site</small><a href="#packages" data-t="navPk">Packages</a><a href="./#demos" data-t="navDemo">Demos</a><a href="./#faq" data-t="navFaq">FAQ</a></div>
+      <div><small>Instagram · Facebook</small><a href="https://www.instagram.com/skiyar_technologies/" target="_blank" rel="noopener">@skiyar_technologies</a><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR</a></div>
+    </div>
+    <p class="foot-legal"><span data-t="legal">SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia</span> <a href="../privacy.html" data-t="privacy">Privacy Policy</a></p>
+  </div>
 </footer>
-<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name."><i></i><span data-t="fab">Message on WhatsApp</span></a>
+<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20"><i></i><span data-t="fab">Message on WhatsApp</span></a>
 </body>
 </html>
