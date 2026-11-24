@@ -54,3 +54,31 @@
 }
 
 @media (prefers-reduced-motion:reduce){ .niche-gor.nod,.ca-gor.hop,.faq details[open] > p{animation:none} }
+
+/* v13: телефон — шапка полностью непрозрачная (сквозь неё не просвечивает прокрученный текст) */
+@media (max-width:899px){ .nav{background:var(--night)} }
+/* скриншот сайта в телефоне отраслей: привязан к левому верхнему углу — начало строк не обрезается */
+.in-phone .screen img{object-position:left top}
+
+/* v13 ревью кода: рамка фокуса у кнопок ниш не обрезается; смена ниши без мелькания; текст только для диктора */
+@media (max-width:899px){ .niche-c{padding-top:4px;padding-bottom:4px;margin-top:-4px;margin-bottom:-4px} }
+.live.swap [data-step]{transition:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* v13 ревью визуала: колонка первого экрана не шире экрана на 360 px (дети .copy — тоже элементы сетки) */
+.hero .copy > *{min-width:0}
+.hero .pilot b{white-space:normal}
+/* таблицы «Все пакеты» на телефоне листаются вбок — край затухает, чтобы это было видно */
+@media (max-width:899px){ .tw{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)} }
+/* «История записи»: уходящая подпись гаснет быстро, новая появляется после — тексты не накладываются */
+.js .cap:not(.on){transition-duration:.12s}
+.js .cap.on{transition-delay:.12s}
+/* шаги ДЕМО на узком телефоне — столбиком, крупнее */
+@media (max-width:400px){ .ty-steps{grid-template-columns:1fr} .ty-steps li{font-size:14px} }
+/* цена в узкой плитке пакетов на телефоне — мельче, чтобы «120 000 ֏‑ից» умещалась целиком */
+@media (max-width:420px){ .pkt:not(.pkt-on) .pr,.pkt:not(.pkt-on) .pl-p{font-size:clamp(16px,5vw,22px)} }
+/* таблица пакетов на планшете (900–1199 px): «в месяц» под ценой, не обрезается; почта в контактах переносится */
+@media (min-width:900px) and (max-width:1199px){ .pk-tbl .pl-p small{display:block;margin-top:2px} }
+/* контраст (Lighthouse): подпись под гарантией и время в напоминании темнее */
+.t-guar .small{color:var(--c-0b1a33)}
+.rem .msg time{color:#2f6fae}

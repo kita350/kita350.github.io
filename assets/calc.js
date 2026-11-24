@@ -33,14 +33,17 @@
   function lossText(v) { $("#caLoss").textContent = window.SITE.t("caLoss").split("{x}").join(fmt(v) + " ֏"); }
   function tweenLoss(to) {
     cancelAnimationFrame(lossRaf);
-    if (still) { lossShown = to; lossText(to); return; }
+    if (still) { lossShown = to; lossText(to); say(); return; }
     var from = lossShown, t0 = performance.now();
     (function step(t) {
       var p = Math.min(1, (t - t0) / 420), e = 1 - Math.pow(1 - p, 3);
       lossShown = from + (to - from) * e; lossText(lossShown);
-      if (p < 1) lossRaf = requestAnimationFrame(step);
+      if (p < 1) lossRaf = requestAnimationFrame(step); else say();
     })(t0);
   }
+  // итог для экранного диктора — один раз, после того как числа досчитались
+  var sayEl = document.getElementById("caSay"), sayT = 0;
+  function say() { if (!sayEl) return; clearTimeout(sayT); sayT = setTimeout(function () { sayEl.textContent = $("#caK").textContent + " " + $("#caOut").textContent + " " + $("#caUnit").textContent + ". " + $("#caLoss").textContent; }, 300); }
   var gor = box.querySelector(".ca-gor");
   function hop() { if (!gor || still) return; gor.classList.remove("hop"); void gor.offsetWidth; gor.classList.add("hop"); }
   [b, n, c].forEach(function (el) { el.addEventListener("change", hop); });
