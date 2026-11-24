@@ -25,10 +25,13 @@
       timers.push(setTimeout(cycle, LOOP));
     })();
   }
-  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { show(4); return; }
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches, seen = true;
+  // перезапуск сценария с начала (смена ниши в assets/niche.js)
+  box.restartLive = function () { if (still) { show(4); return; } stop(); if (seen && !document.hidden) play(); };
+  if (still) { show(4); return; }
   box.classList.add("is-live");
   if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (e) { if (e[0].isIntersecting && !document.hidden) play(); else stop(); }, { threshold: 0.25 }).observe(box);
+    new IntersectionObserver(function (e) { seen = e[0].isIntersecting; if (seen && !document.hidden) play(); else stop(); }, { threshold: 0.25 }).observe(box);
     document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); });
   } else play();
 })();

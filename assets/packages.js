@@ -161,7 +161,8 @@ document.documentElement.classList.add("js");
   "use strict";
   if (!("IntersectionObserver" in window)) return;
   if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var SEL = "main section:not(.hero) h2, .tile, .gr-col, .pkt, .in-panel, .ca-box, .steps-l li, .faq details, .pv, .ty-form, .pg-once article, .fin-grid > div";
+  // только заголовки блоков и крупные панели: меньше работы браузеру и не «всё влетает» (аудит unslop)
+  var SEL = "main section:not(.hero) h2, .bn-grid, .gr-grid, .pkb-grid, .in-panel, .ca-box, .steps-l, .pv, .pg-once";
   var seen = new WeakSet();
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {

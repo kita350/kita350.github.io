@@ -1,0 +1,51 @@
+/* ───── v12 (24.11.2026): интерактив и зоны нажатия ───── */
+
+/* Переключатель ниши над живым телефоном */
+.lv-box{position:relative}
+.niche{display:flex;align-items:flex-end;gap:10px;margin:0 0 14px}
+.niche-gor{flex:none;width:32px;height:48px;transform-origin:50% 100%}
+.niche-gor.nod{animation:nod .5s var(--ease-out)}
+@keyframes nod{30%{transform:rotate(-8deg) translateY(-2px)}60%{transform:rotate(5deg)}100%{transform:none}}
+.niche-in{min-width:0;flex:1}
+.niche-l{display:block;margin:0 0 6px;color:var(--muted);font-size:13px}
+.niche-c{display:flex;flex-wrap:wrap;gap:6px}
+.niche-b{min-height:44px;padding:0 14px;border-radius:22px;border:1px solid var(--line-2);background:none;color:var(--white);font:600 14px/1 var(--font);cursor:pointer;transition:background-color .2s var(--ease-out),border-color .2s var(--ease-out),transform .12s var(--ease-out)}
+.niche-b:active{transform:scale(.97)}
+.niche-b[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--night)}
+.niche-p{margin:8px 0 0;color:var(--sky);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+/* блок .live во всю ширину колонки, телефон по центру своей рамки */
+.hero .live{width:100%;min-width:0;max-width:100%}
+.hero .wrap > *{min-width:0}
+.lv-box{width:min(300px,100%);margin:0 auto}
+@media (min-width:900px){ .lv-box{width:320px} .hero .live{justify-self:center;max-width:540px} .niche{justify-content:center} .niche-in{flex:0 1 auto} }
+@media (hover:hover){ .niche-b:hover:not([aria-pressed="true"]){border-color:var(--sky)} }
+/* на телефоне чипы в одну прокручиваемую строку, если не влезают */
+@media (max-width:899px){
+  .niche-c{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-right:-16px;padding-right:16px}
+  .niche-c::-webkit-scrollbar{display:none}
+  .niche-b{flex:none}
+}
+
+/* Гор в калькуляторе: подпрыгивает, когда ползунок отпущен */
+.ca-gor{width:42px;height:71px;margin-left:auto;align-self:flex-end;transform-origin:50% 100%;pointer-events:none}
+#caSum{display:flex;align-items:baseline;gap:8px}
+.ca-gor.hop{animation:hop .5s var(--ease-out)}
+@keyframes hop{35%{transform:translateY(-10px) scale(1.04)}70%{transform:translateY(0) scale(.98)}100%{transform:none}}
+
+/* Вопросы: ответ проявляется мягко */
+.faq details[open] > p{animation:faq-in .25s var(--ease-out)}
+@keyframes faq-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.faq summary::after{transition:transform .2s var(--ease-out)}
+
+/* Зоны нажатия на телефоне не меньше 44 px */
+@media (max-width:899px){
+  .nav-burger{width:44px;height:44px}
+  .logo{min-height:44px}
+  .st-rail button{height:44px}
+  .st-rail button::before{top:20px}
+  .pkt-a,.pl-demo{display:inline-flex;align-items:center;min-height:44px}
+  .foot a,.fin-grid a,.nav-panel a,.langs a{display:inline-flex;align-items:center;min-height:44px}
+  .langs a{min-width:44px;justify-content:center}
+}
+
+@media (prefers-reduced-motion:reduce){ .niche-gor.nod,.ca-gor.hop,.faq details[open] > p{animation:none} }

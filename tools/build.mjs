@@ -17,15 +17,15 @@ const w = (p, s) => { fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive
 const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
-    text: ["hero", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
-    css: ["tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4"],
-    js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "reveal"],
+    text: ["hero", "niche", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
+    css: ["tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
+    js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "reveal"],
   },
 ];
 if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
   src: "src/packages.html", out: "packages.html", og: "og",
   text: ["hero", "pk", "end", "pkpage"],
-  css: ["tokens", "site", "pk", "end", "pkpage", "v3", "v4"],
+  css: ["tokens", "site", "pk", "end", "pkpage", "v3", "v4", "v5"],
   js: ["site", "pk", "fab", "reveal"],
 });
 

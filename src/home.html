@@ -54,6 +54,12 @@
       <p class="pilot" data-t-html="pilot"></p>
     </div>
     <div class="live" id="live" aria-label="" data-t-aria="lpAria">
+      <!-- переключатель ниши: тексты src/text/niche.js, логика assets/niche.js -->
+      <div class="niche" role="group" data-t-aria="nicheAria">
+        <img class="niche-gor px" src="../assets/img/px/hero-gor-1x.png" width="48" height="72" alt="">
+        <div class="niche-in"><span class="niche-l" data-t="nicheLbl"></span><div class="niche-c"></div><p class="niche-p" aria-live="polite"></p></div>
+      </div>
+      <div class="lv-box">
       <div class="lv-toast" data-step="4"><b data-t="lpToastT"></b><small data-t="lpToastS"></small></div>
       <div class="lv-phone">
         <div class="lv-screen">
@@ -66,6 +72,7 @@
             <div class="lv-m lv-ok" data-step="3"><i aria-hidden="true"></i><span data-t="lpOk"></span></div>
           </div>
         </div>
+      </div>
       </div>
       <ol class="lv-dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
     </div>
@@ -366,7 +373,7 @@
       </div>
       <div class="ca-out" aria-live="polite">
         <p class="ca-k" id="caK" data-t="caPayK"></p>
-        <p class="ca-sum" id="caSum"><span id="caOut">0</span> <small id="caUnit"></small></p>
+        <p class="ca-sum" id="caSum"><span id="caOut">0</span> <small id="caUnit"></small><img class="ca-gor px" src="../assets/img/px/gor-joy.png" width="84" height="142" alt="" loading="lazy"></p>
         <p class="ca-msg" id="caMsg"></p>
         <div class="ca-loss">
           <p id="caLoss"></p>

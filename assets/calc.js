@@ -28,6 +28,22 @@
       if (p < 1) raf = requestAnimationFrame(step);
     })(t0);
   }
+  // сумма потерь считается плавно (как число визитов), Гор подпрыгивает, когда ползунок отпущен
+  var lossShown = 0, lossRaf = 0;
+  function lossText(v) { $("#caLoss").textContent = window.SITE.t("caLoss").split("{x}").join(fmt(v) + " ֏"); }
+  function tweenLoss(to) {
+    cancelAnimationFrame(lossRaf);
+    if (still) { lossShown = to; lossText(to); return; }
+    var from = lossShown, t0 = performance.now();
+    (function step(t) {
+      var p = Math.min(1, (t - t0) / 420), e = 1 - Math.pow(1 - p, 3);
+      lossShown = from + (to - from) * e; lossText(lossShown);
+      if (p < 1) lossRaf = requestAnimationFrame(step);
+    })(t0);
+  }
+  var gor = box.querySelector(".ca-gor");
+  function hop() { if (!gor || still) return; gor.classList.remove("hop"); void gor.offsetWidth; gor.classList.add("hop"); }
+  [b, n, c].forEach(function (el) { el.addEventListener("change", hop); });
   function upd() {
     var t = window.SITE.t, lang = window.SITE.lang();
     if (+n.value > +b.value) n.value = b.value;
@@ -36,7 +52,7 @@
     var loss = N * C * WEEKS, k = Math.ceil(PRICE / C), p = B ? Math.round(N / B * 100) : 0;
     animate(k);
     $("#caUnit").textContent = unit(k, lang);
-    $("#caLoss").textContent = t("caLoss").split("{x}").join(fmt(loss) + " ֏");
+    tweenLoss(loss);
     $("#caFormula").textContent = t("caFormula").split("{n}").join(N).split("{c}").join(fmt(C) + " ֏").split("{p}").join(p);
     var msg = !N ? t("caZero") : (N / B < 0.03 ? t("caLow").split("{p}").join(p) : "");
     $("#caMsg").textContent = msg; $("#caMsg").hidden = !msg;
