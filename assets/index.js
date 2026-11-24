@@ -674,7 +674,7 @@ document.documentElement.classList.add("js");
     setSrc(c.img, c.w[c.mood]);
     if (!c.img.classList.contains("st-px")) return;
     if (!c.bub) { c.bub = document.createElement("i"); c.bub.className = "emo-bub"; c.bub.setAttribute("aria-hidden", "true"); c.img.parentNode.appendChild(c.bub); }
-    var t = BUB[c.mood] || "";
+    var t = c.noBub ? "" : (BUB[c.mood] || "");
     c.bub.textContent = t; c.bub.className = "emo-bub emo-" + c.mood + (t && c.img.classList.contains("on") ? " on" : "");
     c.bub.style.left = (c.img.offsetLeft + c.img.offsetWidth * 0.62) + "px"; c.bub.style.top = (c.img.offsetTop - 8) + "px";
   }
@@ -740,6 +740,7 @@ document.documentElement.classList.add("js");
     list.forEach(function (c) {
       if (!c.img.classList.contains("st-px")) return;
       var m = (STORY[c.img.dataset.who] || {})[s] || "base";
+      c.noBub = s >= 5; // по ТЗ облачка только на шагах 1–4
       mood(c, m);
       if (c.img.dataset.who === "lusine" && s === 4) c.t = setTimeout(function () { mood(c, "happy"); }, 1200); // увидела запись — обрадовалась
     });
