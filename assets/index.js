@@ -114,11 +114,20 @@ document.documentElement.classList.add("js");
     box.style.setProperty("--k", Math.max(0.5, k).toFixed(3));
   }
 
-  function onScroll() {
-    var r = track.getBoundingClientRect();
-    var total = track.offsetHeight - stage.offsetHeight;
-    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+  // Геометрию меряем только при загрузке и смене размера; при прокрутке — одно чтение scrollY за кадр,
+  // без замеров раскладки на каждое событие (на телефоне это давало рывки).
+  var top0 = 0, total = 0, ticking = false;
+  function measure() {
+    top0 = track.getBoundingClientRect().top + window.scrollY;
+    total = track.offsetHeight - stage.offsetHeight;
+  }
+  function update() {
+    ticking = false;
+    var p = total > 0 ? Math.min(1, Math.max(0, (window.scrollY - top0) / total)) : 0;
     show(Math.min(N, Math.floor(p * N) + 1));
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }
 
   each(".st-rail button", function (b) {
@@ -131,11 +140,14 @@ document.documentElement.classList.add("js");
   });
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", function () { fit(); onScroll(); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  var rz = 0;
+  window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(function () { fit(); measure(); update(); }, 150); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); measure(); update(); });
+  window.addEventListener("load", function () { measure(); update(); });
   fit();
+  measure();
   show(1);
-  onScroll();
+  update();
 })();
 
 ;
