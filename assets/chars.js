@@ -60,7 +60,6 @@
   // жесты: настоящие кадры движений (Гор машет, робот машет кистью, Рузан поднимает телефон, Лусине печатает)
   var GEST = {
     gor: ["emo-gor-wave1.png", "emo-gor-wave2.png", "emo-gor-wave1.png", "emo-gor-wave2.png", "emo-gor-wave1.png", "emo-gor-wave2.png"],
-    ski: ["emo-ski-wave1.png", "emo-ski-wave2.png", "emo-ski-wave1.png", "emo-ski-wave2.png", "emo-ski-wave1.png"],
     ruzan: ["emo-ruzan-phone1.png", "emo-ruzan-phone2.png", "emo-ruzan-phone1.png", "emo-ruzan-phone2.png", "emo-ruzan-phone1.png"],
     lusine: ["emo-lusine-wave1.png", "emo-lusine-wave2.png", "emo-lusine-wave1.png", "emo-lusine-wave2.png", "emo-lusine-wave1.png", "emo-lusine-wave2.png"],
     gorfree: ["emo-gor-free-wave1.png", "emo-gor-free-wave2.png", "emo-gor-free-wave1.png", "emo-gor-free-wave2.png", "emo-gor-free-wave1.png", "emo-gor-free-wave2.png"]

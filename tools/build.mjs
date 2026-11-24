@@ -19,7 +19,7 @@ const PAGES = [
     src: "src/home.html", out: "index.html", og: "og",
     text: ["hero", "niche", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
     css: ["fonts", "tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
-    js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "phone3d", "chars", "reveal"],
+    js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "phone3d", "phone3d-ind", "chars", "reveal"],
   },
 ];
 if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
