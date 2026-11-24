@@ -150,10 +150,16 @@
 /* подсказка про ДЕМО под кнопкой */
 .dm-hint{margin:12px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45;max-width:30em}
 @media (max-width:899px){ .hero .dm-hint{order:3;margin-top:10px} }
-/* счётчик мест скрыт до первого клиента (вернуть: удалить это правило) */
-.pkt-seats .left,.pk-p .left{display:none}
+/* счётчик мест «свободно N из 5»: число — data-taken у #packages (src/home.html, src/packages.html) и текст плашки в src/text/hero.js */
 /* «было/стало» без цифр: сцена сразу под заголовком */
 .gr-col h3{margin-bottom:8px}
 
 /* ───── v6 (24.11.2026): плитка гарантии убрана из пакетов (гарантия — в «Что вы получаете») ───── */
 @media (min-width:900px){ .pkt-seats{grid-column:1/-1} }
+
+/* ───── v7 (24.11.2026): цена под заголовком, кто такой Гор ───── */
+.hero .h-price{order:1;margin:14px 0 -6px;color:var(--sky);font-weight:700;font-size:17px;letter-spacing:-.01em}
+.gr-who{margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45;max-width:40em}
+
+/* v9: «первым 5 — бесплатно» рядом с подключением во вкладках отраслей */
+.in-price .in-free{display:inline-block;margin-left:4px;color:var(--sky);font-weight:700;font-size:13px}

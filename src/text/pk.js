@@ -17,7 +17,7 @@
       pkWaStart: "Բարև ձեզ։ Ինձ հետաքրքրում է SKIYAR Start փաթեթը։",
       pkWaOn: "Բարև ձեզ։ Ինձ հետաքրքրում է SKIYAR Online փաթեթը։",
       pkWaAi: "Բարև ձեզ։ Ուզում եմ իմանալ Online AI-ի (ԱԲ պատասխանների) մասին։",
-      pkMin: "Բաժանորդագրությունները՝ նվազագույնը 12 ամիս։",
+      pkMin: "Պայմանագիրը մեկ տարով է, դուրս գալ կարող եք ցանկացած պահի՝ 30 օր առաջ զգուշացնելով։",
       pkMore: "Բոլոր փաթեթները, միանվագ կայքերը և հավելումները",
       r1: "Google Maps քարտի ուղղում՝ հղում, ժամեր, լուսանկարներ",
       r2: "Մեկ էջանոց կայք՝ հայերեն, ռուսերեն, անգլերեն",
@@ -32,11 +32,11 @@
       gTitle: "Արդյունքի երաշխիք",
       gText: "Եթե առաջին 2 ամսում համակարգով եկել է 20-ից քիչ առցանց գրանցում, երրորդ ամիսն անվճար է։",
       gCond: "Պայման՝ գրանցման հղումը կա Instagram-ում և Google-ում, ադմինիստրատորը գրանցումներն ընդունում է համակարգով։ Հաշվում ենք համակարգի տվյալներով, դուք դրանք տեսնում եք ամսական հաշվետվությունում։",
-      pTitle: "Online՝ առաջին 5 բիզնեսի համար", pLeft: "Զբաղված է {n} տեղ 5-ից",
+      pTitle: "Online՝ առաջին 5 բիզնեսի համար", pLeft: "Ազատ է {n} տեղ 5-ից",
       p1: "Միացումն անվճար է", p2: "Առաջին ամսվա վճարը՝ գործարկումից հետո, երբ ամեն ինչ տեսել եք աշխատանքում", p3: "Փոխարենը՝ կարծիք և թույլտվություն ցույց տալու աշխատանքը",
       pCta: "Ուզում եմ լինել առաջին հինգում", pWa: "Բարև ձեզ։ Ուզում եմ միանալ SKIYAR-ին առաջին 5 բիզնեսների թվում։",
       wTitle: "Ազնիվ կանոններ",
-      w1: "Դոմենը գրանցվում է ձեր անունով։", w2: "Կայքի օրինակն անվճար է և պատրաստվում է մինչև պայմանագիրը։", w3: "12 ամիս հետո կայքը կարող եք վերցնել անվճար։"
+      w1: "Դոմենը գրանցվում է ձեր անունով։", w2: "Կայքի օրինակն անվճար է և պատրաստվում է մինչև պայմանագիրը։", w3: "12 ամիս հետո կայքը կարող եք վերցնել անվճար։", w4: "Պայմանագիրը մեկ տարով է, բայց դուրս գալ կարող եք ցանկացած պահի՝ 30 օր առաջ զգուշացնելով, առանց տուգանքի։ Հետգնում՝ միայն եթե ուզում եք կայքը վերցնել ձեզ։"
     },
     ru: {
       pkbOnP: "Сайт, запись 24/7, напоминания в WhatsApp и отчёт каждый месяц.", pkbOnBtn: "Хочу Online", pkbStartP: "Карточка Google и одна страница", pkbAiP: "Online + ИИ отвечает клиентам", pkbGuar: "записей за 2 месяца — гарантия. Если меньше, третий месяц бесплатно.", pkbAaP: "Только ИИ-ответы, если сайт уже есть; минимум 6 месяцев", pkbOnceT: "Разово", pkbOnceP: "Site, Site Pro, ресторан, Shop", pkbFrom: "от 120 000 ֏", pkbMore: "Все цены", pkbPilotP: "Подключение бесплатно, первый месяц — после запуска",
@@ -53,7 +53,7 @@
       pkWaStart: "Здравствуйте! Интересует пакет SKIYAR Start.",
       pkWaOn: "Здравствуйте! Интересует пакет SKIYAR Online.",
       pkWaAi: "Здравствуйте! Хочу узнать про Online AI (ИИ-ответы).",
-      pkMin: "Подписки — минимум на 12 месяцев.",
+      pkMin: "Договор на год, выйти можно в любой момент за 30 дней.",
       pkMore: "Все пакеты, разовые сайты и дополнения",
       r1: "Исправим карточку Google Maps: ссылка, часы, фото",
       r2: "Одностраничный сайт на армянском, русском, английском",
@@ -68,11 +68,11 @@
       gTitle: "Гарантия результата",
       gText: "Если за первые 2 месяца через систему пришло меньше 20 онлайн-записей, третий месяц бесплатно.",
       gCond: "Условие: ссылка на запись стоит в Instagram и в Google, а администратор принимает записи через систему. Считаем по данным системы записи — вы видите их в ежемесячном отчёте.",
-      pTitle: "Online для первых 5 бизнесов", pLeft: "Занято {n} из 5 мест",
+      pTitle: "Online для первых 5 бизнесов", pLeft: "Свободно {n} из 5 мест",
       p1: "Подключение бесплатно", p2: "Первый месяц — оплата после запуска, когда вы увидели всё в работе", p3: "Взамен — отзыв и разрешение показать работу",
       pCta: "Хочу быть в первых пяти", pWa: "Здравствуйте! Хочу подключиться к SKIYAR в числе первых 5 бизнесов.",
       wTitle: "Честные правила",
-      w1: "Домен оформляется на вас.", w2: "Пример сайта бесплатный и делается до договора.", w3: "После 12 месяцев сайт можно забрать бесплатно."
+      w1: "Домен оформляется на вас.", w2: "Пример сайта бесплатный и делается до договора.", w3: "После 12 месяцев сайт можно забрать бесплатно.", w4: "Договор на год, но выйти можно в любой момент — предупредив за 30 дней, без штрафа. Выкуп — только если хотите забрать сайт себе."
     },
     en: {
       pkbOnP: "Website, 24/7 booking, WhatsApp reminders and a monthly report.", pkbOnBtn: "I want Online", pkbStartP: "Google listing and a one-page site", pkbAiP: "Online plus AI replies to clients", pkbGuar: "bookings in 2 months, guaranteed. If fewer, month 3 is free.", pkbAaP: "AI replies only, if you already have a site; 6 months minimum", pkbOnceT: "One-time", pkbOnceP: "Site, Site Pro, restaurant, Shop", pkbFrom: "from 120 000 ֏", pkbMore: "All prices", pkbPilotP: "Free setup, first month paid after launch",
@@ -89,7 +89,7 @@
       pkWaStart: "Hello! I’m interested in the SKIYAR Start package.",
       pkWaOn: "Hello! I’m interested in the SKIYAR Online package.",
       pkWaAi: "Hello! I’d like to know about Online AI (AI replies).",
-      pkMin: "Subscriptions run for at least 12 months.",
+      pkMin: "A one-year contract; you can leave any time with 30 days’ notice.",
       pkMore: "All packages, one-time sites and add-ons",
       r1: "Google Maps listing fixed: link, hours, photos",
       r2: "One-page site in Armenian, Russian, English",
@@ -104,11 +104,11 @@
       gTitle: "Result guarantee",
       gText: "If fewer than 20 online bookings come through the system in the first 2 months, the third month is free.",
       gCond: "Condition: the booking link is in your Instagram and Google profile, and your front desk takes bookings through the system. We count with the booking system’s data, which you see in the monthly report.",
-      pTitle: "Online for the first 5 businesses", pLeft: "{n} of 5 places taken",
+      pTitle: "Online for the first 5 businesses", pLeft: "{n} of 5 places free",
       p1: "Free setup", p2: "First month paid after launch, once you’ve seen it all working", p3: "In return: a review and permission to show the work",
       pCta: "I want to be one of the first five", pWa: "Hello! I’d like to join SKIYAR as one of the first 5 businesses.",
       wTitle: "Fair rules",
-      w1: "The domain is registered in your name.", w2: "The sample site is free and made before any contract.", w3: "After 12 months you can take the site for free."
+      w1: "The domain is registered in your name.", w2: "The sample site is free and made before any contract.", w3: "After 12 months you can take the site for free.", w4: "The contract is for a year, but you can leave any time with 30 days’ notice and no penalty. A buyout applies only if you want to keep the site."
     }
   };
   for (var l in P) for (var k in P[l]) window.T[l][k] = P[l][k];

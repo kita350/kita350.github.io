@@ -39,7 +39,7 @@
       els[i].textContent = t("pkTerm") + ", " + t("pkFirst").split("{x}").join(fmt(total) + "\u00a0֏");
     }
     var taken = +box.getAttribute("data-taken");
-    box.querySelector("#pkLeft").textContent = t("pLeft").split("{n}").join(taken);
+    box.querySelector("#pkLeft").textContent = t("pLeft").split("{n}").join(5 - taken);
     var seats = box.querySelector(".seats"); seats.textContent = "";
     for (i = 0; i < 5; i++) { var s = document.createElement("i"); if (i < taken) s.className = "taken"; seats.appendChild(s); }
   }

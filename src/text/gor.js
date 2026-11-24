@@ -5,6 +5,7 @@
     hy: {
       csTitle: "", csQuote: "", csWho: "",
       grTitle: "Ինչպես էր Գորի մոտ, և ինչպես դարձավ", grSub: "Նույն սրահը, նույն վարպետները։ Տարբերությունը՝ մեկ շաբաթ։",
+      grWho: "Գորը մեր տեսահոլովակների հերոսն է՝ գործարար, ով հարազատների և ծանոթների միջոցով փորձում է տարբեր բիզնեսներ՝ ռեստորան, սրահ, հյուրատուն։",
       grWasK: "Առաջ՝ տետր", grWasT: "Գրանցումը տետրում, հեռախոսը՝ մինչև գիշեր",
       grW1: "հաճախորդ 15:00-ին", grW2: "նամակ առանց պատասխանի", grW3: "չեկած շաբաթում",
       grN1: "Ուրբ 15:00 — Աննա", grN2a: "Ուրբ 15:00 —", grN2b: "Մարի", grN3: "Շբթ 11:00 — ???", grN4: "հետ զանգել՝ 6 հոգու",
@@ -17,6 +18,7 @@
     ru: {
       csTitle: "", csQuote: "", csWho: "",
       grTitle: "Как было у Гора и как стало", grSub: "Тот же салон, те же мастера. Разница — одна неделя.",
+      grWho: "Гор — герой наших роликов: бизнесмен, который через родственников и знакомых пробует разные бизнесы — ресторан, салон, гестхаус.",
       grWasK: "Было: тетрадка", grWasT: "Запись в тетрадке, телефон до ночи",
       grW1: "клиента на 15:00", grW2: "сообщений без ответа", grW3: "неявки за неделю",
       grN1: "Пт 15:00 — Анна", grN2a: "Пт 15:00 —", grN2b: "Мари", grN3: "Сб 11:00 — ???", grN4: "перезвонить: 6 чел.",
@@ -29,6 +31,7 @@
     en: {
       csTitle: "", csQuote: "", csWho: "",
       grTitle: "Gor: before and after", grSub: "Same salon, same staff. The difference is one week.",
+      grWho: "Gor is the hero of our videos: a businessman who tries different businesses through relatives and friends — a restaurant, a salon, a guesthouse.",
       grWasK: "Before: the notebook", grWasT: "Bookings in a notebook, the phone ringing till midnight",
       grW1: "clients at 15:00", grW2: "unanswered messages", grW3: "no-shows a week",
       grN1: "Fri 15:00 — Anna", grN2a: "Fri 15:00 —", grN2b: "Mari", grN3: "Sat 11:00 — ???", grN4: "call back: 6 people",
