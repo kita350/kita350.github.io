@@ -3,6 +3,7 @@
 (function () {
   var G = {
     hy: {
+      csTitle: "", csQuote: "", csWho: "",
       grTitle: "Ինչպես էր Գորի մոտ, և ինչպես դարձավ", grSub: "Նույն սրահը, նույն վարպետները։ Տարբերությունը՝ մեկ շաբաթ։",
       grWasK: "Առաջ՝ տետր", grWasT: "Գրանցումը տետրում, հեռախոսը՝ մինչև գիշեր",
       grW1: "հաճախորդ 15:00-ին", grW2: "նամակ առանց պատասխանի", grW3: "չեկած շաբաթում",
@@ -14,6 +15,7 @@
       grFoot: "«Առաջ» թվերը տեսարան են մեր տեսանյութերից, ոչ թե հաճախորդի վիճակագրություն։"
     },
     ru: {
+      csTitle: "", csQuote: "", csWho: "",
       grTitle: "Как было у Гора и как стало", grSub: "Тот же салон, те же мастера. Разница — одна неделя.",
       grWasK: "Было: тетрадка", grWasT: "Запись в тетрадке, телефон до ночи",
       grW1: "клиента на 15:00", grW2: "сообщений без ответа", grW3: "неявки за неделю",
@@ -25,6 +27,7 @@
       grFoot: "Цифры «было» — сценка из наших роликов, не статистика клиента."
     },
     en: {
+      csTitle: "", csQuote: "", csWho: "",
       grTitle: "Gor: before and after", grSub: "Same salon, same staff. The difference is one week.",
       grWasK: "Before: the notebook", grWasT: "Bookings in a notebook, the phone ringing till midnight",
       grW1: "clients at 15:00", grW2: "unanswered messages", grW3: "no-shows a week",

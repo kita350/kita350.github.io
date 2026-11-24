@@ -145,3 +145,15 @@
 .pkt .pr{white-space:normal}
 /* длинное армянское слово «Ադմինիստրատոր,» шире 8em — рамка заголовка не должна быть уже слова */
 [data-lang="hy"] .hero h1{max-width:11em}
+
+/* ───── v5 (24.11.2026): правки понятности по аудиту ───── */
+/* подсказка про ДЕМО под кнопкой */
+.dm-hint{margin:12px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45;max-width:30em}
+@media (max-width:899px){ .hero .dm-hint{order:3;margin-top:10px} }
+/* счётчик мест скрыт до первого клиента (вернуть: удалить это правило) */
+.pkt-seats .left,.pk-p .left{display:none}
+/* «было/стало» без цифр: сцена сразу под заголовком */
+.gr-col h3{margin-bottom:8px}
+
+/* ───── v6 (24.11.2026): плитка гарантии убрана из пакетов (гарантия — в «Что вы получаете») ───── */
+@media (min-width:900px){ .pkt-seats{grid-column:1/-1} }
