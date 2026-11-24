@@ -599,6 +599,8 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 .niche-c{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-right:-16px;padding-right:16px}
 .niche-c::-webkit-scrollbar{display:none}
 .niche-b{flex:none}
+.niche-c{-webkit-mask-image:linear-gradient(90deg,var(--c-000) 82%,transparent);mask-image:linear-gradient(90deg,var(--c-000) 82%,transparent)}
+.hero .lv-phone{margin-bottom:-70px}
 }
 .ca-gor{width:42px;height:71px;margin-left:auto;align-self:flex-end;transform-origin:50% 100%;pointer-events:none}
 #caSum{display:flex;align-items:baseline;gap:8px}
@@ -615,5 +617,6 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 .pkt-a,.pl-demo{display:inline-flex;align-items:center;min-height:44px}
 .foot a,.fin-grid a,.nav-panel a,.langs a{display:inline-flex;align-items:center;min-height:44px}
 .langs a{min-width:44px;justify-content:center}
+.foot-cols a{display:flex} 
 }
 @media (prefers-reduced-motion:reduce){ .niche-gor.nod,.ca-gor.hop,.faq details[open] > p{animation:none} }
