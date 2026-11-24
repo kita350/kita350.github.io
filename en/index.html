@@ -34,16 +34,18 @@
 <script src="../assets/index.js" defer></script>
 </head>
 <body data-lang="en">
-<header class="nav">
+<header class="nav" id="nav">
   <div class="wrap">
     <a class="logo" href="#"><i>S</i>SKIYAR</a>
-    <nav class="nav-links"><a href="#packages" data-t="navPk">Packages</a><a href="#demos" data-t="navDemo">Demos</a><a href="#faq" data-t="navFaq">FAQ</a></nav>
-    <div class="nav-end">
+    <div class="nav-panel" id="navPanel">
+      <nav class="nav-links"><a href="#packages" data-t="navPk">Packages</a><a href="#demos" data-t="navDemo">Demos</a><a href="#faq" data-t="navFaq">FAQ</a></nav>
       <div class="langs" role="group" data-t-aria="langAria" aria-label="Site language">
         <a href="../" hreflang="hy" data-lang-btn="hy">Հայ</a><a href="../ru/" hreflang="ru" data-lang-btn="ru">Рус</a><a href="../en/" hreflang="en" data-lang-btn="en" aria-current="page">Eng</a>
       </div>
-      <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name." data-t="navCta">Get a sample</a>
     </div>
+    <span class="nav-clock" aria-hidden="true">23:47</span>
+    <a class="nav-demo" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20" data-t="navCta" data-t-aria="navCtaAria" aria-label="Send DEMO on WhatsApp">DEMO</a>
+    <button type="button" class="nav-burger" aria-expanded="false" aria-controls="navPanel" data-t-aria="menuAria" aria-label="Menu"><i></i></button>
   </div>
 </header>
 
@@ -54,7 +56,7 @@
       <h1 data-t="h1">The front desk that never sleeps</h1>
       <p class="sub" data-t-html="sub">Website, online booking and WhatsApp reminders in three languages. We run all of it.</p>
       <div class="cta">
-        <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name." data-t="cta1">Get a free sample</a>
+        <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20" data-t="cta1">Send DEMO</a>
         <a class="btn btn-line" href="#packages" data-t="cta2">See packages</a>
       </div>
       <p class="pilot" data-t-html="pilot"><b>Pilot: 5 places</b><span>Free setup, first month paid after launch</span></p>
@@ -207,14 +209,14 @@
         <div class="url" aria-hidden="true"><i></i>liorabeauty<span>.am</span></div>
       </article>
     </div>
-    <div class="bn-cta"><a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name." data-t="cta1">Get a free sample</a></div>
+    <div class="bn-cta"><a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20" data-t="cta1">Send DEMO</a></div>
   </div>
 </section>
 <section class="try" id="try" data-demo-base="../demo/">
   <div class="wrap ty-grid">
     <div class="ty-head">
-      <h2 data-t="tyTitle">Your site, with your name on it</h2>
-      <p class="lead" data-t="tySub">Type your business name, pick the type and open the sample — already with your name on it.</p>
+      <h2 data-t="tyTitle">We’ll send you your business’s site</h2>
+      <p class="lead" data-t="tySub">One word — DEMO — and your business name. Within a day we’ll send a sample site with your name. Free.</p>
     </div>
     <div class="pv" data-kind="salon" aria-live="polite">
       <div class="pv-url"><i></i><span><b>yourname</b>.am</span></div>
@@ -224,8 +226,9 @@
       </div>
     </div>
     <form class="ty-form" autocomplete="off">
+      <p class="ty-kw"><b data-t="navCta">DEMO</b><span data-t="tyKwAlt">ԴԵՄՈ · ДЕМО</span></p>
       <label for="tyName" data-t="tyName">Business name</label>
-      <input class="ty-input" id="tyName" name="name" type="text" maxlength="60" data-t-ph="tyPh" placeholder="For example, Gohar Salon" enterkeyhint="go" spellcheck="false">
+      <div class="ty-claim"><span class="ty-pre" data-t="navCta" aria-hidden="true">DEMO</span><input class="ty-input" id="tyName" name="name" type="text" maxlength="60" data-t-ph="tyPh" placeholder="For example, Gohar Salon" enterkeyhint="send" spellcheck="false"></div>
       <div class="ty-kinds" role="radiogroup" aria-labelledby="tyKindL">
         <span class="lbl2" id="tyKindL" data-t="tyKind">Type of business</span>
         <button type="button" role="radio" data-kind-btn="salon" data-t="tyKSalon">Salon</button>
@@ -233,9 +236,11 @@
         <button type="button" role="radio" data-kind-btn="hotel" data-t="tyKHotel">Hotel</button>
       </div>
       <div class="ty-btns">
-        <a class="btn btn-main" id="tyOpen" target="_blank" rel="noopener" data-t="tyOpen">Open the sample</a>
-        <a class="btn btn-line" id="tyWa" target="_blank" rel="noopener" data-t="tyWa">Message on WhatsApp</a>
+        <a class="btn btn-main" id="tyWa" target="_blank" rel="noopener"><span data-t="tyWa">Send on WhatsApp</span><small data-t="tyWaS">within 1 day</small></a>
+        <a class="btn btn-line" id="tyOpen" target="_blank" rel="noopener" data-t="tyOpen">See a sample now</a>
       </div>
+      <ol class="ty-steps"><li data-t="tyS1">You send DEMO and your name</li><li data-t="tyS2">Ani checks the details</li><li data-t="tyS3">You get a link to your site</li></ol>
+      <p class="ty-ig"><span data-t="tyIg">Or send DEMO in an Instagram DM</span> <a href="https://www.instagram.com/skiyar_technologies/" target="_blank" rel="noopener">@skiyar_technologies</a></p>
       <p class="ty-note" data-t="tyNote">We don’t save your name, and the sample isn’t published.</p>
       <p class="ty-live"><a href="https://liora-beauty.skiyar-templates.workers.dev" target="_blank" rel="noopener" data-t="tyLive">Want to try a real booking? Open the Liora Beauty live demo</a></p>
     </form>
@@ -359,94 +364,38 @@
     </div>
   </div>
 </section>
-<section class="pk" id="packages" data-sel="b" data-bill="m" data-taken="0">
+<section class="pk pkb" id="packages" data-sel="b" data-bill="m" data-taken="0">
   <div class="wrap">
     <div class="pk-head">
-      <div><h2 data-t="pkTitle">Packages and prices</h2><p class="lead" data-t="pkSub">No hidden fees. Subscriptions are for 12 months.</p></div>
+      <div><h2 data-t="pkTitle">Packages and prices</h2><p class="lead" data-t="pkSub">Subscriptions run for 12 months. Prices are right here.</p></div>
       <div class="bill" role="radiogroup" data-t-aria="pkBillAria" aria-label="Billing">
         <button type="button" role="radio" data-bill="m" aria-checked="true" data-t="pkMonth">Monthly</button>
         <button type="button" role="radio" data-bill="y" aria-checked="false"><span data-t="pkYear">Yearly</span> <em data-t="pkSave">−15%</em></button>
       </div>
     </div>
-    <div class="pk-pick" role="group" aria-label="SKIYAR">
-      <button type="button" data-col="a" aria-pressed="false">Start</button>
-      <button type="button" data-col="b" aria-pressed="true">Online</button>
-      <button type="button" data-col="c" aria-pressed="false">Online AI</button>
+    <div class="pkb-grid">
+      <article class="pkt pkt-on">
+        <span class="main" data-t="pkMain">Main</span>
+        <h3>SKIYAR Online</h3>
+        <p data-t="pkbOnP">Website, 24/7 booking, WhatsApp reminders and a monthly report.</p>
+        <p class="pl-p" data-m="35 000" data-y="357 000"><span class="pl-x">35 000</span> ֏ <small data-per></small></p>
+        <p class="pl-eq" data-eq="357 000"></p>
+        <p class="pl-s" data-setup="50 000" data-free="1"></p>
+        <p class="pl-y" data-first="35000,357000,50000"></p>
+        <a class="btn btn-main" target="_blank" rel="noopener" data-wa="pkWaOn" href="https://wa.me/37498337187?text=Hello!%20I%E2%80%99m%20interested%20in%20the%20SKIYAR%20Online%20package."><span data-t="pkbOnBtn">I want Online</span><small>WhatsApp</small></a>
+      </article>
+      <article class="pkt"><h3>Start</h3><p data-t="pkbStartP">Google listing and a one-page site</p><p class="pr">49 000 ֏ <small data-t="pkOnce">one-time</small></p><a class="pkt-a" href="../demo/start/?lang=en" target="_blank" rel="noopener" data-t="pkStartDemo">One-page sample</a></article>
+      <article class="pkt pkt-ai"><span class="soon" data-t="pkPilotSoon">Pilot, coming soon</span><h3>Online AI</h3><p data-t="pkbAiP">AI replies to clients</p><p class="pl-p" data-m="60 000" data-y="612 000"><span class="pl-x">60 000</span> ֏ <small data-per></small></p></article>
+      <article class="pkt pkt-g"><b>20</b><p data-t="pkbGuar">bookings in 2 months, guaranteed. If fewer, month 3 is free.</p></article>
+      <article class="pkt"><h3>AI Admin</h3><p data-t="pkbAaP">If you already have a site; 6 months minimum</p><p class="pl-p" data-m="40 000" data-y="408 000"><span class="pl-x">40 000</span> ֏ <small data-per></small></p></article>
+      <article class="pkt"><h3 data-t="pkbOnceT">One-time</h3><p data-t="pkbOnceP">Site, Site Pro, restaurant, Shop</p><p class="pr"><span data-t="pkbFrom">from 120 000 ֏</span></p><a class="pkt-a" href="packages.html#once" data-t="pkbMore">All prices</a></article>
+      <article class="pkt pkt-seats">
+        <div><h3 data-t="pTitle">Pilot for the Online package</h3><p class="left"><span class="seats" aria-hidden="true"></span><b id="pkLeft"></b></p><p data-t="pkbPilotP">Free setup, first month paid after launch</p></div>
+        <a class="btn btn-line" target="_blank" rel="noopener" data-wa="pWa" href="https://wa.me/37498337187?text=Hello!%20I%E2%80%99d%20like%20to%20join%20the%20SKIYAR%20pilot." data-t="pCta">Take a pilot place</a>
+      </article>
     </div>
-    <div class="pk-tbl">
-      <table>
-        <thead>
-          <tr>
-            <td class="pk-help"><b data-t="pkHelpT">Which one?</b><p data-t="pkHelp">Start if you need to be found on Google. Online if you want clients to book without calling. Online AI is a pilot for now.</p></td>
-            <th scope="col" class="c-a">
-              <div class="pl">
-                <b class="pl-n">SKIYAR Start</b>
-                <span class="pl-t" data-t="pkStartT">So people can find you</span>
-                <a class="pl-demo" href="../demo/start/?lang=en" target="_blank" rel="noopener" data-t="pkStartDemo">One-page sample</a>
-                <p class="pl-p"><span class="pl-x">49 000</span> ֏ <small data-t="pkOnce">one-time</small></p>
-                <p class="pl-eq"></p>
-                <p class="pl-s" data-t="pkStartPay">pay after delivery</p>
-                <a class="btn btn-line" target="_blank" rel="noopener" data-wa="pkWaStart" href="https://wa.me/37498337187?text=Hello!%20I%E2%80%99m%20interested%20in%20the%20SKIYAR%20Start%20package." data-t="pkPick">Choose</a>
-              </div>
-            </th>
-            <th scope="col" class="c-b">
-              <div class="pl">
-                <span class="main" data-t="pkMain">Main</span><b class="pl-n">SKIYAR Online</b>
-                <span class="pl-t" data-t="pkOnT">So clients book themselves</span>
-                <p class="pl-p" data-m="35 000" data-y="357 000"><span class="pl-x">35 000</span> ֏ <small data-per></small></p>
-                <p class="pl-eq" data-eq="357 000"></p>
-                <p class="pl-s" data-setup="50 000" data-free="1"></p>
-                <p class="pl-y" data-first="35000,357000,50000"></p>
-                <a class="btn btn-main" target="_blank" rel="noopener" data-wa="pkWaOn" href="https://wa.me/37498337187?text=Hello!%20I%E2%80%99m%20interested%20in%20the%20SKIYAR%20Online%20package." data-t="pkPick">Choose</a>
-              </div>
-            </th>
-            <th scope="col" class="c-c">
-              <div class="pl">
-                <span class="soon" data-t="pkPilotSoon">Pilot, coming soon</span><b class="pl-n">SKIYAR Online AI</b>
-                <span class="pl-t" data-t="pkAiT">So no message goes unanswered</span>
-                <p class="pl-p" data-m="60 000" data-y="612 000"><span class="pl-x">60 000</span> ֏ <small data-per></small></p>
-                <p class="pl-eq" data-eq="612 000"></p>
-                <p class="pl-s" data-setup="80 000"></p>
-                <p class="pl-y" data-first="60000,612000,80000"></p>
-                <a class="btn btn-line" target="_blank" rel="noopener" data-wa="pkWaAi" href="https://wa.me/37498337187?text=Hello!%20I%E2%80%99d%20like%20to%20know%20about%20the%20Online%20AI%20pilot." data-t="pkAsk">Ask about the pilot</a>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row" data-t="r1">Google Maps listing fixed: link, hours, photos</th><td class="c-a"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r2">One-page site in Armenian, Russian, English</th><td class="c-a"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r3">Full site: services, prices, masters, reviews</th><td class="c-a"><i class="no" role="img" data-t-aria="pkNo" aria-label="No"></i></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r4">Online booking</th><td class="c-a"><span data-t="r4s">WhatsApp button</span></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r5">WhatsApp reminders to clients</th><td class="c-a"><i class="no" role="img" data-t-aria="pkNo" aria-label="No"></i></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r6">Domain (in your name), hosting, secure connection</th><td class="c-a"><span data-t="r6a">1st year included</span></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r7">Edits and price updates</th><td class="c-a"><span data-t="r7a">6 000 ֏/h</span></td><td class="c-b"><span data-t="r7v">up to 2 h a month</span></td><td class="c-c"><span data-t="r7v">up to 2 h a month</span></td></tr>
-          <tr><th scope="row" data-t="r8">A report every month</th><td class="c-a"><i class="no" role="img" data-t-aria="pkNo" aria-label="No"></i></td><td class="c-b"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td><td class="c-c"><i class="ck" role="img" data-t-aria="pkYes" aria-label="Yes"></i></td></tr>
-          <tr><th scope="row" data-t="r9">AI replies to clients 24/7 (Instagram and WhatsApp later)</th><td class="c-a"><i class="no" role="img" data-t-aria="pkNo" aria-label="No"></i></td><td class="c-b"><i class="no" role="img" data-t-aria="pkNo" aria-label="No"></i></td><td class="c-c"><span data-t="r9c">Telegram</span> <span class="soon-s" data-t="pkPilotSoon">Pilot, coming soon</span></td></tr>
-          <tr><th scope="row" data-t="r10">Launch</th><td class="c-a"><span data-t="r10a">3 days</span></td><td class="c-b"><span data-t="r10b">7–10 days</span></td><td class="c-c"><span data-t="r10c">10–14 days</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="pk-ai" data-t="pkAiNote">The AI front desk isn’t a finished product yet; we offer it as a pilot. It starts in Telegram, with WhatsApp and Instagram later. Without a new site: AI Admin, 40 000 ֏ a month, 6 months minimum.</p>
+    <p class="pk-rules"><span data-t="w1">The domain is registered in your name.</span> <span data-t="w2">Don’t like the sample? You pay nothing.</span> <span data-t="w3">After 12 months you can take the site for free.</span></p>
     <p class="pk-min"><span data-t="pkMin">Subscriptions run for at least 12 months.</span> <a href="packages.html" data-t="pkMore">All packages, one-time sites and add-ons</a></p>
-
-    <div class="pk-more">
-      <article class="pk-g">
-        <h3 data-t="gTitle">Result guarantee</h3>
-        <p class="big" data-t="gText">If fewer than 20 online bookings come through the system in the first 2 months, the third month is free.</p>
-        <p data-t="gCond">Condition: the booking link is in your Instagram and Google profile, and your front desk takes bookings through the system. We count with the booking system’s data, which you see in the monthly report.</p>
-      </article>
-      <article class="pk-p">
-        <h3 data-t="pTitle">Pilot for the Online package</h3>
-        <p class="left"><span class="seats" aria-hidden="true"></span><b id="pkLeft"></b></p>
-        <ul><li data-t="p1">Free setup</li><li data-t="p2">First month paid after launch, once you’ve seen it all working</li><li data-t="p3">In return: a review, permission to show the work and 2 contacts of owners you know</li></ul>
-        <a class="btn btn-main" target="_blank" rel="noopener" data-wa="pWa" href="https://wa.me/37498337187?text=Hello!%20I%E2%80%99d%20like%20to%20join%20the%20SKIYAR%20pilot." data-t="pCta">Take a pilot place</a>
-      </article>
-      <article class="pk-w">
-        <h3 data-t="wTitle">Fair rules</h3>
-        <ul><li data-t="w1">The domain is registered in your name.</li><li data-t="w2">Don’t like the sample? You pay nothing.</li><li data-t="w3">After 12 months you can take the site for free.</li></ul>
-      </article>
-    </div>
   </div>
 </section>
 <section class="how" id="how">
@@ -487,19 +436,28 @@
     <div>
       <h2 data-t="fnTitle">A sample of your site could be ready tomorrow</h2>
       <p class="lead" data-t="fnSub">Message us and we’ll make a sample with your name within a day. The sample is free and commits you to nothing.</p>
-      <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name." data-t="fnBtn">Get a sample on WhatsApp</a>
+      <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20" data-t="fnBtn">Send DEMO on WhatsApp</a>
     </div>
     <div class="fin-c">
-      <div><small data-t="fnPhone">Phone and WhatsApp</small><a href="https://wa.me/37498337187" target="_blank" rel="noopener">+374 98 337 187 ↗</a></div>
+      <div><small data-t="fnPhone">Phone and WhatsApp</small><a href="https://wa.me/37498337187" target="_blank" rel="noopener">+374 98 337 187</a></div>
       <div><small>Email</small><a href="mailto:skiyar.technologies@gmail.com">skiyar.technologies@gmail.com</a></div>
-      <div><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR ↗</a></div>
+      <div><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR</a></div>
     </div>
   </div>
 </section>
 </main>
 <footer class="foot">
-  <div class="wrap"><span data-t="legal">SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia</span><a href="../privacy.html" data-t="privacy">Privacy Policy</a></div>
+  <div class="wrap">
+    <p class="foot-big" data-t="h1">The front desk that never sleeps</p>
+    <div class="foot-cols">
+      <div><small>WhatsApp</small><a href="https://wa.me/37498337187" target="_blank" rel="noopener">+374 98 337 187</a></div>
+      <div><small>Email</small><a href="mailto:skiyar.technologies@gmail.com">skiyar.technologies@gmail.com</a></div>
+      <div><small data-t="ftSite">On the site</small><a href="#packages" data-t="navPk">Packages</a><a href="#demos" data-t="navDemo">Demos</a><a href="#faq" data-t="navFaq">FAQ</a></div>
+      <div><small>Instagram · Facebook</small><a href="https://www.instagram.com/skiyar_technologies/" target="_blank" rel="noopener">@skiyar_technologies</a><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR</a></div>
+    </div>
+    <p class="foot-legal"><span data-t="legal">SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia</span> <a href="../privacy.html" data-t="privacy">Privacy Policy</a></p>
+  </div>
 </footer>
-<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=Hello!%20I'd%20like%20a%20free%20sample%20with%20my%20business%20name."><i></i><span data-t="fab">Message on WhatsApp</span></a>
+<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20"><i></i><span data-t="fab">Message on WhatsApp</span></a>
 </body>
 </html>

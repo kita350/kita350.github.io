@@ -3,8 +3,9 @@
 (function () {
   var P = {
     hy: {
+      pkbOnP: "Կայք, գրանցում 24/7, հիշեցումներ WhatsApp-ով և հաշվետվություն ամեն ամիս։", pkbOnBtn: "Ուզում եմ Online", pkbStartP: "Google քարտ և մեկ էջանոց կայք", pkbAiP: "ԱԲ-ն պատասխանում է հաճախորդներին", pkbGuar: "գրանցում 2 ամսում՝ երաշխիք։ Եթե ավելի քիչ է, երրորդ ամիսն անվճար է։", pkbAaP: "Եթե կայք արդեն ունեք․ նվազագույնը 6 ամիս", pkbOnceT: "Միանվագ", pkbOnceP: "Site, Site Pro, ռեստորան, Shop", pkbFrom: "120 000 ֏-ից", pkbMore: "Բոլոր գները", pkbPilotP: "Միացումն անվճար, առաջին ամիսը՝ գործարկումից հետո",
       pkTitle: "Փաթեթներ և գներ",
-      pkSub: "Առանց թաքնված վճարների։ Բաժանորդագրությունը՝ 12 ամսով։", pkMain: "Հիմնական", pkHelpT: "Ո՞րն ընտրել", pkHelp: "Start՝ եթե պետք է, որ ձեզ գտնեն Google-ում։ Online՝ եթե ուզում եք, որ հաճախորդները գրանցվեն առանց զանգի։ Online AI-ն՝ միայն պիլոտ։", pkTerm: "12 ամսվա պայմանագիր", pkFirst: "առաջին տարին՝ միացումով {x}", pkNoSetup: "առանց միացման վճարի",
+      pkSub: "Բաժանորդագրությունը՝ 12 ամսով։ Գները՝ հենց այստեղ։", pkMain: "Հիմնական", pkHelpT: "Ո՞րն ընտրել", pkHelp: "Start՝ եթե պետք է, որ ձեզ գտնեն Google-ում։ Online՝ եթե ուզում եք, որ հաճախորդները գրանցվեն առանց զանգի։ Online AI-ն՝ միայն պիլոտ։", pkTerm: "12 ամսվա պայմանագիր", pkFirst: "առաջին տարին՝ միացումով {x}", pkNoSetup: "առանց միացման վճարի",
       pkYes: "Այո", pkNo: "Ոչ", pkMonth: "Ամսական", pkYear: "Տարեկան", pkSave: "−15%",
       pkBillAria: "Վճարման եղանակը",
       pkStartT: "Որպեսզի ձեզ գտնեն", pkStartDemo: "Մեկ էջանոց կայքի օրինակ", pkOnT: "Որպեսզի գրանցվեն ինքնուրույն", pkAiT: "Որպեսզի ոչ մի նամակ անպատասխան չմնա",
@@ -38,8 +39,9 @@
       w1: "Դոմենը գրանցվում է ձեր անունով։", w2: "Օրինակը դուր չեկա՞վ՝ ոչինչ չեք վճարում։", w3: "12 ամիս հետո կայքը կարող եք վերցնել անվճար։"
     },
     ru: {
+      pkbOnP: "Сайт, запись 24/7, напоминания в WhatsApp и отчёт каждый месяц.", pkbOnBtn: "Хочу Online", pkbStartP: "Карточка Google и одна страница", pkbAiP: "ИИ отвечает клиентам", pkbGuar: "записей за 2 месяца — гарантия. Если меньше, третий месяц бесплатно.", pkbAaP: "Если сайт уже есть; минимум 6 месяцев", pkbOnceT: "Разово", pkbOnceP: "Site, Site Pro, ресторан, Shop", pkbFrom: "от 120 000 ֏", pkbMore: "Все цены", pkbPilotP: "Подключение бесплатно, первый месяц — после запуска",
       pkTitle: "Пакеты и цены",
-      pkSub: "Без скрытых платежей. Подписка — на 12 месяцев.", pkMain: "Основной", pkHelpT: "Какой выбрать", pkHelp: "Start — если нужно, чтобы вас находили в Google. Online — если хотите, чтобы клиенты записывались без звонка. Online AI — пока только пилот.", pkTerm: "договор на 12 месяцев", pkFirst: "первый год с подключением — {x}", pkNoSetup: "без платы за подключение",
+      pkSub: "Подписка на 12 месяцев. Цены — прямо здесь.", pkMain: "Основной", pkHelpT: "Какой выбрать", pkHelp: "Start — если нужно, чтобы вас находили в Google. Online — если хотите, чтобы клиенты записывались без звонка. Online AI — пока только пилот.", pkTerm: "договор на 12 месяцев", pkFirst: "первый год с подключением — {x}", pkNoSetup: "без платы за подключение",
       pkYes: "Да", pkNo: "Нет", pkMonth: "Ежемесячно", pkYear: "За год", pkSave: "−15%",
       pkBillAria: "Способ оплаты",
       pkStartT: "Чтобы вас нашли", pkStartDemo: "Пример одностраничника", pkOnT: "Чтобы записывались сами", pkAiT: "Чтобы ни одно сообщение не осталось без ответа",
@@ -73,8 +75,9 @@
       w1: "Домен оформляется на вас.", w2: "Не понравился пример — ничего не платите.", w3: "После 12 месяцев сайт можно забрать бесплатно."
     },
     en: {
+      pkbOnP: "Website, 24/7 booking, WhatsApp reminders and a monthly report.", pkbOnBtn: "I want Online", pkbStartP: "Google listing and a one-page site", pkbAiP: "AI replies to clients", pkbGuar: "bookings in 2 months, guaranteed. If fewer, month 3 is free.", pkbAaP: "If you already have a site; 6 months minimum", pkbOnceT: "One-time", pkbOnceP: "Site, Site Pro, restaurant, Shop", pkbFrom: "from 120 000 ֏", pkbMore: "All prices", pkbPilotP: "Free setup, first month paid after launch",
       pkTitle: "Packages and prices",
-      pkSub: "No hidden fees. Subscriptions are for 12 months.", pkMain: "Main", pkHelpT: "Which one?", pkHelp: "Start if you need to be found on Google. Online if you want clients to book without calling. Online AI is a pilot for now.", pkTerm: "12-month contract", pkFirst: "first year with setup: {x}", pkNoSetup: "no setup fee",
+      pkSub: "Subscriptions run for 12 months. Prices are right here.", pkMain: "Main", pkHelpT: "Which one?", pkHelp: "Start if you need to be found on Google. Online if you want clients to book without calling. Online AI is a pilot for now.", pkTerm: "12-month contract", pkFirst: "first year with setup: {x}", pkNoSetup: "no setup fee",
       pkYes: "Yes", pkNo: "No", pkMonth: "Monthly", pkYear: "Yearly", pkSave: "−15%",
       pkBillAria: "Billing",
       pkStartT: "So people can find you", pkStartDemo: "One-page sample", pkOnT: "So clients book themselves", pkAiT: "So no message goes unanswered",
