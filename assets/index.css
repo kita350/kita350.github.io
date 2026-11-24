@@ -1046,3 +1046,19 @@ body[data-lang="en"] .lang-cur::after{content:"Eng"}
 }
 .px-io .niche-gor:not(.px-go),.px-io .st-px:not(.px-go),.px-io .ski:not(.px-go),.px-io .gr-px:not(.px-go),.px-io .ca-gor:not(.px-go){animation-play-state:paused}
 .px-io .st-px:not(.on){animation-play-state:paused}
+.ph3d .lv-box{width:min(430px,100%)}
+@media (min-width:900px){ .ph3d .lv-box{width:440px} }
+.ph3d .lv-phone{position:relative;padding:0;background:none;border:0;border-radius:0;box-shadow:none;overflow:visible;margin:-9% 0 -12%;transform:none}
+.ph3d .hero .lv-phone{margin-bottom:-12%}
+.lv-3d{display:block;width:100%;height:auto;pointer-events:none}
+.ph3d .lv-screen{position:absolute;left:0;top:0;width:300px;height:636px!important;transform-origin:0 0;border-radius:38px;will-change:transform;backface-visibility:hidden}
+.lv-island{position:absolute;z-index:5;top:11px;left:50%;width:94px;height:28px;margin-left:-47px;border-radius:14px;background:#000}
+.ph3d .lv-sb{padding:14px 26px 6px 30px;align-items:center}
+.lv-input{position:absolute;z-index:4;left:12px;right:58px;bottom:20px;height:36px;border-radius:18px;background:#fff;border:1px solid #ddd8cf}
+.lv-send{position:absolute;z-index:4;right:12px;bottom:20px;width:36px;height:36px;border-radius:50%;background:#4f93e0}
+.ph3d .lv-toast{z-index:6}
+@media (max-width:899px){
+.ph3d .lv-box{display:flex;flex-direction:column}
+.ph3d .lv-phone,.ph3d .hero .lv-phone{margin:-9% 0 -4%}
+.ph3d .lv-toast{position:relative;order:2;top:auto;left:auto;right:auto;margin:0 0 8px}
+}

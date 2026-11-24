@@ -25,6 +25,7 @@
       el.classList.toggle("done", n < s);
     });
     var t = track.querySelector(".sb b"); if (t) t.textContent = SB[s - 1];
+    document.dispatchEvent(new CustomEvent("story:step", { detail: s }));
   }
 
   var MQ = window.matchMedia ? matchMedia("(max-width: 899px)") : { matches: false };

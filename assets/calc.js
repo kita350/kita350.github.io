@@ -56,6 +56,7 @@
     animate(k);
     $("#caUnit").textContent = unit(k, lang);
     tweenLoss(loss);
+    document.dispatchEvent(new CustomEvent("calc:loss", { detail: { loss: loss, price: PRICE } }));
     $("#caFormula").textContent = t("caFormula").split("{n}").join(N).split("{c}").join(fmt(C) + " ֏").split("{p}").join(p);
     var msg = !N ? t("caZero") : (N / B < 0.03 ? t("caLow").split("{p}").join(p) : "");
     $("#caMsg").textContent = msg; $("#caMsg").hidden = !msg;

@@ -108,6 +108,7 @@ document.documentElement.classList.add("js");
       el.classList.toggle("done", n < s);
     });
     var t = track.querySelector(".sb b"); if (t) t.textContent = SB[s - 1];
+    document.dispatchEvent(new CustomEvent("story:step", { detail: s }));
   }
 
   var MQ = window.matchMedia ? matchMedia("(max-width: 899px)") : { matches: false };
@@ -352,6 +353,7 @@ document.documentElement.classList.add("js");
     animate(k);
     $("#caUnit").textContent = unit(k, lang);
     tweenLoss(loss);
+    document.dispatchEvent(new CustomEvent("calc:loss", { detail: { loss: loss, price: PRICE } }));
     $("#caFormula").textContent = t("caFormula").split("{n}").join(N).split("{c}").join(fmt(C) + " ֏").split("{p}").join(p);
     var msg = !N ? t("caZero") : (N / B < 0.03 ? t("caLow").split("{p}").join(p) : "");
     $("#caMsg").textContent = msg; $("#caMsg").hidden = !msg;
@@ -533,83 +535,179 @@ document.documentElement.classList.add("js");
 })();
 
 ;
-/* ПРОБНЫЙ САЙТ (ветка site-mock-tilt, на основной не ставить без «ок» основателя): объёмный «живой» телефон первого экрана.
-   Объём: толщина корпуса — стопка жёстких теней в сторону, обратную наклону; мягкая тень под телефоном;
-   слои — плашка записи и Гор у ниш сдвигаются сильнее телефона (параллакс), блик скользит по стеклу.
-   Компьютер: наклон за мышью (до 16°). Телефон: телефон сам плавно поворачивается, пока на экране,
-   плюс наклон от прокрутки; касания не перехватываются.
-   Выключено только при «уменьшить движение». Вне экрана — пауза. */
+/* ПРОБНЫЙ САЙТ (ветка site-mock-tilt; на основной — только после «ок» основателя).
+   Телефон первого экрана «как у Apple»: корпус — кадры рендера Blender (assets/img/phone3d/fNN.webp),
+   при прокрутке телефон поворачивается (кадр выбирается по прокрутке первого экрана), при загрузке — плавно «встаёт» на место.
+   Живой экран с перепиской (HTML, ниши и языки работают) кладётся поверх: для каждого кадра известны 4 угла экрана
+   (corners.json из Blender), экран натягивается на них через matrix3d. Без JS и при «уменьшить движение» — первый кадр без анимации. */
 (function () {
   "use strict";
   var box = document.getElementById("live");
-  var wrap = box && box.querySelector(".lv-box"), ph = box && box.querySelector(".lv-phone");
-  if (!ph || !wrap || !window.matchMedia) return;
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var mouse = matchMedia("(hover: hover) and (pointer: fine)").matches;
-  document.documentElement.classList.add("tilt-on");
-  var sheen = document.createElement("i"); sheen.className = "lv-sheen"; sheen.setAttribute("aria-hidden", "true");
-  ph.appendChild(sheen);
-  var toast = wrap.querySelector(".lv-toast"), gor = document.querySelector(".niche-gor");
+  var wrap = box && box.querySelector(".lv-box"), ph = box && box.querySelector(".lv-phone"), scr = ph && ph.querySelector(".lv-screen");
+  if (!scr || !window.fetch || !document.createElement("canvas").getContext) return;
+  var base = (document.querySelector('link[rel="stylesheet"][href*="assets/"]') || {}).getAttribute("href").replace(/assets\/.*$/, "") + "assets/img/phone3d/";
+  var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var SW = 300, SH = 636; // размер живого экрана в CSS-пикселях (пропорции экрана модели)
 
-  var A = 16, DEPTH = 12;
-  var EDGE = ["#9db2d4", "#8aa0c4", "#7890b6", "#6982a8", "#5c7599", "#51698b", "#475e7e", "#3e5372", "#364966", "#2e3f5a", "#26354d", "#0b111d"];
-  var tx = 0, ty = 0, raf = 0, rect = null, seen = true;
-  function draw() {
-    raf = 0;
-    ph.style.transform = "perspective(1000px) rotateX(" + (-ty * A).toFixed(2) + "deg) rotateY(" + (tx * A).toFixed(2) + "deg)";
-    // толщина: слои корпуса уходят в сторону, противоположную наклону
-    // металлический торец: ближние слои светлее, дальние темнее
-    var sh = [], dx = -tx * 1.6, dy = ty * 1.6, i, c;
-    for (i = 1; i <= DEPTH; i++) { c = EDGE[i - 1]; sh.push((dx * i).toFixed(1) + "px " + (dy * i).toFixed(1) + "px 0 " + c); }
-    sh.push((dx * 22).toFixed(0) + "px " + (26 + dy * 16).toFixed(0) + "px 50px -16px rgba(0,0,0,.7)");
-    sh.push("0 0 0 1px rgba(127,178,236,.2) inset");
-    ph.style.boxShadow = sh.join(",");
-    sheen.style.transform = "translate(" + (tx * 30).toFixed(1) + "%," + (ty * 20).toFixed(1) + "%)";
-    if (toast) toast.style.translate = (tx * 26).toFixed(1) + "px " + (ty * 18).toFixed(1) + "px";
-    if (gor) gor.style.translate = (-tx * 8).toFixed(1) + "px 0";
-  }
-  function queue() { if (!raf) raf = requestAnimationFrame(draw); }
+  fetch(base + "corners.json").then(function (r) { return r.json(); }).then(start).catch(function () {});
 
-  if (mouse) {
-    var area = document.querySelector(".hero") || box;
-    var measure = function () { rect = ph.getBoundingClientRect(); };
-    area.addEventListener("pointerenter", measure, { passive: true });
-    window.addEventListener("scroll", function () { rect = null; }, { passive: true });
-    area.addEventListener("pointermove", function (e) {
-      if (e.pointerType !== "mouse") return;
-      if (!rect) measure();
-      tx = Math.max(-1, Math.min(1, (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2 + 160)));
-      ty = Math.max(-1, Math.min(1, (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2 + 160)));
-      wrap.classList.add("tilting"); queue();
-    }, { passive: true });
-    area.addEventListener("pointerleave", function () { wrap.classList.remove("tilting"); tx = -0.5; ty = 0.2; queue(); }, { passive: true });
-    tx = -0.5; ty = 0.2; queue(); // в покое телефон стоит чуть повёрнутым — объём виден сразу
-  } else {
-    // телефон: медленный поворот туда-обратно + наклон от прокрутки первого экрана; ~30 кадров/с, только пока виден
-    var hero = document.querySelector(".hero"), hh = hero ? hero.offsetHeight : innerHeight, p = 0, odd = false, loop = 0;
-    window.addEventListener("scroll", function () { p = Math.min(1, scrollY / hh); }, { passive: true });
-    var step = function (t) {
-      loop = 0;
-      if (!seen || document.hidden) return;
-      odd = !odd;
-      if (odd) { tx = Math.sin(t / 1500) * 1.1; ty = Math.cos(t / 2300) * 0.3 - p * 0.8; draw(); }
-      loop = requestAnimationFrame(step);
-    };
-    var go = function () { if (!loop && seen && !document.hidden) loop = requestAnimationFrame(step); };
-    document.addEventListener("visibilitychange", go);
-    if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { seen = e[0].isIntersecting; go(); }).observe(ph);
-    go();
+  function start(J) {
+    var N = J.n, FW = J.w, FH = J.h, imgs = new Array(N), cur = -1, want = 0;
+    var cv = document.createElement("canvas"); cv.className = "lv-3d"; cv.setAttribute("aria-hidden", "true");
+    ph.insertBefore(cv, scr);
+    var ctx = cv.getContext("2d"), k = 1;
+    document.documentElement.classList.add("ph3d");
+    // детали настоящего телефона поверх живого экрана: островок камеры, строка ввода, значки сети
+    scr.insertAdjacentHTML("beforeend", '<i class="lv-island" aria-hidden="true"></i><i class="lv-input" aria-hidden="true"></i><i class="lv-send" aria-hidden="true"></i>');
+    var dots = scr.querySelector(".lv-sb span[aria-hidden]");
+    if (dots) dots.innerHTML = '<svg width="54" height="12" viewBox="0 0 54 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y=".5" width="3" height="11.5" rx="1"/><path d="M28 3.2a9 9 0 0 1 6.4 2.6l1.3-1.3a10.8 10.8 0 0 0-15.4 0l1.3 1.3A9 9 0 0 1 28 3.2zm0 3.4a5.6 5.6 0 0 1 4 1.6l1.3-1.3a7.4 7.4 0 0 0-10.6 0L24 8.2a5.6 5.6 0 0 1 4-1.6zm0 3.3a2 2 0 0 0-1.5.6L28 12l1.5-1.5a2 2 0 0 0-1.5-.6z"/><rect x="39.5" y="1.5" width="12" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-opacity=".45"/><rect x="41" y="3" width="8" height="6" rx="1.3"/></svg>';
+
+    function size() {
+      var w = ph.clientWidth, dpr = Math.min(2, window.devicePixelRatio || 1);
+      k = w / FW; cv.width = Math.round(w * dpr); cv.height = Math.round(FH * k * dpr);
+      cur = -1; paint();
+    }
+    // матрица, переводящая прямоугольник экрана в 4 угла кадра
+    function adj(m) { return [m[4]*m[8]-m[5]*m[7], m[2]*m[7]-m[1]*m[8], m[1]*m[5]-m[2]*m[4], m[5]*m[6]-m[3]*m[8], m[0]*m[8]-m[2]*m[6], m[2]*m[3]-m[0]*m[5], m[3]*m[7]-m[4]*m[6], m[1]*m[6]-m[0]*m[7], m[0]*m[4]-m[1]*m[3]]; }
+    function mm(a, b) { var c = [], i, j, s, t; for (i = 0; i < 3; i++) for (j = 0; j < 3; j++) { s = 0; for (t = 0; t < 3; t++) s += a[3*i+t] * b[3*t+j]; c[3*i+j] = s; } return c; }
+    function mv(m, v) { return [m[0]*v[0]+m[1]*v[1]+m[2]*v[2], m[3]*v[0]+m[4]*v[1]+m[5]*v[2], m[6]*v[0]+m[7]*v[1]+m[8]*v[2]]; }
+    function basis(p) { var m = [p[0][0], p[1][0], p[2][0], p[0][1], p[1][1], p[2][1], 1, 1, 1], v = mv(adj(m), [p[3][0], p[3][1], 1]); return mm(m, [v[0],0,0, 0,v[1],0, 0,0,v[2]]); }
+    var SRC = basis([[0, 0], [SW, 0], [SW, SH], [0, SH]]), SRCA = adj(SRC);
+    function fit(c) {
+      var d = basis(c.map(function (p) { return [p[0] * k, p[1] * k]; })), t = mm(d, SRCA), i;
+      for (i = 0; i < 9; i++) t[i] /= t[8];
+      scr.style.transform = "matrix3d(" + [t[0], t[3], 0, t[6], t[1], t[4], 0, t[7], 0, 0, 1, 0, t[2], t[5], 0, t[8]].map(function (x) { return +x.toFixed(6); }).join(",") + ")";
+    }
+    function paint() {
+      var f = want; while (f > 0 && !imgs[f]) f--; // нужный кадр ещё грузится — ближайший готовый
+      if (!imgs[f] || f === cur) return;
+      cur = f; ctx.clearRect(0, 0, cv.width, cv.height); ctx.drawImage(imgs[f], 0, 0, cv.width, cv.height); fit(J.corners[f]);
+    }
+    function load(i, cb) { var im = new Image(); im.decoding = "async"; im.onload = function () { imgs[i] = im; if (cb) cb(); if (Math.abs(i - want) < 2) paint(); }; im.src = base + "f" + (i < 10 ? "0" : "") + i + ".webp"; }
+
+    // прокрутка: 0 — телефон повёрнут влево, к концу первого экрана — развернулся вправо
+    var hero = document.querySelector(".hero"), raf = 0, intro = 0;
+    function fromScroll() {
+      var r = hero.getBoundingClientRect(), p = Math.max(0, Math.min(1, -r.top / Math.max(1, r.height * 0.75)));
+      return Math.round(p * (N - 1));
+    }
+    function onScroll() { if (!raf) raf = requestAnimationFrame(function () { raf = 0; if (intro) return; want = fromScroll(); paint(); }); }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", function () { size(); }, { passive: true });
+
+    var got = 1;
+    load(0, function () {
+      size();
+      for (var i = 1; i < N; i++) load(i, function () { if (++got === N) startIntro(); });
+    });
+    function startIntro() {
+      if (still) return;
+      {
+        // появление: телефон за 1,4 с разворачивается из середины поворота в исходное положение
+        intro = 1; var t0 = 0, from = Math.round(N * 0.6);
+        var go = function (t) {
+          if (!t0) t0 = t;
+          var p = Math.min(1, (t - t0) / 1400), e = 1 - Math.pow(1 - p, 3);
+          want = Math.round(from * (1 - e)); paint();
+          if (p < 1) requestAnimationFrame(go); else { intro = 0; onScroll(); }
+        };
+        if (window.scrollY > 40) { intro = 0; onScroll(); return; } // уже прокрутили — без появления
+        requestAnimationFrame(go);
+      }
+    }
   }
-  // блик — только пока телефон на экране
-  if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { seen = e[0].isIntersecting; wrap.classList.toggle("idle", seen); }).observe(ph);
 })();
-/* персонажи двигаются только когда видны на экране (иначе анимация на паузе — браузер не тратит силы) */
+
+;
+/* ПРОБНЫЙ САЙТ: у персонажей есть эмоции.
+   Моргание (Гор, Лусине, робот) — раз в 2,5–5 с. В «Истории записи» лица меняются по шагам:
+   Рузан злится (салон закрыт) → удивляется автоответу → радуется записи; Нарине (Лусине) удивляется, потом радуется;
+   Гор в конце доволен. В калькуляторе Гор паникует при больших потерях и радуется при маленьких.
+   Робот иногда улыбается. Анимации на паузе, когда персонажа не видно. */
 (function () {
-  if (!("IntersectionObserver" in window)) return;
-  var l = document.querySelectorAll(".niche-gor, .st-px, .ski, .gr-px, .ca-gor");
-  document.documentElement.classList.add("px-io");
-  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle("px-go", e.isIntersecting); }); });
-  for (var i = 0; i < l.length; i++) io.observe(l[i]);
+  "use strict";
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function dir(img) { return img.getAttribute("src").replace(/[^\/]*$/, ""); }
+  var pre = {};
+  function preload(img, names) { names.forEach(function (n) { var k = dir(img) + n; if (!pre[k]) { pre[k] = new Image(); pre[k].src = k; } }); }
+  function setSrc(img, name) { var s = dir(img) + name; if (img.getAttribute("src") !== s) img.setAttribute("src", s); }
+
+  // кто есть кто: базовый кадр, моргание, радость
+  var who = {
+    gor: { base: "hero-gor-1x.png", blink: "emo-gor-blink.png", happy: "emo-gor-happy.png" },
+    lusine: { base: "hero-lusine-1x.png", blink: "emo-lusine-blink.png", happy: "emo-lusine-happy.png", wow: "emo-lusine-wow.png" },
+    ski: { base: "hero-ski-1x.png", blink: "emo-ski-blink.png", happy: "emo-ski-happy.png" },
+    ruzan: { base: "hero-ruzan-1x.png", angry: "emo-ruzan-angry.png", wow: "emo-ruzan-wow.png", happy: "emo-ruzan-happy.png" }
+  };
+  var list = [];
+  [].forEach.call(document.querySelectorAll("img.px"), function (img) {
+    var m = /hero-(gor|lusine|ski|ruzan)-1x\.png$/.exec(img.getAttribute("src"));
+    if (!m) return;
+    var c = { img: img, w: who[m[1]], mood: "base", vis: false };
+    img.dataset.who = m[1]; list.push(c);
+    preload(img, Object.keys(c.w).map(function (k) { return c.w[k]; }));
+  });
+  function show(c) { setSrc(c.img, c.w[c.mood]); }
+  function mood(c, m, ms) {
+    if (!c.w[m]) return;
+    c.mood = m; show(c); clearTimeout(c.t);
+    if (ms) c.t = setTimeout(function () { c.mood = "base"; show(c); }, ms);
+  }
+  // видимость
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { list.forEach(function (c) { if (c.img === e.target) c.vis = e.isIntersecting; }); }); });
+    list.forEach(function (c) { io.observe(c.img); });
+  } else list.forEach(function (c) { c.vis = true; });
+
+  // моргание: только у тех, у кого видны глаза, и только в спокойном настроении
+  if (!still) (function blinkLoop() {
+    list.forEach(function (c) {
+      if (!c.vis || c.mood !== "base" || !c.w.blink || Math.random() < 0.45) return;
+      setSrc(c.img, c.w.blink); setTimeout(function () { if (c.mood === "base") show(c); }, 140);
+    });
+    setTimeout(blinkLoop, 2500 + Math.random() * 2500);
+  })();
+
+  // робот иногда улыбается
+  if (!still) setInterval(function () { list.forEach(function (c) { if (c.vis && c.img.dataset.who === "ski" && c.mood === "base" && Math.random() < 0.5) mood(c, "happy", 1600); }); }, 5000);
+
+  // Гор у кнопок ниш радуется выбору
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest || !e.target.closest(".niche-b")) return;
+    list.forEach(function (c) { if (c.img.classList.contains("niche-gor")) mood(c, "happy", 1400); });
+  });
+
+  // «История записи»: эмоции по шагам
+  var STORY = { ruzan: { 1: "angry", 2: "wow", 3: "happy", 5: "happy" }, lusine: { 4: "wow" }, gor: { 6: "happy" } };
+  document.addEventListener("story:step", function (e) {
+    var s = e.detail;
+    list.forEach(function (c) {
+      if (!c.img.classList.contains("st-px")) return;
+      var m = (STORY[c.img.dataset.who] || {})[s] || "base";
+      mood(c, m);
+      if (c.img.dataset.who === "lusine" && s === 4) c.t = setTimeout(function () { mood(c, "happy"); }, 1200); // увидела запись — обрадовалась
+    });
+  });
+  // первый шаг уже на экране при загрузке
+  list.forEach(function (c) { if (c.img.classList.contains("st-px") && c.img.dataset.who === "ruzan") mood(c, "angry"); });
+
+  // калькулятор: Гор паникует, грустит или радуется в зависимости от потерь
+  var ca = document.querySelector(".ca-gor");
+  if (ca) {
+    preload(ca, ["gor-panic.png", "gor-neutral.png", "gor-joy.png"]);
+    document.addEventListener("calc:loss", function (e) {
+      var r = e.detail.loss / Math.max(1, e.detail.price);
+      setSrc(ca, r >= 3 ? "gor-panic.png" : r >= 1 ? "gor-neutral.png" : "gor-joy.png");
+    });
+  }
+
+  // анимации движения — только когда персонаж виден
+  if ("IntersectionObserver" in window) {
+    var l = document.querySelectorAll(".niche-gor, .st-px, .ski, .gr-px, .ca-gor");
+    document.documentElement.classList.add("px-io");
+    var io2 = new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle("px-go", e.isIntersecting); }); });
+    for (var i = 0; i < l.length; i++) io2.observe(l[i]);
+  }
 })();
 
 ;
