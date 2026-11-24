@@ -254,3 +254,5 @@ section[id]{scroll-margin-top:calc(var(--nav) + 8px)}
 /* плашка «Напоминание» на мобильном — поверх пустого низа экрана телефона, без пустой полосы под телефоном */
 @media (max-width:899px){ .ph3d .lv-toast{position:absolute;order:0;left:18%;right:18%;top:auto;bottom:22%;margin:0;z-index:6} }
 .ph3d .niche{position:relative;z-index:7}
+/* третий круг ревью: на мобильном рамка телефона не перечёркивает строку цены ниши — телефон на 24 px ниже (часы на 390×844 видны) */
+@media (max-width:899px){ .ph3d .lv-phone,.ph3d .hero .lv-phone{margin-top:calc(-15% + 24px)} }
