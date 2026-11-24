@@ -787,3 +787,4 @@ input[type="range"]{height:44px}
 @media (max-width:899px){ .ph3d .lv-box{width:calc(100% + 2*var(--gut) + 40px);max-width:none;margin-left:calc(-1*var(--gut) - 20px);margin-right:calc(-1*var(--gut) - 20px)} }
 .ph3d .lv-lbl{font-size:12px}
 @media (max-width:899px){ .ph3d .lv-toast{position:absolute;order:0;left:18%;right:18%;top:auto;bottom:22%;margin:0;z-index:6} }
+.ph3d .niche{position:relative;z-index:7}
