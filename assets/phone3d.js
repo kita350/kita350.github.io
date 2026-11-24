@@ -7,7 +7,7 @@
   "use strict";
   var box = document.getElementById("live");
   var wrap = box && box.querySelector(".lv-box"), ph = box && box.querySelector(".lv-phone"), scr = ph && ph.querySelector(".lv-screen");
-  if (!scr || !window.fetch || !document.createElement("canvas").getContext) return;
+  if (!scr || !window.fetch) return;
   var base = (document.querySelector('link[rel="stylesheet"][href*="assets/"]') || {}).getAttribute("href").replace(/assets\/.*$/, "") + "assets/img/phone3d/";
   var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var SW = 300, SH = 636; // размер живого экрана в CSS-пикселях (пропорции экрана модели)
@@ -16,9 +16,10 @@
 
   function start(J) {
     var N = J.n, FW = J.w, FH = J.h, imgs = new Array(N), cur = -1, want = 0;
-    var cv = document.createElement("canvas"); cv.className = "lv-3d"; cv.setAttribute("aria-hidden", "true");
+    var cv = document.createElement("img"); cv.className = "lv-3d"; cv.alt = ""; cv.setAttribute("aria-hidden", "true");
+    cv.width = FW; cv.height = FH;
     ph.insertBefore(cv, scr);
-    var ctx = cv.getContext("2d"), k = 1;
+    var k = 1;
     document.documentElement.classList.add("ph3d");
     // детали настоящего телефона поверх живого экрана: островок камеры, строка ввода, значки сети
     scr.insertAdjacentHTML("beforeend", '<i class="lv-island" aria-hidden="true"></i><i class="lv-input" aria-hidden="true"></i><i class="lv-send" aria-hidden="true"></i>');
@@ -26,8 +27,7 @@
     if (dots) dots.innerHTML = '<svg width="54" height="12" viewBox="0 0 54 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y=".5" width="3" height="11.5" rx="1"/><path d="M28 3.2a9 9 0 0 1 6.4 2.6l1.3-1.3a10.8 10.8 0 0 0-15.4 0l1.3 1.3A9 9 0 0 1 28 3.2zm0 3.4a5.6 5.6 0 0 1 4 1.6l1.3-1.3a7.4 7.4 0 0 0-10.6 0L24 8.2a5.6 5.6 0 0 1 4-1.6zm0 3.3a2 2 0 0 0-1.5.6L28 12l1.5-1.5a2 2 0 0 0-1.5-.6z"/><rect x="39.5" y="1.5" width="12" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-opacity=".45"/><rect x="41" y="3" width="8" height="6" rx="1.3"/></svg>';
 
     function size() {
-      var w = ph.clientWidth, dpr = Math.min(2, window.devicePixelRatio || 1);
-      k = w / FW; cv.width = Math.round(w * dpr); cv.height = Math.round(FH * k * dpr);
+      k = ph.clientWidth / FW;
       cur = -1; paint();
     }
     // матрица, переводящая прямоугольник экрана в 4 угла кадра
@@ -44,9 +44,14 @@
     function paint() {
       var f = want; while (f > 0 && !imgs[f]) f--; // нужный кадр ещё грузится — ближайший готовый
       if (!imgs[f] || f === cur) return;
-      cur = f; ctx.clearRect(0, 0, cv.width, cv.height); ctx.drawImage(imgs[f], 0, 0, cv.width, cv.height); fit(J.corners[f]);
+      cur = f; cv.src = imgs[f].src; fit(J.corners[f]);
     }
-    function load(i, cb) { var im = new Image(); im.decoding = "async"; im.onload = function () { imgs[i] = im; if (cb) cb(); if (Math.abs(i - want) < 2) paint(); }; im.src = base + "f" + (i < 10 ? "0" : "") + i + ".webp"; }
+    // кадр считается готовым только после распаковки (decode) — иначе браузер распаковывает его посреди прокрутки
+    function load(i, cb) {
+      var im = new Image(); im.decoding = "async"; im.src = base + "f" + (i < 10 ? "0" : "") + i + ".webp";
+      var done = function () { imgs[i] = im; if (cb) cb(); if (Math.abs(i - want) < 2) paint(); };
+      if (im.decode) im.decode().then(done, function () {}); else im.onload = done;
+    }
 
     // прокрутка: 0 — телефон повёрнут влево, к концу первого экрана — развернулся вправо
     var hero = document.querySelector(".hero"), raf = 0, intro = 0;
