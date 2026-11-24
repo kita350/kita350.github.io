@@ -709,3 +709,6 @@ body[data-lang="en"] .lang-cur::after{content:"Eng"}
 .ph3d .lv-phone,.ph3d .hero .lv-phone{margin:-9% 0 -4%}
 .ph3d .lv-toast{position:relative;order:2;top:auto;left:auto;right:auto;margin:0 0 8px}
 }
+.ph3d .lv-phone::before{content:"";position:absolute;z-index:-1;left:6%;right:6%;bottom:2%;height:14%;border-radius:50%;background:radial-gradient(closest-side,rgba(82,150,225,.38),rgba(82,150,225,.1) 60%,transparent);pointer-events:none}
+.ph3d .lv-phone::after{content:"";position:absolute;z-index:-1;left:24%;right:20%;bottom:5.5%;height:3.5%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent);pointer-events:none}
+.ph3d .lv-phone{isolation:isolate}
