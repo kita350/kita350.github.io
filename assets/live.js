@@ -32,6 +32,6 @@
   box.classList.add("is-live");
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(function (e) { seen = e[0].isIntersecting; if (seen && !document.hidden) play(); else stop(); }, { threshold: 0.25 }).observe(box);
-    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (seen) play(); });
   } else play();
 })();

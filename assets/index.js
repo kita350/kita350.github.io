@@ -317,14 +317,17 @@ document.documentElement.classList.add("js");
   function lossText(v) { $("#caLoss").textContent = window.SITE.t("caLoss").split("{x}").join(fmt(v) + " ֏"); }
   function tweenLoss(to) {
     cancelAnimationFrame(lossRaf);
-    if (still) { lossShown = to; lossText(to); return; }
+    if (still) { lossShown = to; lossText(to); say(); return; }
     var from = lossShown, t0 = performance.now();
     (function step(t) {
       var p = Math.min(1, (t - t0) / 420), e = 1 - Math.pow(1 - p, 3);
       lossShown = from + (to - from) * e; lossText(lossShown);
-      if (p < 1) lossRaf = requestAnimationFrame(step);
+      if (p < 1) lossRaf = requestAnimationFrame(step); else say();
     })(t0);
   }
+  // итог для экранного диктора — один раз, после того как числа досчитались
+  var sayEl = document.getElementById("caSay"), sayT = 0;
+  function say() { if (!sayEl) return; clearTimeout(sayT); sayT = setTimeout(function () { sayEl.textContent = $("#caK").textContent + " " + $("#caOut").textContent + " " + $("#caUnit").textContent + ". " + $("#caLoss").textContent; }, 300); }
   var gor = box.querySelector(".ca-gor");
   function hop() { if (!gor || still) return; gor.classList.remove("hop"); void gor.offsetWidth; gor.classList.add("hop"); }
   [b, n, c].forEach(function (el) { el.addEventListener("change", hop); });
@@ -463,7 +466,7 @@ document.documentElement.classList.add("js");
   box.classList.add("is-live");
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(function (e) { seen = e[0].isIntersecting; if (seen && !document.hidden) play(); else stop(); }, { threshold: 0.25 }).observe(box);
-    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (seen) play(); });
   } else play();
 })();
 
@@ -486,7 +489,7 @@ document.documentElement.classList.add("js");
   function apply(i) {
     var n = (t("niches") || [])[i] || base;
     for (var k in F) { var el = q(F[k]); if (el && n[k] != null) el.textContent = n[k]; }
-    price.textContent = (t("nichePrice") || [])[i] || "";
+    if (price) price.textContent = (t("nichePrice") || [])[i] || "";
   }
   function build() {
     var chips = t("nicheChips") || [];
@@ -504,13 +507,17 @@ document.documentElement.classList.add("js");
     cur = i;
     var bs = wrap.querySelectorAll(".niche-b");
     for (var j = 0; j < bs.length; j++) bs[j].setAttribute("aria-pressed", j === i ? "true" : "false");
-    apply(i);
+    // сначала мгновенно прячем старые пузыри, потом подменяем текст — новые реплики не мелькают в старых
+    box.classList.add("swap");
     if (box.restartLive) box.restartLive();
+    apply(i);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { box.classList.remove("swap"); }); });
     if (gor) { gor.classList.remove("nod"); void gor.offsetWidth; gor.classList.add("nod"); }
   }
 
   grab(); build(); apply(0);
-  window.SITE.onRender.push(function () { grab(); build(); apply(cur); });
+  // базовые тексты салона берём из разметки только пока выбран салон (иначе там уже тексты другой ниши)
+  window.SITE.onRender.push(function () { if (cur === 0) grab(); build(); apply(cur); });
 })();
 
 ;
