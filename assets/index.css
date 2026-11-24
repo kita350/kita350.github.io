@@ -922,3 +922,4 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 @media (max-width:899px){ .hero .dm-hint{order:3;margin-top:10px} }
 .pkt-seats .left,.pk-p .left{display:none}
 .gr-col h3{margin-bottom:8px}
+@media (min-width:900px){ .pkt-seats{grid-column:1/-1} }
