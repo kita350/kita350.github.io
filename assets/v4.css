@@ -157,3 +157,7 @@
 
 /* ───── v6 (24.11.2026): плитка гарантии убрана из пакетов (гарантия — в «Что вы получаете») ───── */
 @media (min-width:900px){ .pkt-seats{grid-column:1/-1} }
+
+/* ───── v7 (24.11.2026): цена под заголовком, кто такой Гор ───── */
+.hero .h-price{order:1;margin:14px 0 -6px;color:var(--sky);font-weight:700;font-size:17px;letter-spacing:-.01em}
+.gr-who{margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45;max-width:40em}

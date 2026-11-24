@@ -36,7 +36,7 @@
       p1: "Միացումն անվճար է", p2: "Առաջին ամսվա վճարը՝ գործարկումից հետո, երբ ամեն ինչ տեսել եք աշխատանքում", p3: "Փոխարենը՝ կարծիք և թույլտվություն ցույց տալու աշխատանքը",
       pCta: "Ուզում եմ լինել առաջին հինգում", pWa: "Բարև ձեզ։ Ուզում եմ միանալ SKIYAR-ին առաջին 5 բիզնեսների թվում։",
       wTitle: "Ազնիվ կանոններ",
-      w1: "Դոմենը գրանցվում է ձեր անունով։", w2: "Կայքի օրինակն անվճար է և պատրաստվում է մինչև պայմանագիրը։", w3: "12 ամիս հետո կայքը կարող եք վերցնել անվճար։"
+      w1: "Դոմենը գրանցվում է ձեր անունով։", w2: "Կայքի օրինակն անվճար է և պատրաստվում է մինչև պայմանագիրը։", w3: "12 ամիս հետո կայքը կարող եք վերցնել անվճար։", w4: "Պայմանագիրը մեկ տարով է, բայց դուրս գալ կարող եք ցանկացած պահի՝ 30 օր առաջ զգուշացնելով, առանց տուգանքի։ Հետգնում՝ միայն եթե ուզում եք կայքը վերցնել ձեզ։"
     },
     ru: {
       pkbOnP: "Сайт, запись 24/7, напоминания в WhatsApp и отчёт каждый месяц.", pkbOnBtn: "Хочу Online", pkbStartP: "Карточка Google и одна страница", pkbAiP: "Online + ИИ отвечает клиентам", pkbGuar: "записей за 2 месяца — гарантия. Если меньше, третий месяц бесплатно.", pkbAaP: "Только ИИ-ответы, если сайт уже есть; минимум 6 месяцев", pkbOnceT: "Разово", pkbOnceP: "Site, Site Pro, ресторан, Shop", pkbFrom: "от 120 000 ֏", pkbMore: "Все цены", pkbPilotP: "Подключение бесплатно, первый месяц — после запуска",
@@ -72,7 +72,7 @@
       p1: "Подключение бесплатно", p2: "Первый месяц — оплата после запуска, когда вы увидели всё в работе", p3: "Взамен — отзыв и разрешение показать работу",
       pCta: "Хочу быть в первых пяти", pWa: "Здравствуйте! Хочу подключиться к SKIYAR в числе первых 5 бизнесов.",
       wTitle: "Честные правила",
-      w1: "Домен оформляется на вас.", w2: "Пример сайта бесплатный и делается до договора.", w3: "После 12 месяцев сайт можно забрать бесплатно."
+      w1: "Домен оформляется на вас.", w2: "Пример сайта бесплатный и делается до договора.", w3: "После 12 месяцев сайт можно забрать бесплатно.", w4: "Договор на год, но выйти можно в любой момент — предупредив за 30 дней, без штрафа. Выкуп — только если хотите забрать сайт себе."
     },
     en: {
       pkbOnP: "Website, 24/7 booking, WhatsApp reminders and a monthly report.", pkbOnBtn: "I want Online", pkbStartP: "Google listing and a one-page site", pkbAiP: "Online plus AI replies to clients", pkbGuar: "bookings in 2 months, guaranteed. If fewer, month 3 is free.", pkbAaP: "AI replies only, if you already have a site; 6 months minimum", pkbOnceT: "One-time", pkbOnceP: "Site, Site Pro, restaurant, Shop", pkbFrom: "from 120 000 ֏", pkbMore: "All prices", pkbPilotP: "Free setup, first month paid after launch",
@@ -108,7 +108,7 @@
       p1: "Free setup", p2: "First month paid after launch, once you’ve seen it all working", p3: "In return: a review and permission to show the work",
       pCta: "I want to be one of the first five", pWa: "Hello! I’d like to join SKIYAR as one of the first 5 businesses.",
       wTitle: "Fair rules",
-      w1: "The domain is registered in your name.", w2: "The sample site is free and made before any contract.", w3: "After 12 months you can take the site for free."
+      w1: "The domain is registered in your name.", w2: "The sample site is free and made before any contract.", w3: "After 12 months you can take the site for free.", w4: "The contract is for a year, but you can leave any time with 30 days’ notice and no penalty. A buyout applies only if you want to keep the site."
     }
   };
   for (var l in P) for (var k in P[l]) window.T[l][k] = P[l][k];
