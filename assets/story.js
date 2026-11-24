@@ -27,11 +27,18 @@
     var t = track.querySelector(".sb b"); if (t) t.textContent = SB[s - 1];
   }
 
+  var MQ = window.matchMedia ? matchMedia("(max-width: 899px)") : { matches: false };
   function fit() {
-    // масштаб телефона под свободную высоту
-    var ph = track.querySelector(".st-phone");
-    var h = ph.clientHeight, w = track.querySelector(".st-grid").clientWidth - (innerWidth >= 900 ? 600 : 130);
-    var k = Math.min(innerWidth >= 900 ? 1.2 : 1.1, h / 546, w / 264);
+    var w = track.querySelector(".st-grid").clientWidth - (innerWidth >= 900 ? 600 : 130), k;
+    if (MQ.matches) {
+      // телефон: без прилипания; размер от ширины и высоты экрана устройства, чтобы не прыгал,
+      // когда браузер прячет/показывает свою панель
+      var sh = Math.min(screen.height || innerHeight, innerHeight + 140);
+      k = Math.min(1.1, w / 264, (sh * 0.56) / 546);
+    } else {
+      // масштаб телефона под свободную высоту
+      k = Math.min(1.2, track.querySelector(".st-phone").clientHeight / 546, w / 264);
+    }
     box.style.setProperty("--k", Math.max(0.5, k).toFixed(3));
   }
 
@@ -44,6 +51,7 @@
   }
   function update() {
     ticking = false;
+    if (MQ.matches) return; // на телефоне шаги идут сами (autoplay ниже)
     var p = total > 0 ? Math.min(1, Math.max(0, (window.scrollY - top0) / total)) : 0;
     show(Math.min(N, Math.floor(p * N) + 1));
   }
@@ -54,6 +62,7 @@
   each(".st-rail button", function (b) {
     b.addEventListener("click", function () {
       var n = +b.getAttribute("data-go");
+      if (MQ.matches) { show(n); restart(); return; }
       var total = track.offsetHeight - stage.offsetHeight;
       var y = track.getBoundingClientRect().top + window.scrollY + total * ((n - 0.5) / N);
       window.scrollTo({ top: y, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
@@ -61,8 +70,24 @@
   });
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  var rz = 0;
-  window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(function () { fit(); measure(); update(); }, 150); });
+  // Телефон: шаги сменяются сами каждые 3,2 с, пока блок на экране; нажатие на полоску — к шагу.
+  var STEP = 3200, timer = 0, inView = false;
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function tick() { show(cur >= N ? 1 : cur + 1); }
+  function stopAuto() { clearInterval(timer); timer = 0; }
+  function restart() { stopAuto(); if (MQ.matches && inView && !still && !document.hidden) timer = setInterval(tick, STEP); }
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { inView = e[0].isIntersecting; restart(); }, { threshold: 0.4 }).observe(stage);
+  }
+  document.addEventListener("visibilitychange", restart);
+
+  var rz = 0, lastW = innerWidth;
+  window.addEventListener("resize", function () {
+    // на телефоне меняется только высота (панель браузера) — ничего не пересчитываем
+    if (MQ.matches && innerWidth === lastW) return;
+    lastW = innerWidth;
+    clearTimeout(rz); rz = setTimeout(function () { fit(); measure(); update(); restart(); }, 150);
+  });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); measure(); update(); });
   window.addEventListener("load", function () { measure(); update(); });
   fit();

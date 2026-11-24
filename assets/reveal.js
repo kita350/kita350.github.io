@@ -14,7 +14,7 @@
         seen.add(el);
         if (e.isIntersecting) { io.unobserve(el); return; }
         var i = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
-        el.style.transitionDelay = Math.min(i, 5) * 60 + "ms";
+        el.style.transitionDelay = Math.min(i, 5) * 50 + "ms";
         el.classList.add("rv");
         return;
       }

@@ -146,6 +146,8 @@ document.documentElement.classList.add("js");
   var fab = document.getElementById("fab"), nav = document.getElementById("nav");
   if (!fab) return;
   fab.classList.add("on");
+  // Встроенные браузеры Facebook/Instagram рисуют свою нижнюю панель поверх страницы — поднимаем кнопку над ней.
+  if (/FBAN|FBAV|FB_IAB|Instagram/i.test(navigator.userAgent)) document.documentElement.classList.add("inapp");
   if (!nav || !("MutationObserver" in window)) return;
   new MutationObserver(function () { fab.classList.toggle("on", !nav.classList.contains("open")); })
     .observe(nav, { attributes: true, attributeFilter: ["class"] });
@@ -168,7 +170,7 @@ document.documentElement.classList.add("js");
         seen.add(el);
         if (e.isIntersecting) { io.unobserve(el); return; }
         var i = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
-        el.style.transitionDelay = Math.min(i, 5) * 60 + "ms";
+        el.style.transitionDelay = Math.min(i, 5) * 50 + "ms";
         el.classList.add("rv");
         return;
       }

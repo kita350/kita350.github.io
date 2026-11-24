@@ -7,7 +7,7 @@
 .nav.open .nav-links{display:flex;flex-direction:column;gap:2px;margin:0;font-size:18px}
 .nav.open .nav-links a{padding:10px 0;color:var(--white)}
 .nav-clock{margin-left:auto;padding:6px 8px;border-radius:8px;background:var(--card);color:var(--sky);font:800 13px/1 var(--font);font-variant-numeric:tabular-nums}
-.nav-demo{display:inline-flex;align-items:center;height:40px;padding:0 15px;border-radius:10px;background:var(--blue);color:var(--night);font-weight:800;font-size:14px;text-decoration:none;transition:transform .12s cubic-bezier(.3,.7,.4,1),background-color .2s}
+.nav-demo{display:inline-flex;align-items:center;height:40px;padding:0 15px;border-radius:10px;background:var(--blue);color:var(--night);font-weight:800;font-size:14px;text-decoration:none;transition:transform .12s var(--ease-out),background-color .2s}
 .nav-demo:hover{background:var(--c-7fb2ec)}
 .nav-demo:active{transform:translateY(2px) scale(.97)}
 .nav-burger{width:40px;height:40px;padding:0;border-radius:10px;border:1px solid var(--line-2);background:none;display:grid;place-items:center;cursor:pointer}
@@ -28,9 +28,9 @@
 }
 
 /* одна микроанимация на все кнопки: нажатие проседает, заливка наезжает снизу */
-.btn{position:relative;overflow:hidden;isolation:isolate;transition:transform .12s cubic-bezier(.3,.7,.4,1),border-color .2s}
+.btn{position:relative;overflow:hidden;isolation:isolate;transition:transform .12s var(--ease-out),border-color .2s}
 .btn:active{transform:translateY(2px) scale(.985)}
-.btn-main::before{content:"";position:absolute;inset:0;transform:scaleY(0);transform-origin:50% 100%;background:var(--c-7fb2ec);z-index:-1;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.btn-main::before{content:"";position:absolute;inset:0;transform:scaleY(0);transform-origin:50% 100%;background:var(--c-7fb2ec);z-index:-1;transition:transform .28s var(--ease-out)}
 .btn-main:hover{background:var(--blue)}
 .btn-main:hover::before{transform:scaleY(1)}
 .btn small{font-weight:600;font-size:13px;opacity:.7}

@@ -30,7 +30,7 @@
 .ca-formula{margin-top:4px!important;color:var(--c-c3cad8);font-size:14.5px;font-variant-numeric:tabular-nums}
 .ca-bar{display:grid;gap:6px;margin:16px 0 8px}
 .ca-bar .t{display:block;height:10px;border-radius:3px;background:var(--c-rgba-121-137-170-22);overflow:hidden}
-.ca-bar i{display:block;height:100%;width:100%;transform-origin:0 50%;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.ca-bar i{display:block;height:100%;width:100%;transform-origin:0 50%;transition:transform .35s var(--ease-out)}
 #caBarL{background:var(--ice)}
 #caBarS{background:var(--blue)}
 .ca-pkg{display:flex;align-items:center;gap:8px;color:var(--c-c3cad8);font-size:14px}
