@@ -1,6 +1,7 @@
 /* Тексты первого экрана (черновики A и B). HY — на проверку Ани. */
 window.T = {
   hy: {
+    lpAria: "Օրինակ. հաճախորդը գրում է 23:47-ին և ինքն է գրանցվում", lpMsg: "Բարև ձեզ, ուրբաթ օրը մատնահարդարման ազատ ժամ կա՞", lpAuto: "Ավտոպատասխան · 23:47", lpAutoT: "Հիմա փակ ենք, բայց ազատ ժամերը կարող եք տեսնել այստեղ", lpBtn: "Գրանցվել առցանց", lpOk: "Գրանցում՝ ուրբաթ 11:00, վարպետ՝ Նարինե", lpToastT: "Հիշեցումն ուղարկված է", lpToastS: "Հինգշաբթի 18:00, Ռուզանը պատասխանեց՝ «Կգամ»",
     _title: "SKIYAR — առցանց ադմինիստրատոր բիզնեսի համար",
     _desc: "Կայք, առցանց գրանցում և հիշեցումներ WhatsApp-ով ձեր բիզնեսի համար՝ հայերեն, ռուսերեն և անգլերեն։ Գներ, օրինակներ և անվճար օրինակ ձեր անունով։",
     navPk: "Փաթեթներ", navDemo: "Դեմո", navFaq: "Հարցեր", navCta: "ԴԵՄՈ", menuAria: "Մենյու", navCtaAria: "Գրել ԴԵՄՈ WhatsApp-ով", langAria: "Կայքի լեզուն",
@@ -17,6 +18,7 @@ window.T = {
     bNote: "Սրահը փակ է։ Գրանցումը՝ ոչ։"
   },
   ru: {
+    lpAria: "Пример: клиентка пишет в 23:47 и записывается сама", lpMsg: "Здравствуйте, на маникюр в пятницу есть время?", lpAuto: "Автоответ · 23:47", lpAutoT: "Сейчас закрыты, но свободное время видно здесь", lpBtn: "Записаться онлайн", lpOk: "Запись: пятница 11:00, мастер Нарине", lpToastT: "Напоминание отправлено", lpToastS: "Четверг 18:00, Рузан ответила «Приду»",
     _title: "SKIYAR — онлайн-администратор для бизнеса",
     _desc: "Сайт, онлайн-запись и напоминания в WhatsApp для вашего бизнеса на армянском, русском и английском. Цены, примеры и бесплатный пример с вашим названием.",
     navPk: "Пакеты", navDemo: "Демо", navFaq: "Вопросы", navCta: "ДЕМО", menuAria: "Меню", navCtaAria: "Написать ДЕМО в WhatsApp", langAria: "Язык сайта",
@@ -33,6 +35,7 @@ window.T = {
     bNote: "Салон закрыт. Запись — нет."
   },
   en: {
+    lpAria: "Example: a client writes at 23:47 and books herself", lpMsg: "Hi, any time for a manicure on Friday?", lpAuto: "Auto-reply · 23:47", lpAutoT: "We’re closed now, but you can see free times here", lpBtn: "Book online", lpOk: "Booked: Friday 11:00, with Narine", lpToastT: "Reminder sent", lpToastS: "Thursday 18:00, Ruzan replied “I’ll be there”",
     _title: "SKIYAR — an online front desk for your business",
     _desc: "Website, online booking and WhatsApp reminders for your business in Armenian, Russian and English. Prices, samples and a free sample with your name.",
     navPk: "Packages", navDemo: "Demos", navFaq: "FAQ", navCta: "DEMO", menuAria: "Menu", navCtaAria: "Send DEMO on WhatsApp", langAria: "Site language",

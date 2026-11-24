@@ -32,7 +32,7 @@
       fnTitle: "Ձեր կայքը կարող է պատրաստ լինել վաղը՝ որպես օրինակ",
       fnSub: "Գրեք մեզ. մեկ օրում կպատրաստենք օրինակ ձեր անունով։ Օրինակն անվճար է և ոչնչի չի պարտավորեցնում։", fnBtn: "Գրել ԴԵՄՈ WhatsApp-ով",
       fnPhone: "Հեռախոս և WhatsApp",
-      legal: "SKIYAR — ԱՁ Սկինո Նիկիտա Վլադիմիրովիչ · ՀՎՀՀ 20453381 · Կոտայք, Հայաստան",
+      legal: "SKIYAR — ԱՁ Սկինո Նիկիտա Վլադիմիրովիչ, ՀՎՀՀ 20453381, Կոտայք, Հայաստան",
       privacy: "Գաղտնիության քաղաքականություն",
       fab: "Գրել WhatsApp-ով"
     },
@@ -66,7 +66,7 @@
       fnTitle: "Пример вашего сайта может быть готов завтра",
       fnSub: "Напишите нам — за день сделаем пример с вашим названием. Пример бесплатный и ни к чему не обязывает.", fnBtn: "Написать ДЕМО в WhatsApp",
       fnPhone: "Телефон и WhatsApp",
-      legal: "SKIYAR — ИП Скино Никита Владимирович · ИНН 20453381 · Котайк, Армения",
+      legal: "SKIYAR — ИП Скино Никита Владимирович, ИНН 20453381, Котайк, Армения",
       privacy: "Политика конфиденциальности",
       fab: "Написать в WhatsApp"
     },
@@ -100,7 +100,7 @@
       fnTitle: "A sample of your site could be ready tomorrow",
       fnSub: "Message us and we’ll make a sample with your name within a day. The sample is free and commits you to nothing.", fnBtn: "Send DEMO on WhatsApp",
       fnPhone: "Phone and WhatsApp",
-      legal: "SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia",
+      legal: "SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich, Tax ID 20453381, Kotayk, Armenia",
       privacy: "Privacy Policy",
       fab: "Message on WhatsApp"
     }

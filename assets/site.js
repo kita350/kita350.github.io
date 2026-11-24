@@ -4,6 +4,7 @@
    data-t-alt / data-t-aria / data-t-href.
    Язык: на собранных страницах (/, /ru/, /en/) — window.PAGE_LANG, переключение = переход на страницу языка;
    в исходниках src/ — ?lang= → сохранённый → hy. */
+document.documentElement.classList.add("js");
 (function () {
   "use strict";
   var LANGS = ["hy", "ru", "en"];

@@ -61,18 +61,21 @@
       </div>
       <p class="pilot" data-t-html="pilot"><b>Пилот: 5 мест</b><span>Подключение бесплатно, первый месяц оплачиваете после запуска</span></p>
     </div>
-    <div class="night" aria-hidden="true">
-      <p class="clock" data-c="23:47"></p>
-      <div class="scene">
-        <img class="ruzan px" src="../assets/img/px/hero-ruzan-1x.png" width="48" height="72" alt="">
-        <div class="card">
-          <div class="who"><b data-t="bWho">Тикин Рузан</b><span data-t="bAct">записывается на сайте</span></div>
-          <div class="row"><span data-t="bSvc">Маникюр с гель-лаком</span><span>9 000 ֏</span></div>
-          <div class="row"><span data-t="bWhen">Пятница, 11:00</span><span>Liora Beauty</span></div>
-          <div class="state"><div class="s-btn" data-t="bBtn">Записаться</div><div class="s-done"><i></i><span data-t-html="bDone">Записано. Напоминание придёт в WhatsApp накануне.</span></div></div>
+    <div class="live" id="live" aria-label="" data-t-aria="lpAria" aria-label="Пример: клиентка пишет в 23:47 и записывается сама">
+      <div class="lv-toast" data-step="4"><b data-t="lpToastT">Напоминание отправлено</b><small data-t="lpToastS">Четверг 18:00, Рузан ответила «Приду»</small></div>
+      <div class="lv-phone">
+        <div class="lv-screen">
+          <div class="lv-sb"><span class="lv-time">23:47</span><span aria-hidden="true">●●●</span></div>
+          <div class="lv-hd"><span class="lv-av" aria-hidden="true">L</span><div><b>Liora Beauty</b><small>Instagram</small></div></div>
+          <div class="lv-body">
+            <div class="lv-m lv-out" data-step="0" data-t="lpMsg">Здравствуйте, на маникюр в пятницу есть время?</div>
+            <div class="lv-typing" data-step="1" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="lv-m lv-in" data-step="2"><span class="lv-lbl" data-t="lpAuto">Автоответ · 23:47</span><span data-t="lpAutoT">Сейчас закрыты, но свободное время видно здесь</span><span class="lv-btn" data-t="lpBtn">Записаться онлайн</span></div>
+            <div class="lv-m lv-ok" data-step="3"><i aria-hidden="true"></i><span data-t="lpOk">Запись: пятница 11:00, мастер Нарине</span></div>
+          </div>
         </div>
       </div>
-      <p class="closed" data-t="bNote">Салон закрыт. Запись — нет.</p>
+      <ol class="lv-dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
     </div>
   </div>
 </section>
@@ -104,7 +107,7 @@
 
                 <div class="scr" data-steps="3">
                   <div class="bk">
-                    <h4>Liora Beauty · <span data-t="pBook">Запись</span></h4>
+                    <p class="bk-t">Liora Beauty · <span data-t="pBook">Запись</span></p>
                     <div class="bk-svc"><b data-t="pSvc">Маникюр с гель-лаком</b><span>9 000 ֏</span></div>
                     <div class="bk-m" data-t="pMaster">Мастер: Нарине</div>
                     <div class="bk-days">
@@ -165,6 +168,30 @@
   </div>
   <div class="wrap"><p class="st-note" data-t="stNote">Скоро: ИИ-администратор, который сам отвечает на вопросы в Instagram и WhatsApp. Сейчас это пилот.</p></div>
 </section>
+<section class="gor" id="gor">
+  <div class="wrap">
+    <h2 data-t="grTitle">Как было у Гора и как стало</h2>
+    <p class="lead" data-t="grSub">Тот же салон, те же мастера. Разница — одна неделя.</p>
+    <div class="gr-grid">
+      <article class="gr-col gr-was">
+        <span class="gr-k" data-t="grWasK">Было: тетрадка</span>
+        <h3 data-t="grWasT">Запись в тетрадке, телефон до ночи</h3>
+        <div class="gr-cnt"><div><b>2</b><span data-t="grW1">клиента на 15:00</span></div><div><b>14</b><span data-t="grW2">сообщений без ответа</span></div><div><b>3</b><span data-t="grW3">неявки за неделю</span></div></div>
+        <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-panic.png" width="70" height="147" alt="" data-t-alt="grAltWas" loading="lazy">
+          <div class="gr-note" aria-hidden="true"><span data-t="grN1">Пт 15:00 — Анна</span><span><span data-t="grN2a">Пт 15:00 —</span> <s data-t="grN2b">Мари</s> <em>?!</em></span><span data-t="grN3">Сб 11:00 — ???</span><span data-t="grN4">перезвонить: 6 чел.</span></div></div>
+      </article>
+      <article class="gr-col gr-now">
+        <span class="gr-k" data-t="grNowK">Стало: SKIYAR Online</span>
+        <h3 data-t="grNowT">Клиенты записываются сами, напоминание уходит само</h3>
+        <div class="gr-cnt"><div><b>0</b><span data-t="grS1">двойных записей</span></div><div><b>3</b><span data-t="grS2">записи пришли ночью</span></div><div><b>18:00</b><span data-t="grS3">напоминание накануне</span></div></div>
+        <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-joy.png" width="84" height="142" alt="" data-t-alt="grAltNow" loading="lazy">
+          <div class="gr-cal" aria-hidden="true"><b data-t="grCalT">Пятница, Нарине</b><div><span>11:00</span><em data-t="grC1">Рузан, с сайта</em></div><div class="hot"><span>15:00</span><em data-t="grC2">Анна, подтвердила</em></div><div><span>16:30</span><em data-t="grC3">Свободно</em></div></div></div>
+      </article>
+    </div>
+    <p class="gr-foot" data-t="grFoot">Цифры «было» — сценка из наших роликов, не статистика клиента.</p>
+  </div>
+</section>
+
 <section class="bento" id="what">
   <div class="wrap">
     <h2 data-t="bnTitle">Что вы получаете</h2>
@@ -455,9 +482,9 @@
       <div><small data-t="ftSite">На сайте</small><a href="#packages" data-t="navPk">Пакеты</a><a href="#demos" data-t="navDemo">Демо</a><a href="#faq" data-t="navFaq">Вопросы</a></div>
       <div><small>Instagram · Facebook</small><a href="https://www.instagram.com/skiyar_technologies/" target="_blank" rel="noopener">@skiyar_technologies</a><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR</a></div>
     </div>
-    <p class="foot-legal"><span data-t="legal">SKIYAR — ИП Скино Никита Владимирович · ИНН 20453381 · Котайк, Армения</span> <a href="../privacy.html" data-t="privacy">Политика конфиденциальности</a></p>
+    <p class="foot-legal"><span data-t="legal">SKIYAR — ИП Скино Никита Владимирович, ИНН 20453381, Котайк, Армения</span> <a href="../privacy.html" data-t="privacy">Политика конфиденциальности</a></p>
   </div>
 </footer>
-<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=%D0%94%D0%95%D0%9C%D0%9E%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D1%81%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0.%20%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%3A%20"><i></i><span data-t="fab">Написать в WhatsApp</span></a>
+<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=%D0%94%D0%95%D0%9C%D0%9E%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D1%81%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0.%20%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%3A%20"><i></i><span data-t="fab">Написать в WhatsApp</span></a>
 </body>
 </html>
