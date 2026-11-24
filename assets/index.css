@@ -924,3 +924,4 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 @media (min-width:900px){ .pkt-seats{grid-column:1/-1} }
 .hero .h-price{order:1;margin:14px 0 -6px;color:var(--sky);font-weight:700;font-size:17px;letter-spacing:-.01em}
 .gr-who{margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45;max-width:40em}
+.in-price .in-free{display:inline-block;margin-left:4px;color:var(--sky);font-weight:700;font-size:13px}
