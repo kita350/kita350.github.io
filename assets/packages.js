@@ -161,6 +161,8 @@ document.documentElement.classList.add("js");
   "use strict";
   if (!("IntersectionObserver" in window)) return;
   if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  // на телефоне не выезжаем: при быстрой прокрутке туда-сюда плашки выглядели как «съезжающие»
+  if (window.matchMedia && matchMedia("(max-width: 899px), (hover: none)").matches) return;
   // только заголовки блоков и крупные панели: меньше работы браузеру и не «всё влетает» (аудит unslop)
   var SEL = "main section:not(.hero) h2, .bn-grid, .gr-grid, .pkb-grid, .in-panel, .ca-box, .steps-l, .pv, .pg-once";
   var seen = new WeakSet();

@@ -973,3 +973,5 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 .foot-cols a{display:flex} 
 }
 @media (prefers-reduced-motion:reduce){ .niche-gor.nod,.ca-gor.hop,.faq details[open] > p{animation:none} }
+@media (max-width:899px){ .nav{background:var(--night)} }
+.in-phone .screen img{object-position:left top}

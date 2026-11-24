@@ -54,3 +54,8 @@
 }
 
 @media (prefers-reduced-motion:reduce){ .niche-gor.nod,.ca-gor.hop,.faq details[open] > p{animation:none} }
+
+/* v13: телефон — шапка полностью непрозрачная (сквозь неё не просвечивает прокрученный текст) */
+@media (max-width:899px){ .nav{background:var(--night)} }
+/* скриншот сайта в телефоне отраслей: привязан к левому верхнему углу — начало строк не обрезается */
+.in-phone .screen img{object-position:left top}
