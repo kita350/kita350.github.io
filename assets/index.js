@@ -114,11 +114,20 @@ document.documentElement.classList.add("js");
     box.style.setProperty("--k", Math.max(0.5, k).toFixed(3));
   }
 
-  function onScroll() {
-    var r = track.getBoundingClientRect();
-    var total = track.offsetHeight - stage.offsetHeight;
-    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+  // Геометрию меряем только при загрузке и смене размера; при прокрутке — одно чтение scrollY за кадр,
+  // без замеров раскладки на каждое событие (на телефоне это давало рывки).
+  var top0 = 0, total = 0, ticking = false;
+  function measure() {
+    top0 = track.getBoundingClientRect().top + window.scrollY;
+    total = track.offsetHeight - stage.offsetHeight;
+  }
+  function update() {
+    ticking = false;
+    var p = total > 0 ? Math.min(1, Math.max(0, (window.scrollY - top0) / total)) : 0;
     show(Math.min(N, Math.floor(p * N) + 1));
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }
 
   each(".st-rail button", function (b) {
@@ -131,11 +140,14 @@ document.documentElement.classList.add("js");
   });
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", function () { fit(); onScroll(); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  var rz = 0;
+  window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(function () { fit(); measure(); update(); }, 150); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); measure(); update(); });
+  window.addEventListener("load", function () { measure(); update(); });
   fit();
+  measure();
   show(1);
-  onScroll();
+  update();
 })();
 
 ;
@@ -360,20 +372,17 @@ document.documentElement.classList.add("js");
 })();
 
 ;
-/* Плавающая кнопка WhatsApp (только телефон).
-   Показывается, только когда на экране нет плиток и карточек (не заезжает на них), первого экрана, истории с телефоном, финального блока, подвала
-   и ни одной другой главной кнопки — чтобы не закрывать текст и не дублировать кнопку рядом. */
+/* Плавающая кнопка WhatsApp (телефон и планшет): видна всегда — это главный способ связи.
+   Прячется только пока открыто меню. Никаких замеров при прокрутке.
+   Чтобы она не закрывала текст, внизу каждого блока и подвала оставлено место (end.css). */
 (function () {
   "use strict";
-  var fab = document.getElementById("fab");
-  if (!fab || !("IntersectionObserver" in window)) return;
-  var zones = document.querySelectorAll(".hero, .pg-head, .st-track, #contact, footer, main .btn-main, .ty-btns, .in-btns, .bn-grid, .pkb-grid, .gr-grid, .in-panel, .ca-box, .tw, .pg-once, .pk-tbl");
-  var visible = new Set();
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target); });
-    fab.classList.toggle("on", visible.size === 0);
-  });
-  for (var i = 0; i < zones.length; i++) io.observe(zones[i]);
+  var fab = document.getElementById("fab"), nav = document.getElementById("nav");
+  if (!fab) return;
+  fab.classList.add("on");
+  if (!nav || !("MutationObserver" in window)) return;
+  new MutationObserver(function () { fab.classList.toggle("on", !nav.classList.contains("open")); })
+    .observe(nav, { attributes: true, attributeFilter: ["class"] });
 })();
 
 ;
