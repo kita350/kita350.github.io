@@ -11,14 +11,14 @@
 .st-phone{position:relative;flex:1 1 auto;min-height:0;display:flex;justify-content:flex-end;align-items:flex-end;padding-right:4px}
 .st-ph-box{position:relative;width:calc(264px * var(--k,1));height:calc(546px * var(--k,1))}
 .st-ph-box .phone{position:absolute;left:0;top:0;width:264px;transform:scale(var(--k,1));transform-origin:0 0}
-.st-px{position:absolute;z-index:3;bottom:0;right:calc(100% + 2px);width:96px;height:144px;opacity:0;transition:opacity .35s}
+.st-px{position:absolute;z-index:3;bottom:0;right:calc(100% + 2px);width:96px;height:144px;opacity:0;transition:opacity .25s var(--ease-out)}
 .st-px.on{opacity:1}
 
 .screen.app{background:var(--c-f4f5f7);color:var(--c-10131a);font-size:13px;line-height:1.35}
 .sb{position:absolute;top:0;left:0;right:0;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 28px;font:700 13px/1 var(--font);color:var(--c-10131a);z-index:1;font-variant-numeric:tabular-nums}
 .sb i{width:22px;height:10px;border:1.5px solid var(--c-10131a);border-radius:3px;position:relative}
 .sb i::after{content:"";position:absolute;inset:1.5px 6px 1.5px 1.5px;background:var(--c-10131a);border-radius:1px}
-.js .scr{position:absolute;inset:40px 0 0;display:flex;flex-direction:column;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;pointer-events:none}
+.js .scr{position:absolute;inset:40px 0 0;display:flex;flex-direction:column;opacity:0;transform:translateY(8px);transition:opacity .25s var(--ease-out),transform .25s var(--ease-out);pointer-events:none}
 .js .scr.on{opacity:1;transform:none}
 
 /* чат в Instagram */
@@ -34,7 +34,7 @@
 .ch-time{align-self:flex-end;font-size:10.5px;color:var(--c-5f6673);margin:-2px 4px 8px}
 .lbl{display:block;font-size:10.5px;color:var(--c-6b7280);margin-bottom:3px}
 .bub-btn{display:block;margin-top:9px;padding:8px 10px;border-radius:10px;background:var(--c-10131a);color:var(--c-fdfdfb);text-align:center;font-weight:700;font-size:12.5px}
-.js .b2{opacity:0;transform:translateY(6px);transition:opacity .35s .1s,transform .35s .1s}
+.js .b2{opacity:0;transform:translateY(6px);transition:opacity .25s var(--ease-out) .1s,transform .25s var(--ease-out) .1s}
 .js .b2.on{opacity:1;transform:none}
 
 /* страница записи */
@@ -95,7 +95,7 @@
 .st-rail button[aria-current="step"]::before,.st-rail button.done::before{background:var(--blue)}
 .st-rail span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .st-caps{position:relative;min-height:122px}
-.js .cap{position:absolute;inset:0 0 auto;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+.js .cap{position:absolute;inset:0 0 auto;opacity:0;transform:translateY(8px);transition:opacity .25s var(--ease-out),transform .25s var(--ease-out)}
 .js .cap.on{opacity:1;transform:none}
 .cap-t{margin:0 0 4px;font-weight:800;font-size:20px;letter-spacing:-.01em;color:var(--blue);font-variant-numeric:tabular-nums}
 .cap-p{margin:0;font-size:18px;line-height:1.42;color:var(--white);max-width:24em}
