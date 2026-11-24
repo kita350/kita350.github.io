@@ -622,3 +622,11 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 @media (prefers-reduced-motion:reduce){ .niche-gor.nod,.ca-gor.hop,.faq details[open] > p{animation:none} }
 @media (max-width:899px){ .nav{background:var(--night)} }
 .in-phone .screen img{object-position:left top}
+.tilt-on .lv-phone{position:relative;transition:transform .5s var(--ease-out);box-shadow:0 30px 60px -30px rgba(82,150,225,.55),0 0 0 1px rgba(127,178,236,.18) inset}
+.tilt-on .lv-box.tilting .lv-phone{transition:transform .1s linear}
+.lv-sheen{position:absolute;inset:-20%;z-index:3;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .4s var(--ease-out);
+background:radial-gradient(40% 30% at 50% 30%,rgba(255,255,255,.2),rgba(255,255,255,0) 70%)}
+.lv-phone{overflow:hidden}
+.tilt-on .lv-box.idle .lv-sheen{opacity:1}
+@keyframes breathe{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-6px) rotate(.6deg)}}
+.tilt-on .lv-box.idle:not(.tilting){animation:breathe 7s ease-in-out infinite}
