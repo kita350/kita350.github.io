@@ -76,7 +76,8 @@
     })();
   }
   if (!still) (function gestLoop() {
-    var vis = list.filter(function (c) { return c.vis && !c.busy && (!c.img.classList.contains("st-px") || c.img.classList.contains("on")); });
+    // в «Истории» жест только у персонажа без эмоции: эмоция шага важнее
+    var vis = list.filter(function (c) { return c.vis && !c.busy && (!c.img.classList.contains("st-px") || (c.img.classList.contains("on") && c.mood === "base")); });
     if (vis.length) gesture(vis[Math.floor(Math.random() * vis.length)]);
     setTimeout(gestLoop, 3200 + Math.random() * 2600);
   })();
