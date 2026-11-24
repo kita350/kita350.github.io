@@ -16,7 +16,7 @@
   function apply(i) {
     var n = (t("niches") || [])[i] || base;
     for (var k in F) { var el = q(F[k]); if (el && n[k] != null) el.textContent = n[k]; }
-    price.textContent = (t("nichePrice") || [])[i] || "";
+    if (price) price.textContent = (t("nichePrice") || [])[i] || "";
   }
   function build() {
     var chips = t("nicheChips") || [];
@@ -34,11 +34,15 @@
     cur = i;
     var bs = wrap.querySelectorAll(".niche-b");
     for (var j = 0; j < bs.length; j++) bs[j].setAttribute("aria-pressed", j === i ? "true" : "false");
-    apply(i);
+    // сначала мгновенно прячем старые пузыри, потом подменяем текст — новые реплики не мелькают в старых
+    box.classList.add("swap");
     if (box.restartLive) box.restartLive();
+    apply(i);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { box.classList.remove("swap"); }); });
     if (gor) { gor.classList.remove("nod"); void gor.offsetWidth; gor.classList.add("nod"); }
   }
 
   grab(); build(); apply(0);
-  window.SITE.onRender.push(function () { grab(); build(); apply(cur); });
+  // базовые тексты салона берём из разметки только пока выбран салон (иначе там уже тексты другой ниши)
+  window.SITE.onRender.push(function () { if (cur === 0) grab(); build(); apply(cur); });
 })();

@@ -34,6 +34,12 @@
       </div>
     </div>
     <span class="nav-clock" aria-hidden="true">23:47</span>
+    <details class="lang-dd">
+      <summary data-t-aria="langAria"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span class="lang-cur"></span></summary>
+      <div class="langs lang-menu" role="group" data-t-aria="langAria">
+        <button type="button" data-lang-btn="hy">Հայ</button><button type="button" data-lang-btn="ru">Рус</button><button type="button" data-lang-btn="en">Eng</button>
+      </div>
+    </details>
     <a class="nav-demo" target="_blank" rel="noopener" data-wa="waHello" data-t="navCta" data-t-aria="navCtaAria"></a>
     <button type="button" class="nav-burger" aria-expanded="false" aria-controls="navPanel" data-t-aria="menuAria"><i></i></button>
   </div>
@@ -371,7 +377,8 @@
         <div class="ca-f"><label for="caN"><span data-t="caN"></span><output id="caNv" for="caN"></output></label><input id="caN" type="range" min="0" max="30" step="1" value="2"><div class="ca-ends" aria-hidden="true"><span>0</span><span>30</span></div></div>
         <div class="ca-f"><label for="caC"><span data-t="caC"></span><output id="caCv" for="caC"></output></label><input id="caC" type="range" min="2000" max="50000" step="500" value="8000"><div class="ca-ends" aria-hidden="true"><span>2 000 ֏</span><span>50 000 ֏</span></div></div>
       </div>
-      <div class="ca-out" aria-live="polite">
+      <div class="ca-out">
+        <p class="sr-only" id="caSay" aria-live="polite"></p>
         <p class="ca-k" id="caK" data-t="caPayK"></p>
         <p class="ca-sum" id="caSum"><span id="caOut">0</span> <small id="caUnit"></small><img class="ca-gor px" src="../assets/img/px/gor-joy.png" width="84" height="142" alt="" loading="lazy"></p>
         <p class="ca-msg" id="caMsg"></p>
