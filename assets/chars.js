@@ -50,7 +50,8 @@
   // моргание: только у тех, у кого видны глаза, и только в спокойном настроении
   if (!still) (function blinkLoop() {
     list.forEach(function (c) {
-      if (!c.vis || c.busy || c.mood !== "base" || !c.w.blink || Math.random() < 0.45) return;
+      if (!c.vis || c.busy || c.mood !== "base" || !c.w.blink || Math.random() < 0.45 || Date.now() - (c.gestAt || 0) < 1800) return;
+      c.blinkAt = Date.now();
       setSrc(c.img, c.w.blink); setTimeout(function () { if (c.mood === "base") show(c); }, 140);
     });
     setTimeout(blinkLoop, 2500 + Math.random() * 2500);
@@ -60,13 +61,15 @@
   var GEST = {
     gor: ["emo-gor-wave1.png", "emo-gor-wave2.png", "emo-gor-wave1.png", "emo-gor-wave2.png", "emo-gor-wave1.png", "emo-gor-wave2.png"],
     ski: ["emo-ski-wave1.png", "emo-ski-wave2.png", "emo-ski-wave1.png", "emo-ski-wave2.png", "emo-ski-wave1.png"],
-    ruzan: ["emo-ruzan-phone1.png", "emo-ruzan-phone2.png", "emo-ruzan-phone2.png", "emo-ruzan-phone2.png", "emo-ruzan-phone1.png"],
-    lusine: ["emo-lusine-type1.png", "emo-lusine-type2.png", "emo-lusine-type1.png", "emo-lusine-type2.png", "emo-lusine-type1.png", "emo-lusine-type2.png"]
+    ruzan: ["emo-ruzan-phone1.png", "emo-ruzan-phone2.png", "emo-ruzan-phone1.png", "emo-ruzan-phone2.png", "emo-ruzan-phone1.png"],
+    lusine: ["emo-lusine-wave1.png", "emo-lusine-wave2.png", "emo-lusine-wave1.png", "emo-lusine-wave2.png", "emo-lusine-wave1.png", "emo-lusine-wave2.png"],
+    gorfree: ["emo-gor-free-wave1.png", "emo-gor-free-wave2.png", "emo-gor-free-wave1.png", "emo-gor-free-wave2.png", "emo-gor-free-wave1.png", "emo-gor-free-wave2.png"]
   };
   list.forEach(function (c) { preload(c.img, GEST[c.img.dataset.who] || []); });
   function gesture(c) {
     var fr = GEST[c.img.dataset.who]; if (!fr || c.busy) return;
-    c.busy = true; var i = 0;
+    if (Date.now() - (c.blinkAt || 0) < 600) return; // не сразу после моргания
+    c.busy = true; c.gestAt = Date.now(); var i = 0;
     (function next() {
       if (i < fr.length && c.vis) { setSrc(c.img, fr[i++]); setTimeout(next, 200); }
       else { c.busy = false; show(c); }
@@ -100,6 +103,20 @@
   });
   // первый шаг уже на экране при загрузке
   list.forEach(function (c) { if (c.img.classList.contains("st-px") && c.img.dataset.who === "ruzan") mood(c, "angry"); });
+
+  // «Как было — как стало»
+  [].forEach.call(document.querySelectorAll(".gr-px"), function (img) {
+    var free = /emo-gor-free/.test(img.getAttribute("src"));
+    var b = document.createElement("i"); b.className = "emo-bub gr-bub on emo-" + (free ? "happy" : "angry"); b.textContent = free ? BUB.happy : BUB.angry; b.setAttribute("aria-hidden", "true");
+    img.parentNode.style.position = "relative"; img.parentNode.appendChild(b);
+    b.style.left = (img.offsetLeft + img.offsetWidth * 0.62) + "px"; b.style.top = Math.max(0, img.offsetTop - 22) + "px";
+    window.addEventListener("resize", function () { b.style.left = (img.offsetLeft + img.offsetWidth * 0.62) + "px"; b.style.top = Math.max(0, img.offsetTop - 22) + "px"; });
+    if (free) {
+      var c = { img: img, w: { base: "emo-gor-free-hi.png" }, mood: "base", vis: false };
+      img.dataset.who = "gorfree"; list.push(c); preload(img, GEST.gorfree.concat(["emo-gor-free-hi.png"]));
+      if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { c.vis = e[0].isIntersecting; }).observe(img); else c.vis = true;
+    }
+  });
 
   // калькулятор: Гор паникует, грустит или радуется в зависимости от потерь
   var ca = document.querySelector(".ca-gor");

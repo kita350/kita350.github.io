@@ -18,14 +18,14 @@ const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
     text: ["hero", "niche", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
-    css: ["tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
+    css: ["fonts", "tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
     js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "phone3d", "chars", "reveal"],
   },
 ];
 if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
   src: "src/packages.html", out: "packages.html", og: "og",
   text: ["hero", "pk", "end", "pkpage"],
-  css: ["tokens", "site", "pk", "end", "pkpage", "v3", "v4", "v5"],
+  css: ["fonts", "tokens", "site", "pk", "end", "pkpage", "v3", "v4", "v5"],
   js: ["site", "pk", "fab", "reveal"],
 });
 
@@ -106,13 +106,10 @@ ${alt}
 <link rel="icon" href="${pre}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="${pre}favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="${pre}assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Noto+Sans+Armenian:wght@400;700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Noto+Sans+Armenian:wght@400;700;800&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Noto+Sans+Armenian:wght@400;700;800&display=swap"></noscript>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-latin.woff2">
+${L === "ru" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-cyrillic.woff2">` : L === "hy" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/noto-arm-armenian.woff2">` : ""}
 <link rel="stylesheet" href="${pre}assets/${name}.css">
-<script>window.PAGE_LANG="${L}"</script>
+<script>window.PAGE_LANG="${L}";document.documentElement.classList.add("ph3d")</script>
 <script src="${pre}assets/${name}.js" defer></script>`;
     // старые подключения скриптов из исходника — до вставки нового head
     h = h.replace(/\n<script src="[^"]*"><\/script>/g, "").replace(/\n<script>[\s\S]*?<\/script>/g, "");
