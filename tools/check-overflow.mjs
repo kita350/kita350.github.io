@@ -15,7 +15,7 @@ let id = 0; const P = new Map(); ws.onmessage = (e) => { const m = JSON.parse(e.
 const send = (method, params = {}) => new Promise((r) => { const i = ++id; P.set(i, r); ws.send(JSON.stringify({ id: i, method, params })); });
 const ev = async (x) => (await send("Runtime.evaluate", { expression: x, returnByValue: true })).result.result.value;
 let bad = 0;
-for (const W of [375, 1440]) {
+for (const W of (process.env.WIDTHS ? process.env.WIDTHS.split(",").map(Number) : [375, 1440])) {
   await send("Emulation.setDeviceMetricsOverride", { width: W, height: 900, deviceScaleFactor: 1, mobile: W < 768 });
   for (const p of PAGES) {
     await send("Page.navigate", { url: BASE + p }); await sl(2200);
