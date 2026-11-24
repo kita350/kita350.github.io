@@ -609,7 +609,8 @@ document.documentElement.classList.add("js");
       want = Math.round(pos); paint();
       if (pos !== target) raf = requestAnimationFrame(glide);
     }
-    function onScroll() { target = fromScroll(); if (!raf) raf = requestAnimationFrame(glide); }
+    function onScroll() { if (still) return; // «уменьшить движение»: телефон стоит в первом кадре
+      target = fromScroll(); if (!raf) raf = requestAnimationFrame(glide); }
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", function () { size(); }, { passive: true });
 
