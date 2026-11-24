@@ -17,16 +17,16 @@ const w = (p, s) => { fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive
 const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
-    text: ["hero", "story", "bento", "try", "ind", "calc", "pk", "end"],
-    css: ["site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3"],
-    js: ["site", "story", "try", "ind", "calc", "pk", "fab"],
+    text: ["hero", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
+    css: ["tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4"],
+    js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "reveal"],
   },
 ];
 if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
   src: "src/packages.html", out: "packages.html", og: "og",
   text: ["hero", "pk", "end", "pkpage"],
-  css: ["site", "pk", "end", "pkpage", "v3"],
-  js: ["site", "pk", "fab"],
+  css: ["tokens", "site", "pk", "end", "pkpage", "v3", "v4"],
+  js: ["site", "pk", "fab", "reveal"],
 });
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -51,7 +51,9 @@ for (const P of PAGES) {
   }
   const T = ctx.window.T;
   const name = P.out.replace(/\.html$/, "");
-  w(`assets/${name}.css`, P.css.map((c) => `/* ${c} */\n` + min(r(`assets/${c}.css`))).join("\n") + "\n");
+  // штамп Hallmark (первые строки tokens.css) переносим в начало собранного CSS: min() убирает комментарии
+  const stamp = (r("assets/tokens.css").match(/^\/\* Hallmark[^\n]*\*\/$/gm) || []).join("\n");
+  w(`assets/${name}.css`, (stamp ? stamp + "\n" : "") + P.css.map((c) => `/* ${c} */\n` + min(r(`assets/${c}.css`))).join("\n") + "\n");
   w(`assets/${name}.js`, "/* собрано tools/build.mjs — не править руками */\nwindow.T=" + JSON.stringify(T) + ";\n" + P.js.map((j) => r(`assets/${j}.js`)).join("\n;\n"));
 
   for (const L of LANGS) {

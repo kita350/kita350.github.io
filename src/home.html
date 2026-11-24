@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+Armenian:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="../assets/tokens.css">
 <link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="../assets/home.css">
 <link rel="stylesheet" href="../assets/story.css">
@@ -20,6 +21,7 @@
 <link rel="stylesheet" href="../assets/pk.css">
 <link rel="stylesheet" href="../assets/end.css">
 <link rel="stylesheet" href="../assets/v3.css">
+<link rel="stylesheet" href="../assets/v4.css">
 </head>
 <body data-lang="hy">
 <header class="nav" id="nav">
@@ -49,18 +51,21 @@
       </div>
       <p class="pilot" data-t-html="pilot"></p>
     </div>
-    <div class="night" aria-hidden="true">
-      <p class="clock" data-c="23:47"></p>
-      <div class="scene">
-        <img class="ruzan px" src="../assets/img/px/hero-ruzan-1x.png" width="48" height="72" alt="">
-        <div class="card">
-          <div class="who"><b data-t="bWho"></b><span data-t="bAct"></span></div>
-          <div class="row"><span data-t="bSvc"></span><span>9 000 ֏</span></div>
-          <div class="row"><span data-t="bWhen"></span><span>Liora Beauty</span></div>
-          <div class="state"><div class="s-btn" data-t="bBtn"></div><div class="s-done"><i></i><span data-t-html="bDone"></span></div></div>
+    <div class="live" id="live" aria-label="" data-t-aria="lpAria">
+      <div class="lv-toast" data-step="4"><b data-t="lpToastT"></b><small data-t="lpToastS"></small></div>
+      <div class="lv-phone">
+        <div class="lv-screen">
+          <div class="lv-sb"><span class="lv-time">23:47</span><span aria-hidden="true">●●●</span></div>
+          <div class="lv-hd"><span class="lv-av" aria-hidden="true">L</span><div><b>Liora Beauty</b><small>Instagram</small></div></div>
+          <div class="lv-body">
+            <div class="lv-m lv-out" data-step="0" data-t="lpMsg"></div>
+            <div class="lv-typing" data-step="1" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="lv-m lv-in" data-step="2"><span class="lv-lbl" data-t="lpAuto"></span><span data-t="lpAutoT"></span><span class="lv-btn" data-t="lpBtn"></span></div>
+            <div class="lv-m lv-ok" data-step="3"><i aria-hidden="true"></i><span data-t="lpOk"></span></div>
+          </div>
         </div>
       </div>
-      <p class="closed" data-t="bNote"></p>
+      <ol class="lv-dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
     </div>
   </div>
 </section>
@@ -92,7 +97,7 @@
 
                 <div class="scr" data-steps="3">
                   <div class="bk">
-                    <h4>Liora Beauty · <span data-t="pBook"></span></h4>
+                    <p class="bk-t">Liora Beauty · <span data-t="pBook"></span></p>
                     <div class="bk-svc"><b data-t="pSvc"></b><span>9 000 ֏</span></div>
                     <div class="bk-m" data-t="pMaster"></div>
                     <div class="bk-days">
@@ -153,6 +158,30 @@
   </div>
   <div class="wrap"><p class="st-note" data-t="stNote"></p></div>
 </section>
+<section class="gor" id="gor">
+  <div class="wrap">
+    <h2 data-t="grTitle"></h2>
+    <p class="lead" data-t="grSub"></p>
+    <div class="gr-grid">
+      <article class="gr-col gr-was">
+        <span class="gr-k" data-t="grWasK"></span>
+        <h3 data-t="grWasT"></h3>
+        <div class="gr-cnt"><div><b>2</b><span data-t="grW1"></span></div><div><b>14</b><span data-t="grW2"></span></div><div><b>3</b><span data-t="grW3"></span></div></div>
+        <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-panic.png" width="70" height="147" alt="" data-t-alt="grAltWas" loading="lazy">
+          <div class="gr-note" aria-hidden="true"><span data-t="grN1"></span><span><span data-t="grN2a"></span> <s data-t="grN2b"></s> <em>?!</em></span><span data-t="grN3"></span><span data-t="grN4"></span></div></div>
+      </article>
+      <article class="gr-col gr-now">
+        <span class="gr-k" data-t="grNowK"></span>
+        <h3 data-t="grNowT"></h3>
+        <div class="gr-cnt"><div><b>0</b><span data-t="grS1"></span></div><div><b>3</b><span data-t="grS2"></span></div><div><b>18:00</b><span data-t="grS3"></span></div></div>
+        <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-joy.png" width="84" height="142" alt="" data-t-alt="grAltNow" loading="lazy">
+          <div class="gr-cal" aria-hidden="true"><b data-t="grCalT"></b><div><span>11:00</span><em data-t="grC1"></em></div><div class="hot"><span>15:00</span><em data-t="grC2"></em></div><div><span>16:30</span><em data-t="grC3"></em></div></div></div>
+      </article>
+    </div>
+    <p class="gr-foot" data-t="grFoot"></p>
+  </div>
+</section>
+
 <section class="bento" id="what">
   <div class="wrap">
     <h2 data-t="bnTitle"></h2>
@@ -455,6 +484,7 @@
 <script src="text/calc.js"></script>
 <script src="text/pk.js"></script>
 <script src="text/end.js"></script>
+<script src="text/gor.js"></script>
 <script src="../assets/site.js"></script>
 <script src="../assets/story.js"></script>
 <script src="../assets/try.js"></script>
@@ -462,5 +492,7 @@
 <script src="../assets/calc.js"></script>
 <script src="../assets/pk.js"></script>
 <script src="../assets/fab.js"></script>
+<script src="../assets/live.js"></script>
+<script src="../assets/reveal.js"></script>
 </body>
 </html>

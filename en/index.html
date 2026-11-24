@@ -61,18 +61,21 @@
       </div>
       <p class="pilot" data-t-html="pilot"><b>Pilot: 5 places</b><span>Free setup, first month paid after launch</span></p>
     </div>
-    <div class="night" aria-hidden="true">
-      <p class="clock" data-c="23:47"></p>
-      <div class="scene">
-        <img class="ruzan px" src="../assets/img/px/hero-ruzan-1x.png" width="48" height="72" alt="">
-        <div class="card">
-          <div class="who"><b data-t="bWho">Mrs Ruzan</b><span data-t="bAct">is booking on the site</span></div>
-          <div class="row"><span data-t="bSvc">Gel manicure</span><span>9 000 ֏</span></div>
-          <div class="row"><span data-t="bWhen">Friday, 11:00</span><span>Liora Beauty</span></div>
-          <div class="state"><div class="s-btn" data-t="bBtn">Book</div><div class="s-done"><i></i><span data-t-html="bDone">Booked. A WhatsApp reminder comes the day before.</span></div></div>
+    <div class="live" id="live" aria-label="" data-t-aria="lpAria" aria-label="Example: a client writes at 23:47 and books herself">
+      <div class="lv-toast" data-step="4"><b data-t="lpToastT">Reminder sent</b><small data-t="lpToastS">Thursday 18:00, Ruzan replied “I’ll be there”</small></div>
+      <div class="lv-phone">
+        <div class="lv-screen">
+          <div class="lv-sb"><span class="lv-time">23:47</span><span aria-hidden="true">●●●</span></div>
+          <div class="lv-hd"><span class="lv-av" aria-hidden="true">L</span><div><b>Liora Beauty</b><small>Instagram</small></div></div>
+          <div class="lv-body">
+            <div class="lv-m lv-out" data-step="0" data-t="lpMsg">Hi, any time for a manicure on Friday?</div>
+            <div class="lv-typing" data-step="1" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="lv-m lv-in" data-step="2"><span class="lv-lbl" data-t="lpAuto">Auto-reply · 23:47</span><span data-t="lpAutoT">We’re closed now, but you can see free times here</span><span class="lv-btn" data-t="lpBtn">Book online</span></div>
+            <div class="lv-m lv-ok" data-step="3"><i aria-hidden="true"></i><span data-t="lpOk">Booked: Friday 11:00, with Narine</span></div>
+          </div>
         </div>
       </div>
-      <p class="closed" data-t="bNote">The salon is closed. Booking isn’t.</p>
+      <ol class="lv-dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
     </div>
   </div>
 </section>
@@ -104,7 +107,7 @@
 
                 <div class="scr" data-steps="3">
                   <div class="bk">
-                    <h4>Liora Beauty · <span data-t="pBook">Booking</span></h4>
+                    <p class="bk-t">Liora Beauty · <span data-t="pBook">Booking</span></p>
                     <div class="bk-svc"><b data-t="pSvc">Gel manicure</b><span>9 000 ֏</span></div>
                     <div class="bk-m" data-t="pMaster">Master: Narine</div>
                     <div class="bk-days">
@@ -165,6 +168,30 @@
   </div>
   <div class="wrap"><p class="st-note" data-t="stNote">Coming soon: an AI front desk that answers questions in Instagram and WhatsApp by itself. Now in pilot.</p></div>
 </section>
+<section class="gor" id="gor">
+  <div class="wrap">
+    <h2 data-t="grTitle">Gor: before and after</h2>
+    <p class="lead" data-t="grSub">Same salon, same staff. The difference is one week.</p>
+    <div class="gr-grid">
+      <article class="gr-col gr-was">
+        <span class="gr-k" data-t="grWasK">Before: the notebook</span>
+        <h3 data-t="grWasT">Bookings in a notebook, the phone ringing till midnight</h3>
+        <div class="gr-cnt"><div><b>2</b><span data-t="grW1">clients at 15:00</span></div><div><b>14</b><span data-t="grW2">unanswered messages</span></div><div><b>3</b><span data-t="grW3">no-shows a week</span></div></div>
+        <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-panic.png" width="70" height="147" alt="" data-t-alt="grAltWas" loading="lazy">
+          <div class="gr-note" aria-hidden="true"><span data-t="grN1">Fri 15:00 — Anna</span><span><span data-t="grN2a">Fri 15:00 —</span> <s data-t="grN2b">Mari</s> <em>?!</em></span><span data-t="grN3">Sat 11:00 — ???</span><span data-t="grN4">call back: 6 people</span></div></div>
+      </article>
+      <article class="gr-col gr-now">
+        <span class="gr-k" data-t="grNowK">Now: SKIYAR Online</span>
+        <h3 data-t="grNowT">Clients book themselves, reminders go out on their own</h3>
+        <div class="gr-cnt"><div><b>0</b><span data-t="grS1">double bookings</span></div><div><b>3</b><span data-t="grS2">bookings came in at night</span></div><div><b>18:00</b><span data-t="grS3">reminder the day before</span></div></div>
+        <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-joy.png" width="84" height="142" alt="" data-t-alt="grAltNow" loading="lazy">
+          <div class="gr-cal" aria-hidden="true"><b data-t="grCalT">Friday, Narine</b><div><span>11:00</span><em data-t="grC1">Ruzan, from the site</em></div><div class="hot"><span>15:00</span><em data-t="grC2">Anna, confirmed</em></div><div><span>16:30</span><em data-t="grC3">Free</em></div></div></div>
+      </article>
+    </div>
+    <p class="gr-foot" data-t="grFoot">The “before” numbers are a scene from our videos, not client statistics.</p>
+  </div>
+</section>
+
 <section class="bento" id="what">
   <div class="wrap">
     <h2 data-t="bnTitle">What you get</h2>
@@ -455,9 +482,9 @@
       <div><small data-t="ftSite">On the site</small><a href="#packages" data-t="navPk">Packages</a><a href="#demos" data-t="navDemo">Demos</a><a href="#faq" data-t="navFaq">FAQ</a></div>
       <div><small>Instagram · Facebook</small><a href="https://www.instagram.com/skiyar_technologies/" target="_blank" rel="noopener">@skiyar_technologies</a><a href="https://www.facebook.com/profile.php?id=61596531779500" target="_blank" rel="noopener">SKIYAR</a></div>
     </div>
-    <p class="foot-legal"><span data-t="legal">SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich · Tax ID 20453381 · Kotayk, Armenia</span> <a href="../privacy.html" data-t="privacy">Privacy Policy</a></p>
+    <p class="foot-legal"><span data-t="legal">SKIYAR — Individual Entrepreneur Skino Nikita Vladimirovich, Tax ID 20453381, Kotayk, Armenia</span> <a href="../privacy.html" data-t="privacy">Privacy Policy</a></p>
   </div>
 </footer>
-<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20"><i></i><span data-t="fab">Message on WhatsApp</span></a>
+<a class="fab" id="fab" target="_blank" rel="noopener" data-wa="waHello" href="https://wa.me/37498337187?text=DEMO%0AHello!%20I'd%20like%20a%20sample%20site%20with%20my%20business%20name.%20Name%3A%20"><i></i><span data-t="fab">Message on WhatsApp</span></a>
 </body>
 </html>

@@ -6,23 +6,23 @@
 .bn-grid{display:grid;gap:12px}
 .tile{position:relative;overflow:hidden;padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
 .tile h3{margin:0 0 8px;font-weight:800;font-size:21px;line-height:1.2;letter-spacing:-.015em;text-wrap:balance}
-.tile p{margin:0;color:#c3cad8;font-size:16px;line-height:1.5;max-width:32em}
+.tile p{margin:0;color:var(--c-c3cad8);font-size:16px;line-height:1.5;max-width:32em}
 .tile .small{margin-top:12px;font-size:14px}
 
 /* языки: три строки — рабочий переключатель языка сайта */
 .t-lang .words{margin:0 0 22px;display:grid;gap:0;justify-items:start}
-.t-lang .words button{background:none;border:0;padding:2px 0;cursor:pointer;text-align:left;font:800 clamp(26px,8vw,58px)/1.1 var(--font);letter-spacing:-.035em;color:#6274a6;white-space:nowrap;transition:color .2s}
+.t-lang .words button{background:none;border:0;padding:2px 0;cursor:pointer;text-align:left;font:800 clamp(26px,8vw,58px)/1.1 var(--font);letter-spacing:-.035em;color:var(--c-6274a6);white-space:nowrap;transition:color .2s}
 .t-lang .words button:hover{color:var(--sky)}
 .t-lang .words button[aria-pressed="true"]{color:var(--white)}
-.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 22px}
-.shots img{width:100%;aspect-ratio:375/230;object-fit:cover;object-position:0 8%;border-radius:10px;background:#f6f1ea}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 22px}
+.shots img{width:100%;aspect-ratio:375/230;object-fit:cover;object-position:0 8%;border-radius:10px;background:var(--c-f6f1ea)}
 
 /* сутки: часы салона против записи; ночь выделена */
 .day{margin:8px 0 22px}
 .day-row{display:grid;grid-template-columns:76px 1fr;align-items:center;gap:10px;margin-bottom:24px;font-size:13.5px;color:var(--sky)}
-.bar{position:relative;height:12px;border-radius:3px;background:rgba(121,137,170,.14)}
+.bar{position:relative;height:12px;border-radius:3px;background:var(--c-rgba-121-137-170-14)}
 .bar i{position:absolute;top:0;bottom:0;border-radius:3px}
-.bar .open{left:41.667%;width:45.833%;background:#2f5da3}
+.bar .open{left:41.667%;width:45.833%;background:var(--c-2f5da3)}
 .bar .all{left:0;right:0;background:var(--blue)}
 .bar .nt{background:var(--ice)}
 .bar .n1{left:0;width:41.667%;border-radius:3px 0 0 3px}
@@ -33,29 +33,29 @@
 .ticks div{display:flex;justify-content:space-between}
 
 /* напоминание: как сообщение в мессенджере */
-.rem{margin:0 0 20px;max-width:330px;border-radius:14px;overflow:hidden;background:#ece7df}
-.rem-h{display:flex;align-items:center;gap:8px;padding:9px 12px;background:#fff;color:#10131a;font-size:13.5px}
+.rem{margin:0 0 20px;max-width:330px;border-radius:14px;overflow:hidden;background:var(--c-ece7df)}
+.rem-h{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--c-fdfdfb);color:var(--c-10131a);font-size:13.5px}
 .rem-h .av{width:26px;height:26px;font-size:13px}
-.rem .msg{position:relative;margin:12px;padding:10px 12px 8px;border-radius:12px 12px 12px 4px;background:#fff;color:#10131a;font-size:14.5px;line-height:1.4}
-.rem .msg time{display:block;text-align:right;font-size:11px;color:#8a909c;margin-top:2px}
-.rem .msg time{color:#4f9de0}
-.rem .btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid #e6e8ec}
-.rem .btns span{padding:5px 4px;text-align:center;color:#11663a;font-weight:700;font-size:13px}
-.av{width:32px;height:32px;border-radius:50%;background:#e9ddd0;color:#765f42;display:grid;place-items:center;font:500 15px/1 Georgia,serif;font-style:normal;flex:none}
+.rem .msg{position:relative;margin:12px;padding:10px 12px 8px;border-radius:12px 12px 12px 4px;background:var(--c-fdfdfb);color:var(--c-10131a);font-size:14.5px;line-height:1.4}
+.rem .msg time{display:block;text-align:right;font-size:11px;color:var(--c-8a909c);margin-top:2px}
+.rem .msg time{color:var(--c-4f9de0)}
+.rem .btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid var(--c-e6e8ec)}
+.rem .btns span{padding:5px 4px;text-align:center;color:var(--c-11663a);font-weight:700;font-size:13px}
+.av{width:32px;height:32px;border-radius:50%;background:var(--c-e9ddd0);color:var(--c-765f42);display:grid;place-items:center;font:500 15px/1 Georgia,serif;font-style:normal;flex:none}
 
 /* гарантия: единственная яркая плитка */
 .t-guar{background:var(--blue);border-color:var(--blue);color:var(--night)}
 .t-guar h3{font-size:clamp(26px,7vw,36px);line-height:1.12;letter-spacing:-.03em;margin:0 0 14px;padding-right:72px}
 [data-lang="hy"] .t-guar h3{font-size:clamp(23px,6.2vw,32px)}
-.t-guar p{color:#0b1a33}
-.t-guar .small{color:#13305e}
+.t-guar p{color:var(--c-0b1a33)}
+.t-guar .small{color:var(--c-13305e)}
 .t-guar .ski{position:absolute;right:14px;top:18px;width:48px;height:72px}
 
 /* отчёт */
-.rep{margin:20px 0 0;padding:14px 16px;border-radius:12px;background:#f4f5f7;color:#10131a;max-width:420px}
+.rep{margin:20px 0 0;padding:14px 16px;border-radius:12px;background:var(--c-f4f5f7);color:var(--c-10131a);max-width:420px}
 .rep-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;font-weight:700;font-size:14px}
-.rep-h small{padding:2px 8px;border-radius:999px;border:1px solid #c9ced8;color:#4b5262;font-weight:500;font-size:11.5px}
-.rep-r{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid #e1e4ea;font-size:14px}
+.rep-h small{padding:2px 8px;border-radius:999px;border:1px solid var(--c-c9ced8);color:var(--c-4b5262);font-weight:500;font-size:11.5px}
+.rep-r{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--c-e1e4ea);font-size:14px}
 .rep-r b{font-variant-numeric:tabular-nums}
 
 /* домен */
