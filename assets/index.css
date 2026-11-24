@@ -1119,3 +1119,10 @@ html[lang="en"] .tw::before{content:"Swipe sideways →"}
 .niche-c{min-height:44px}
 @media (max-width:899px){ .niche-c{min-height:52px} }
 .niche-p:empty{min-height:1.45em}
+@media (max-width:899px){
+.bento,.try,.ind,.calc,.pk,.how,.faq,.gor{padding-top:44px;padding-bottom:44px}
+.tile{padding:18px}
+.bn-cta{margin-top:20px}
+.in-panel{gap:18px;padding:18px}
+.in-phone{transform:scale(.86);transform-origin:50% 0;margin-bottom:-12%}
+}
