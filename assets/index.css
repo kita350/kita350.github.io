@@ -1004,4 +1004,6 @@ body[data-lang="en"] .lang-cur::after{content:"Eng"}
 .nav-panel .langs{display:none}
 }
 .nav-burger,.nav-demo,.lang-dd{flex:none}
-@media (max-width:350px){ .lang-dd svg{display:none} .lang-dd summary{padding:0 10px} }
+@media (max-width:350px){ .nav .wrap{gap:6px} .logo{letter-spacing:.06em} .lang-dd summary{padding:0 7px;gap:4px} .nav-demo{padding:0 11px} }
+.lang-menu a{color:var(--white)}
+.lang-menu a[aria-current="page"]{color:var(--sky)}
