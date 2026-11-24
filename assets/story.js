@@ -72,7 +72,7 @@
 
   window.addEventListener("scroll", onScroll, { passive: true });
   // Телефон: шаги сменяются сами каждые 3,2 с, пока блок на экране; нажатие на полоску — к шагу.
-  var STEP = 3200, timer = 0, inView = false;
+  var STEP = 4500, timer = 0, inView = false;
   var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   function tick() { show(cur >= N ? 1 : cur + 1); }
   function stopAuto() { clearInterval(timer); timer = 0; }

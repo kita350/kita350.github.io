@@ -712,3 +712,14 @@ body[data-lang="en"] .lang-cur::after{content:"Eng"}
 .ph3d .lv-phone::before{content:"";position:absolute;z-index:-1;left:6%;right:6%;bottom:2%;height:14%;border-radius:50%;background:radial-gradient(closest-side,rgba(82,150,225,.38),rgba(82,150,225,.1) 60%,transparent);pointer-events:none}
 .ph3d .lv-phone::after{content:"";position:absolute;z-index:-1;left:24%;right:20%;bottom:5.5%;height:3.5%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent);pointer-events:none}
 .ph3d .lv-phone{isolation:isolate}
+@media (min-width:900px){
+.ph3d .lv-box{width:520px}
+.ph3d .hero .live{max-width:560px}
+.ph3d .lv-toast{top:58%;left:-120px;right:auto;width:290px}
+}
+.ph3d .lv-toast b,.ph3d .lv-toast small{white-space:normal;overflow:visible;text-overflow:clip}
+.emo-bub{position:absolute;z-index:4;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:#fff;color:#0b1a33;font:800 15px/26px var(--font);text-align:center;opacity:0;scale:.6;transform-origin:50% 100%;transition:opacity .2s var(--ease-out),scale .25s var(--ease-out);pointer-events:none;box-shadow:0 4px 10px -4px rgba(0,0,0,.5)}
+.emo-bub::after{content:"";position:absolute;left:8px;bottom:-5px;border:5px solid transparent;border-top-color:#fff;border-bottom:0}
+.emo-bub.on{opacity:1;scale:1}
+.emo-angry{color:#e5383b}
+.emo-happy{color:#e5383b}

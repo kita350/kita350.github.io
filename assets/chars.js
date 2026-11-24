@@ -26,7 +26,16 @@
     img.dataset.who = m[1]; list.push(c);
     preload(img, Object.keys(c.w).map(function (k) { return c.w[k]; }));
   });
-  function show(c) { setSrc(c.img, c.w[c.mood]); }
+  // облачко над головой: эмоцию видно даже на маленьком персонаже (у Рузан глаза за очками)
+  var BUB = { angry: "!!", wow: "!", happy: "♥" };
+  function show(c) {
+    setSrc(c.img, c.w[c.mood]);
+    if (!c.img.classList.contains("st-px")) return;
+    if (!c.bub) { c.bub = document.createElement("span"); c.bub.className = "emo-bub"; c.bub.setAttribute("aria-hidden", "true"); c.img.parentNode.appendChild(c.bub); }
+    var t = BUB[c.mood] || "";
+    c.bub.textContent = t; c.bub.className = "emo-bub emo-" + c.mood + (t && c.img.classList.contains("on") ? " on" : "");
+    c.bub.style.left = (c.img.offsetLeft + c.img.offsetWidth * 0.62) + "px"; c.bub.style.top = (c.img.offsetTop - 8) + "px";
+  }
   function mood(c, m, ms) {
     if (!c.w[m]) return;
     c.mood = m; show(c); clearTimeout(c.t);
@@ -74,10 +83,9 @@
   var ca = document.querySelector(".ca-gor");
   if (ca) {
     preload(ca, ["gor-panic.png", "gor-neutral.png", "gor-joy.png"]);
-    document.addEventListener("calc:loss", function (e) {
-      var r = e.detail.loss / Math.max(1, e.detail.price);
-      setSrc(ca, r >= 3 ? "gor-panic.png" : r >= 1 ? "gor-neutral.png" : "gor-joy.png");
-    });
+    var caMood = function (d) { var r = d.loss / Math.max(1, d.price); setSrc(ca, r >= 3 ? "gor-panic.png" : r >= 1 ? "gor-neutral.png" : "gor-joy.png"); };
+    document.addEventListener("calc:loss", function (e) { caMood(e.detail); });
+    if (window.SKIYAR_LOSS) caMood(window.SKIYAR_LOSS); // калькулятор уже посчитал до нас
   }
 
   // анимации движения — только когда персонаж виден

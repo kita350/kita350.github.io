@@ -155,7 +155,7 @@ document.documentElement.classList.add("js");
 
   window.addEventListener("scroll", onScroll, { passive: true });
   // Телефон: шаги сменяются сами каждые 3,2 с, пока блок на экране; нажатие на полоску — к шагу.
-  var STEP = 3200, timer = 0, inView = false;
+  var STEP = 4500, timer = 0, inView = false;
   var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   function tick() { show(cur >= N ? 1 : cur + 1); }
   function stopAuto() { clearInterval(timer); timer = 0; }
@@ -326,7 +326,7 @@ document.documentElement.classList.add("js");
     })(t0);
   }
   // сумма потерь считается плавно (как число визитов), Гор подпрыгивает, когда ползунок отпущен
-  var lossShown = 0, lossRaf = 0;
+  var lossShown = 0, lossRaf = 0, lastK = "";
   function lossText(v) { $("#caLoss").textContent = window.SITE.t("caLoss").split("{x}").join(fmt(v) + " ֏"); }
   function tweenLoss(to) {
     cancelAnimationFrame(lossRaf);
@@ -340,7 +340,7 @@ document.documentElement.classList.add("js");
   }
   // итог для экранного диктора — один раз, после того как числа досчитались
   var sayEl = document.getElementById("caSay"), sayT = 0;
-  function say() { if (!sayEl) return; clearTimeout(sayT); sayT = setTimeout(function () { sayEl.textContent = $("#caK").textContent + " " + $("#caOut").textContent + " " + $("#caUnit").textContent + ". " + $("#caLoss").textContent; }, 300); }
+  function say() { if (!sayEl) return; clearTimeout(sayT); sayT = setTimeout(function () { sayEl.textContent = $("#caK").textContent + " " + lastK + " " + $("#caUnit").textContent + ". " + $("#caLoss").textContent; }, 300); }
   var gor = box.querySelector(".ca-gor");
   function hop() { if (!gor || still) return; gor.classList.remove("hop"); void gor.offsetWidth; gor.classList.add("hop"); }
   [b, n, c].forEach(function (el) { el.addEventListener("change", hop); });
@@ -350,6 +350,7 @@ document.documentElement.classList.add("js");
     var B = +b.value, N = +n.value, C = +c.value;
     $("#caBv").textContent = B; $("#caNv").textContent = N; $("#caCv").textContent = fmt(C) + " ֏";
     var loss = N * C * WEEKS, k = Math.ceil(PRICE / C), p = B ? Math.round(N / B * 100) : 0;
+    lastK = k; window.SKIYAR_LOSS = { loss: loss, price: PRICE };
     animate(k);
     $("#caUnit").textContent = unit(k, lang);
     tweenLoss(loss);
@@ -549,7 +550,9 @@ document.documentElement.classList.add("js");
   var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var SW = 300, SH = 636; // размер живого экрана в CSS-пикселях (пропорции экрана модели)
 
-  fetch(base + "corners.json").then(function (r) { return r.json(); }).then(start).catch(function () {});
+  var DATA = {"w":900,"h":1350,"n":36,"corners":[[[160.84,106.17],[656.02,64.52],[717.4,1272.96],[234.04,1233.48]],[[162.25,105.96],[657.69,64.47],[716.33,1273.49],[232.3,1234.07]],[[163.45,105.62],[660.11,64.56],[715.56,1273.86],[229.99,1234.77]],[[164.41,105.15],[663.21,64.79],[715.11,1274.07],[227.17,1235.57]],[[165.15,104.54],[666.95,65.15],[714.96,1274.12],[223.87,1236.49]],[[165.68,103.81],[671.22,65.66],[715.11,1274.03],[220.16,1237.51]],[[166.02,102.96],[675.94,66.32],[715.53,1273.78],[216.12,1238.64]],[[166.21,102.0],[681.01,67.11],[716.19,1273.4],[211.83,1239.88]],[[166.28,100.94],[686.31,68.06],[717.06,1272.88],[207.37,1241.24]],[[166.29,99.77],[691.73,69.14],[718.08,1272.23],[202.84,1242.7]],[[166.27,98.52],[697.15,70.36],[719.2,1271.47],[198.33,1244.27]],[[166.26,97.19],[702.44,71.71],[720.37,1270.6],[193.95,1245.94]],[[166.33,95.79],[707.5,73.18],[721.54,1269.63],[189.79,1247.7]],[[166.5,94.34],[712.22,74.76],[722.67,1268.57],[185.95,1249.54]],[[166.82,92.84],[716.5,76.44],[723.7,1267.43],[182.5,1251.46]],[[167.32,91.31],[720.26,78.2],[724.6,1266.24],[179.54,1253.44]],[[168.01,89.77],[723.43,80.03],[725.34,1264.99],[177.12,1255.46]],[[168.92,88.22],[725.96,81.9],[725.9,1263.71],[175.29,1257.51]],[[170.03,86.68],[727.83,83.81],[726.26,1262.4],[174.1,1259.57]],[[171.36,85.18],[729.01,85.72],[726.42,1261.09],[173.55,1261.63]],[[172.87,83.71],[729.52,87.62],[726.4,1259.79],[173.64,1263.66]],[[174.54,82.3],[729.39,89.5],[726.2,1258.51],[174.35,1265.65]],[[176.33,80.95],[728.66,91.34],[725.86,1257.26],[175.65,1267.58]],[[178.2,79.69],[727.38,93.11],[725.41,1256.06],[177.47,1269.43]],[[180.1,78.53],[725.63,94.81],[724.88,1254.92],[179.76,1271.18]],[[181.98,77.46],[723.49,96.42],[724.32,1253.84],[182.42,1272.83]],[[183.77,76.51],[721.04,97.94],[723.78,1252.85],[185.36,1274.36]],[[185.42,75.68],[718.38,99.35],[723.3,1251.94],[188.5,1275.76]],[[186.89,74.98],[715.6,100.65],[722.92,1251.13],[191.71,1277.02]],[[188.11,74.42],[712.79,101.83],[722.7,1250.42],[194.9,1278.13]],[[189.05,73.99],[710.03,102.89],[722.65,1249.82],[197.97,1279.1]],[[189.68,73.72],[707.41,103.82],[722.83,1249.34],[200.83,1279.91]],[[189.96,73.6],[705.01,104.64],[723.23,1248.98],[203.38,1280.57]],[[189.9,73.63],[702.87,105.32],[723.89,1248.74],[205.54,1281.07]],[[189.47,73.81],[701.07,105.89],[724.8,1248.63],[207.26,1281.42]],[[188.71,74.16],[699.64,106.33],[725.95,1248.66],[208.48,1281.62]]]};
+  var T0 = Date.now();
+  start(DATA);
 
   function start(J) {
     var N = J.n, FW = J.w, FH = J.h, imgs = new Array(N), cur = -1, want = 0;
@@ -605,8 +608,12 @@ document.documentElement.classList.add("js");
       size();
       for (var i = 1; i < N; i++) load(i, function () { if (++got === N) startIntro(); });
     });
+    cv.src = base + "f00.webp"; size(); fit(J.corners[0]); cur = 0; // сразу первый кадр: место под телефон занято с первой отрисовки
+    window.addEventListener("load", function () { size(); }, { once: true });
     function startIntro() {
       if (still) return;
+      var r = ph.getBoundingClientRect();
+      if (Date.now() - T0 > 2500 || r.top > innerHeight * 0.55 || r.bottom < 0) { onScroll(); return; } // долго грузилось или телефон не на экране — без «появления»
       {
         // появление: телефон за 1,4 с разворачивается из середины поворота в исходное положение
         intro = 1; var t0 = 0, from = Math.round(N * 0.6);
@@ -652,7 +659,16 @@ document.documentElement.classList.add("js");
     img.dataset.who = m[1]; list.push(c);
     preload(img, Object.keys(c.w).map(function (k) { return c.w[k]; }));
   });
-  function show(c) { setSrc(c.img, c.w[c.mood]); }
+  // облачко над головой: эмоцию видно даже на маленьком персонаже (у Рузан глаза за очками)
+  var BUB = { angry: "!!", wow: "!", happy: "♥" };
+  function show(c) {
+    setSrc(c.img, c.w[c.mood]);
+    if (!c.img.classList.contains("st-px")) return;
+    if (!c.bub) { c.bub = document.createElement("span"); c.bub.className = "emo-bub"; c.bub.setAttribute("aria-hidden", "true"); c.img.parentNode.appendChild(c.bub); }
+    var t = BUB[c.mood] || "";
+    c.bub.textContent = t; c.bub.className = "emo-bub emo-" + c.mood + (t && c.img.classList.contains("on") ? " on" : "");
+    c.bub.style.left = (c.img.offsetLeft + c.img.offsetWidth * 0.62) + "px"; c.bub.style.top = (c.img.offsetTop - 8) + "px";
+  }
   function mood(c, m, ms) {
     if (!c.w[m]) return;
     c.mood = m; show(c); clearTimeout(c.t);
@@ -700,10 +716,9 @@ document.documentElement.classList.add("js");
   var ca = document.querySelector(".ca-gor");
   if (ca) {
     preload(ca, ["gor-panic.png", "gor-neutral.png", "gor-joy.png"]);
-    document.addEventListener("calc:loss", function (e) {
-      var r = e.detail.loss / Math.max(1, e.detail.price);
-      setSrc(ca, r >= 3 ? "gor-panic.png" : r >= 1 ? "gor-neutral.png" : "gor-joy.png");
-    });
+    var caMood = function (d) { var r = d.loss / Math.max(1, d.price); setSrc(ca, r >= 3 ? "gor-panic.png" : r >= 1 ? "gor-neutral.png" : "gor-joy.png"); };
+    document.addEventListener("calc:loss", function (e) { caMood(e.detail); });
+    if (window.SKIYAR_LOSS) caMood(window.SKIYAR_LOSS); // калькулятор уже посчитал до нас
   }
 
   // анимации движения — только когда персонаж виден
