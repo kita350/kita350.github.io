@@ -49,6 +49,7 @@
         <a class="btn btn-main" target="_blank" rel="noopener" data-wa="waHello" data-t="cta1"></a>
         <a class="btn btn-line" href="#packages" data-t="cta2"></a>
       </div>
+      <p class="dm-hint" data-t="dmHint"></p>
       <p class="pilot" data-t-html="pilot"></p>
     </div>
     <div class="live" id="live" aria-label="" data-t-aria="lpAria">
@@ -166,22 +167,23 @@
       <article class="gr-col gr-was">
         <span class="gr-k" data-t="grWasK"></span>
         <h3 data-t="grWasT"></h3>
-        <div class="gr-cnt"><div><b>2</b><span data-t="grW1"></span></div><div><b>14</b><span data-t="grW2"></span></div><div><b>3</b><span data-t="grW3"></span></div></div>
         <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-panic.png" width="70" height="147" alt="" data-t-alt="grAltWas" loading="lazy">
           <div class="gr-note" aria-hidden="true"><span data-t="grN1"></span><span><span data-t="grN2a"></span> <s data-t="grN2b"></s> <em>?!</em></span><span data-t="grN3"></span><span data-t="grN4"></span></div></div>
       </article>
       <article class="gr-col gr-now">
         <span class="gr-k" data-t="grNowK"></span>
         <h3 data-t="grNowT"></h3>
-        <div class="gr-cnt"><div><b>0</b><span data-t="grS1"></span></div><div><b>3</b><span data-t="grS2"></span></div><div><b>18:00</b><span data-t="grS3"></span></div></div>
         <div class="gr-scene"><img class="px gr-px" src="../assets/img/px/gor-joy.png" width="84" height="142" alt="" data-t-alt="grAltNow" loading="lazy">
           <div class="gr-cal" aria-hidden="true"><b data-t="grCalT"></b><div><span>11:00</span><em data-t="grC1"></em></div><div class="hot"><span>15:00</span><em data-t="grC2"></em></div><div><span>16:30</span><em data-t="grC3"></em></div></div></div>
       </article>
     </div>
-    <p class="gr-foot" data-t="grFoot"></p>
   </div>
 </section>
 
+<!-- Кейс первого клиента: включить (убрать hidden), когда будет реальный клиент с согласием на фото и отзыв. Тексты: csTitle, csQuote, csWho. -->
+<section class="case" id="case" hidden>
+  <div class="wrap"><h2 data-t="csTitle"></h2><blockquote><p data-t="csQuote"></p><footer data-t="csWho"></footer></blockquote></div>
+</section>
 <section class="bento" id="what">
   <div class="wrap">
     <h2 data-t="bnTitle"></h2>
@@ -385,10 +387,6 @@
   <div class="wrap">
     <div class="pk-head">
       <div><h2 data-t="pkTitle"></h2><p class="lead" data-t="pkSub"></p></div>
-      <div class="bill" role="radiogroup" data-t-aria="pkBillAria">
-        <button type="button" role="radio" data-bill="m" aria-checked="true" data-t="pkMonth"></button>
-        <button type="button" role="radio" data-bill="y" aria-checked="false"><span data-t="pkYear"></span> <em data-t="pkSave"></em></button>
-      </div>
     </div>
     <div class="pkb-grid">
       <article class="pkt pkt-on">
@@ -396,9 +394,7 @@
         <h3>SKIYAR Online</h3>
         <p data-t="pkbOnP"></p>
         <p class="pl-p" data-m="35 000" data-y="357 000"><span class="pl-x">35 000</span> ֏ <small data-per></small></p>
-        <p class="pl-eq" data-eq="357 000"></p>
         <p class="pl-s" data-setup="50 000" data-free="1"></p>
-        <p class="pl-y" data-first="35000,357000,50000"></p>
         <a class="btn btn-main" target="_blank" rel="noopener" data-wa="pkWaOn"><span data-t="pkbOnBtn"></span><small>WhatsApp</small></a>
       </article>
       <article class="pkt"><h3>Start</h3><p data-t="pkbStartP"></p><p class="pr">49 000 ֏ <small data-t="pkOnce"></small></p><a class="pkt-a" href="../demo/start/" target="_blank" rel="noopener" data-t="pkStartDemo"></a></article>

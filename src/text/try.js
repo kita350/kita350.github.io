@@ -3,7 +3,7 @@
   var X = {
     hy: {
       tyTitle: "Կուղարկենք ձեր բիզնեսի կայքը",
-      tySub: "Մեկ բառ՝ ԴԵՄՈ, և ձեր բիզնեսի անունը։ Մեկ օրում կուղարկենք կայքի օրինակ ձեր անունով։ Անվճար։",
+      tySub: "Գրեք ԴԵՄՈ և բիզնեսի անունը, և կուղարկենք, թե ինչպես կերևա ձեր բիզնեսի կայքը։ Անվճար, մինչև պայմանագիրը։",
       tyName: "Բիզնեսի անունը", tyPh: "Օրինակ՝ Գոհար սրահ",
       tyKind: "Բիզնեսի տեսակը", tyKSalon: "Սրահ", tyKRest: "Ռեստորան", tyKHotel: "Հյուրանոց",
       tyOpen: "Դիտել օրինակը հիմա", tyWa: "Ուղարկել WhatsApp-ով", tyWaS: "1 օրում", tyKwAlt: "ДЕМО · DEMO", tyS1: "Գրում եք ԴԵՄՈ և անունը", tyS2: "Անին կճշտի մանրամասները", tyS3: "Ստանում եք հղում ձեր կայքին", tyIg: "Կամ գրեք ԴԵՄՈ Instagram-ի դիրեկտ՝", tyWaMsg: "ԴԵՄՈ\nԱնունը՝ {n}\nՏեսակը՝ {k}", tyFor: " «{name}»-ի համար",
@@ -15,7 +15,7 @@
     },
     ru: {
       tyTitle: "Пришлём сайт вашего бизнеса",
-      tySub: "Одно слово — ДЕМО — и название. За день пришлём пример сайта с вашим названием. Бесплатно.",
+      tySub: "Напишите ДЕМО и название — пришлём, как будет выглядеть сайт вашего бизнеса. Бесплатно и до договора.",
       tyName: "Название бизнеса", tyPh: "Например, Салон Гоар",
       tyKind: "Тип бизнеса", tyKSalon: "Салон", tyKRest: "Ресторан", tyKHotel: "Гостиница",
       tyOpen: "Посмотреть пример сейчас", tyWa: "Отправить в WhatsApp", tyWaS: "за 1 день", tyKwAlt: "ԴԵՄՈ · DEMO", tyS1: "Пишете ДЕМО и название", tyS2: "Ани уточнит детали", tyS3: "Получаете ссылку на ваш сайт", tyIg: "Или напишите ДЕМО в директ Instagram", tyWaMsg: "ДЕМО\nНазвание: {n}\nТип: {k}", tyFor: " для «{name}»",
@@ -27,7 +27,7 @@
     },
     en: {
       tyTitle: "We’ll send you your business’s site",
-      tySub: "One word — DEMO — and your business name. Within a day we’ll send a sample site with your name. Free.",
+      tySub: "Send DEMO and your business name, and we’ll show you how your site will look. Free, before any contract.",
       tyName: "Business name", tyPh: "For example, Gohar Salon",
       tyKind: "Type of business", tyKSalon: "Salon", tyKRest: "Restaurant", tyKHotel: "Hotel",
       tyOpen: "See a sample now", tyWa: "Send on WhatsApp", tyWaS: "within 1 day", tyKwAlt: "ԴԵՄՈ · ДЕМО", tyS1: "You send DEMO and your name", tyS2: "Ani checks the details", tyS3: "You get a link to your site", tyIg: "Or send DEMO in an Instagram DM", tyWaMsg: "DEMO\nName: {n}\nType: {k}", tyFor: " for “{name}”",

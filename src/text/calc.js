@@ -14,8 +14,8 @@
       caZero: "Չեկածներ չկա՞ն։ Հիանալի է։ Այդ դեպքում փաթեթը ձեզ պետք է գիշերային գրանցումների համար։",
       caPkg: "Փաթեթ՝ 35 000 ֏ ամսական",
       caNote: "Հիշեցումները նվազեցնում են չեկածների թիվը, բայց ոչ մինչև զրո, և որոշ ազատված ժամեր զբաղեցնում են ուրիշները։ Հաշվարկը մոտավոր է։",
-      caCta: "Ուզում եմ պիլոտ՝ միացումն անվճար",
-      caWa: "Բարև ձեզ։ Հաշվեցի չեկածները ձեր կայքում։ Ուզում եմ միանալ պիլոտին։"
+      caCta: "Միանալ անվճար",
+      caWa: "Բարև ձեզ։ Հաշվեցի չեկածները ձեր կայքում։ Ուզում եմ անվճար միանալ՝ որպես առաջին 5 հաճախորդներից մեկը։"
     },
     ru: {
       caTitle: "Сколько стоят пустые кресла",
@@ -28,8 +28,8 @@
       caZero: "Неявок нет? Отлично. Тогда пакет нужен ради ночных записей.",
       caPkg: "Пакет: 35 000 ֏ в месяц",
       caNote: "Напоминания сокращают неявки, но не до нуля, а часть освободившихся окон занимают другие клиенты. Расчёт примерный.",
-      caCta: "Хочу в пилот: подключение бесплатно",
-      caWa: "Здравствуйте! Посчитал(а) неявки у вас на сайте. Хочу в пилот."
+      caCta: "Подключиться бесплатно",
+      caWa: "Здравствуйте! Посчитал(а) неявки у вас на сайте. Хочу бесплатное подключение для первых 5 клиентов."
     },
     en: {
       caTitle: "What do empty chairs cost you",
@@ -42,8 +42,8 @@
       caZero: "No no-shows? Great. Then the package is about the bookings you get at night.",
       caPkg: "Package: 35 000 ֏ a month",
       caNote: "Reminders cut no-shows, but not to zero, and other clients fill some of the freed slots. A rough estimate.",
-      caCta: "Join the pilot: free setup",
-      caWa: "Hello! I did the no-show math on your site. I’d like to join the pilot."
+      caCta: "Get set up for free",
+      caWa: "Hello! I did the no-show math on your site. I’d like the free setup for the first 5 clients."
     }
   };
   for (var l in C) for (var k in C[l]) window.T[l][k] = C[l][k];
