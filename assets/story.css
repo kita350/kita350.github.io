@@ -115,3 +115,13 @@
   .st-rail{margin-bottom:28px;max-width:280px}
   .st-note{padding:40px 0 96px}
 }
+
+/* Телефон: без прилипания и без 5 экранов прокрутки — блок обычной высоты, шаги сменяются сами (story.js). */
+@media (max-width:899px){
+  .st-track{height:auto}
+  .st-stage{position:relative;top:auto;height:auto;overflow:visible}
+  .st-grid{height:auto;justify-content:flex-start;padding-top:8px;padding-bottom:40px}
+  .st-phone{flex:none}
+  .st-rail button{height:28px}
+  .st-rail button::before{top:13px}
+}
