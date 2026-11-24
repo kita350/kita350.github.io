@@ -60,10 +60,14 @@ document.documentElement.classList.add("js");
     if (m) { var o = !nav.classList.contains("open"); nav.classList.toggle("open", o); m.setAttribute("aria-expanded", String(o)); return; }
     if (nav.classList.contains("open") && e.target.closest(".nav-links a")) { nav.classList.remove("open"); nav.querySelector(".nav-burger").setAttribute("aria-expanded", "false"); }
   });
+  // выпадающий список языков: закрывать по нажатию мимо и по Esc
+  document.addEventListener("click", function (e) { var d = document.querySelector(".lang-dd[open]"); if (d && !d.contains(e.target)) d.open = false; });
+  document.addEventListener("keydown", function (e) { var d = document.querySelector(".lang-dd[open]"); if (d && e.key === "Escape") { d.open = false; d.querySelector("summary").focus(); } });
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-lang-btn]");
     if (!b) return;
     var l = b.getAttribute("data-lang-btn");
+    var dd = b.closest(".lang-dd"); if (dd) dd.open = false;
     if (PAGE) {
       // собранная страница: переходим на страницу языка, сохраняя якорь
       var a = b.tagName === "A" ? b : document.querySelector('a[data-lang-btn="' + l + '"][href]');
