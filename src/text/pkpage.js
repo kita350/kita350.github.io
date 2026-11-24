@@ -2,7 +2,8 @@
    (ИИ без скидок: Online AI 60 000, AI Admin 40 000). HY — на проверку Ани. */
 (function () {
   var N = " ";
-  function m(x) { return x.replace(/ /g, N); }
+  // неразрывный пробел только внутри чисел и перед ֏ (иначе фраза не переносится)
+  function m(x) { return x.replace(/(\d) (?=\d)/g, "$1" + N).replace(/ ֏/g, N + "֏"); }
   var Q = {
     hy: {
       _titlePk: "Փաթեթներ և գներ — SKIYAR",

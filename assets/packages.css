@@ -565,3 +565,5 @@ main > section:not(.hero):not(.story):not(.fin)::after{content:"";display:block;
 .hero .wrap{align-items:center}
 .gr-cnt div{padding:10px 14px}
 }
+.pkt .pr{white-space:normal}
+[data-lang="hy"] .hero h1{max-width:11em}
