@@ -26,7 +26,7 @@ if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
   src: "src/packages.html", out: "packages.html", og: "og",
   text: ["hero", "pk", "end", "pkpage"],
   css: ["fonts", "tokens", "site", "pk", "end", "pkpage", "v3", "v4", "v5"],
-  js: ["site", "pk", "fab", "reveal"],
+  js: ["site", "pk", "fab", "reveal", "pgcards"],
 });
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -50,6 +50,18 @@ for (const P of PAGES) {
     vm.runInContext(r(`src/text/${t}.js`), ctx);
   }
   const T = ctx.window.T;
+  // типографика: неразрывный пробел после коротких слов (нет висячих предлогов), неразрывный дефис в «WhatsApp-ով», «гель-лак».
+  // Тексты сообщений для WhatsApp не трогаем.
+  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|waHello|inAskMsg|tyWaMsg)$/;
+  const SHORT = { ru: "в|во|и|а|но|на|до|без|с|со|к|ко|о|об|у|по|за|от|из|не|ни|для|что|как|или|все|при|под|над", en: "a|an|the|to|in|of|on|at|by|for|and|or|is|it|no|your|our|we", hy: "և" };
+  const typo = (v, L) => {
+    if (typeof v !== "string") return Array.isArray(v) ? v.map((x) => typo(x, L)) : v;
+    let s = v.replace(/([A-Za-z])-(ով|ում|ից|ի|ը|ն|ու)(?![\p{L}])/gu, "$1‑$2").replace(/գել-լաք/gi, (m) => m.replace("-", "‑")).replace(/гель-лак/gi, (m) => m.replace("-", "‑"));
+    if (SHORT[L]) { const re = new RegExp(`(^|[\\s >(«"—])(${SHORT[L]}) (?=[^\\s<])`, "giu"); s = s.replace(re, (m, a, w) => a + w + " ").replace(re, (m, a, w) => a + w + " "); } // дважды: «и в Instagram»
+    s = s.replace(/ — /g, " — ");
+    return s;
+  };
+  for (const L of Object.keys(T)) for (const k of Object.keys(T[L])) if (!NOTYPO.test(k)) T[L][k] = typo(T[L][k], L);
   const name = P.out.replace(/\.html$/, "");
   // штамп Hallmark (первые строки tokens.css) переносим в начало собранного CSS: min() убирает комментарии
   const stamp = (r("assets/tokens.css").match(/^\/\* Hallmark[^\n]*\*\/$/gm) || []).join("\n");
