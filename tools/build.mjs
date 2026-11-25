@@ -119,8 +119,8 @@ ${alt}
 <link rel="icon" href="${pre}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="${pre}favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="${pre}assets/img/apple-touch-icon.png">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-latin.woff2">
-${L === "ru" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-cyrillic.woff2">` : L === "hy" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/noto-arm-armenian.woff2">` : ""}
+<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-latin-800.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-latin-400.woff2">
+${L === "ru" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-cyrillic-800.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-cyrillic-400.woff2">` : L === "hy" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/noto-arm-armenian-800.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/noto-arm-armenian-400.woff2">` : ""}
 <link rel="stylesheet" href="${pre}assets/${name}.css">
 <script>window.PAGE_LANG="${L}";document.documentElement.classList.add("ph3d")</script>
 <script src="${pre}assets/${name}.js" defer></script>`;
