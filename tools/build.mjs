@@ -58,6 +58,7 @@ for (const P of PAGES) {
     if (typeof v !== "string") return Array.isArray(v) ? v.map((x) => typo(x, L)) : v;
     let s = v.replace(/([A-Za-z])-(ով|ում|ից|ի|ը|ն|ու)(?![\p{L}])/gu, "$1‑$2").replace(/գել-լաք/gi, (m) => m.replace("-", "‑")).replace(/гель-лак/gi, (m) => m.replace("-", "‑"));
     if (SHORT[L]) { const re = new RegExp(`(^|[\\s >(«"—])(${SHORT[L]}) (?=[^\\s<])`, "giu"); s = s.replace(re, (m, a, w) => a + w + " ").replace(re, (m, a, w) => a + w + " "); } // дважды: «и в Instagram»
+    s = s.replace(/(\d) (?=\d{3}(?!\d))/g, "$1 ").replace(/ ֏/g, " ֏"); // «35 000 ֏» не рвётся
     s = s.replace(/ — /g, " — ");
     return s;
   };
