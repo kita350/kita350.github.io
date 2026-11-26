@@ -17,7 +17,7 @@ const w = (p, s) => { fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive
 const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
-    text: ["hero", "niche", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
+    text: ["hero", "niche", "biz", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
     css: ["fonts", "tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
     js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "phone3d", "phone3d-ind", "phone3d-story", "chars", "reveal"],
   },
@@ -27,6 +27,17 @@ if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
   text: ["hero", "pk", "end", "pkpage"],
   css: ["fonts", "tokens", "site", "pk", "end", "pkpage", "v3", "v4", "v5"],
   js: ["site", "pk", "fab", "reveal", "pgcards"],
+});
+
+// Страницы ниш (ТЗ ч.7): один шаблон src/niche.html, тексты src/text/nz-<ниша>.js (ключи <nk>_*), адрес /<out без .html>
+const NICHES = [
+  { out: "guesthouse.html", nk: "gh", niche: 2, demo: "hotel/", shot: "hotel", text: "nz-gh" },
+];
+for (const N of NICHES) if (fs.existsSync(path.join(ROOT, `src/text/${N.text}.js`))) PAGES.push({
+  src: "src/niche.html", out: N.out, og: "og", nz: N, tk: "_titleNz", dk: "_descNz",
+  text: ["hero", "niche", "end", N.text],
+  css: ["fonts", "tokens", "site", "home", "ind", "end", "v3", "v4", "v5"],
+  js: ["site", "fab", "live", "niche", "phone3d", "phone3d-ind", "chars", "reveal"],
 });
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -74,6 +85,10 @@ for (const P of PAGES) {
     const t = (k) => (d[k] != null ? d[k] : T.ru[k] != null ? T.ru[k] : "");
     const url = SITE + "/" + DIR[L] + (P.out === "index.html" ? "" : P.out);
     let h = r(P.src);
+    if (P.nz) { // шаблон ниши: ключи n_* → <nk>_*, номер ниши в телефоне, демо и скриншот на языке страницы
+      h = h.replace(/data-(t|t-html|wa)="n_/g, `data-$1="${P.nz.nk}_`).replace(/NZNICHE/g, String(P.nz.niche)).replace(/NZDEMO/g, P.nz.demo)
+        .replace(/shot-NZSHOT-hy\.webp/g, `shot-${P.nz.shot}-${L}.webp`).replace(/NZSHOT/g, P.nz.shot);
+    }
 
     // пути
     h = h.replace(/\.\.\/assets\//g, pre + "assets/").replace(/\.\.\/demo\//g, pre + "demo/").replace(/\.\.\/privacy\.html/g, pre + "privacy.html");
@@ -97,8 +112,8 @@ for (const P of PAGES) {
     // head
     const alt = LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${SITE}/${DIR[l]}${P.out === "index.html" ? "" : P.out}">`).join("\n")
       + `\n<link rel="alternate" hreflang="x-default" href="${SITE}/${P.out === "index.html" ? "" : P.out}">`;
-    const title = esc(t(P.out === "index.html" ? "_title" : "_titlePk") || t("_title"));
-    const desc = escA(t(P.out === "index.html" ? "_desc" : "_descPk") || t("_desc"));
+    const title = esc(t(P.tk || (P.out === "index.html" ? "_title" : "_titlePk")) || t("_title"));
+    const desc = escA(t(P.dk || (P.out === "index.html" ? "_desc" : "_descPk")) || t("_desc"));
     const head = `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${title}</title>
@@ -107,7 +122,7 @@ for (const P of PAGES) {
 ${alt}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SKIYAR">
-<meta property="og:title" content="${escA(t(P.out === "index.html" ? "_title" : "_titlePk") || t("_title"))}">
+<meta property="og:title" content="${escA(t(P.tk || (P.out === "index.html" ? "_title" : "_titlePk")) || t("_title"))}">
 <meta property="og:description" content="${desc}">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="${LOCALE[L]}">

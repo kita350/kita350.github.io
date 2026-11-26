@@ -35,7 +35,8 @@
       gth1: "Տարբերակ", gth2: "Շեմ 2 ամսում",
       gt1: "20 առցանց գրանցում", gt2: "5 ուղիղ ամրագրում", gt3: "15 սեղանի ամրագրում կամ պատվեր", gt4: "10 հայտ", gt5: "10 գրանցում փորձնական դասի",
       vn1: "Online · Գրանցում", vn2: "Online · Ամրագրում", vn3: "Online · Ճաշացանկ", vn4: "Online · Հայտեր", vn5: "Online · Խմբեր",
-      vw1: "Սրահներ, վարսավիրանոցներ, եղունգներ, կոսմետոլոգիա, կլինիկաներ, ավտոսերվիսներ",
+      vn6: "SKIYAR Salon", vw6: "Սրահներ, վարսավիրանոցներ, եղունգներ, կոսմետոլոգիա",
+      vw1: "Ավտոսերվիսներ, կլինիկաներ, ստոմատոլոգիաներ, լուսանկարչական ստուդիաներ",
       vw2: "Հյուրատներ, հյուրանոցներ, տաղավարներ, բաղնիքներ, մեքենաների վարձույթ",
       vw3: "Ռեստորաններ և սրճարաններ", vw4: "Վերանորոգում, կահույք, արևային վահանակներ, մաքրում", vw5: "Դպրոցներ, խմբակներ, ֆիթնես, պարեր",
       aaY: "AI Admin"
@@ -70,7 +71,8 @@
       gth1: "Вариант", gth2: "Порог за 2 месяца",
       gt1: "20 онлайн-записей", gt2: "5 прямых броней", gt3: "15 броней столов или заказов", gt4: "10 заявок", gt5: "10 записей на пробное",
       vn1: "Online · Запись", vn2: "Online · Бронь", vn3: "Online · Меню", vn4: "Online · Заявки", vn5: "Online · Группы",
-      vw1: "Салоны, барбершопы, ногти, косметология, клиники, автосервисы",
+      vn6: "SKIYAR Salon", vw6: "Салоны, барбершопы, ногти, косметология",
+      vw1: "Автосервисы, клиники, стоматологии, фотостудии",
       vw2: "Гостиницы, мини-отели, беседки, бани, прокат авто",
       vw3: "Рестораны и кафе", vw4: "Ремонт, мебель, солнечные панели, клининг", vw5: "Школы, кружки, фитнес, танцы",
       aaY: "AI Admin"
@@ -105,7 +107,8 @@
       gth1: "Option", gth2: "Threshold in 2 months",
       gt1: "20 online bookings", gt2: "5 direct bookings", gt3: "15 table bookings or orders", gt4: "10 requests", gt5: "10 trial sign-ups",
       vn1: "Online · Appointments", vn2: "Online · Stays", vn3: "Online · Menu", vn4: "Online · Requests", vn5: "Online · Classes",
-      vw1: "Salons, barbershops, nails, cosmetology, clinics, car services",
+      vn6: "SKIYAR Salon", vw6: "Salons, barbershops, nails, cosmetology",
+      vw1: "Car services, clinics, dentists, photo studios",
       vw2: "Guesthouses, hotels, gazebos, saunas, car rental",
       vw3: "Restaurants and cafés", vw4: "Renovation, furniture, solar panels, cleaning", vw5: "Schools, clubs, fitness, dance",
       aaY: "AI Admin"
