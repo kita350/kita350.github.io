@@ -17,7 +17,7 @@ const w = (p, s) => { fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive
 const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
-    text: ["hero", "niche", "biz", "story", "gor", "bento", "try", "ind", "calc", "pk", "end", "nz-au"],
+    text: ["hero", "niche", "biz", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
     css: ["fonts", "tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
     js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "phone3d", "phone3d-ind", "phone3d-story", "chars", "reveal"],
   },
@@ -31,9 +31,14 @@ if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
 
 // Страницы ниш (ТЗ ч.7): один шаблон src/niche.html, тексты src/text/nz-<ниша>.js (ключи <nk>_*), адрес /<out без .html>
 const NICHES = [
-  { out: "guesthouse.html", nk: "gh", niche: 2, demo: "hotel/", shot: "hotel", text: "nz-gh" },
+  { out: "hotel.html", nk: "gh", niche: 2, demo: "hotel/", shot: "hotel", text: "nz-gh" },
   { out: "restaurant.html", nk: "rs", niche: 1, demo: "restaurant/", shot: "rest", text: "nz-rs" },
-  { out: "autoservice.html", nk: "au", niche: 3, demo: "", shot: "", text: "nz-au", mock: true },
+  { out: "autoservice.html", nk: "au", niche: 3, demo: "auto/", shot: "auto", text: "nz-au" },
+  { out: "clinic.html", nk: "cl", niche: 4, demo: "clinic/", shot: "clinic", text: "nz-cl" },
+  { out: "courses.html", nk: "cs", niche: 5, demo: "courses/", shot: "courses", text: "nz-cs" },
+  { out: "realty.html", nk: "re", niche: 6, demo: "realty/", shot: "realty", text: "nz-re" },
+  { out: "repair.html", nk: "rp", niche: 7, demo: "repair/", shot: "repair", text: "nz-rp" },
+  { out: "salon.html", nk: "sl", niche: 0, demo: "salon/", shot: "salon", text: "nz-sl" },
 ];
 for (const N of NICHES) if (fs.existsSync(path.join(ROOT, `src/text/${N.text}.js`))) PAGES.push({
   src: "src/niche.html", out: N.out, og: "og", nz: N, tk: "_titleNz", dk: "_descNz",
