@@ -71,7 +71,7 @@ for (const P of PAGES) {
   const T = ctx.window.T;
   // типографика: неразрывный пробел после коротких слов (нет висячих предлогов), неразрывный дефис в «WhatsApp-ով», «гель-лак».
   // Тексты сообщений для WhatsApp не трогаем.
-  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|waHello|inAskMsg|tyWaMsg|bzWa\d|[a-z]{2}_wa|[a-z]{2}_waPk)$/;
+  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|pkWaLite|pkWaLarge|waHello|inAskMsg|tyWaMsg|bzWa\d|[a-z]{2}_wa|[a-z]{2}_waPk)$/;
   const SHORT = { ru: "в|во|и|а|но|на|до|без|с|со|к|ко|о|об|у|по|за|от|из|не|ни|для|что|как|или|все|при|под|над", en: "a|an|the|to|in|of|on|at|by|for|and|or|is|it|no|your|our|we", hy: "և|ու" };
   const typo = (v, L) => {
     if (typeof v !== "string") return Array.isArray(v) ? v.map((x) => typo(x, L)) : v;
