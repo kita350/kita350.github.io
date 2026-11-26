@@ -71,7 +71,7 @@ for (const P of PAGES) {
   const T = ctx.window.T;
   // типографика: неразрывный пробел после коротких слов (нет висячих предлогов), неразрывный дефис в «WhatsApp-ով», «гель-лак».
   // Тексты сообщений для WhatsApp не трогаем.
-  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|pkWaLite|pkWaLarge|waHello|inAskMsg|tyWaMsg|bzWa\d|[a-z]{2}_wa|[a-z]{2}_waPk)$/;
+  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|pkWaLite|pkWaLarge|pkWaAo|waHello|inAskMsg|tyWaMsg|bzWa\d|[a-z]{2}_wa|[a-z]{2}_waPk)$/;
   const SHORT = { ru: "в|во|и|а|но|на|до|без|с|со|к|ко|о|об|у|по|за|от|из|не|ни|для|что|как|или|все|при|под|над", en: "a|an|the|to|in|of|on|at|by|for|and|or|is|it|no|your|our|we", hy: "և|ու" };
   const typo = (v, L) => {
     if (typeof v !== "string") return Array.isArray(v) ? v.map((x) => typo(x, L)) : v;
@@ -79,7 +79,7 @@ for (const P of PAGES) {
     if (SHORT[L]) { const re = new RegExp(`(^|[\\s >(«"—])(${SHORT[L]}) (?=[^\\s<])`, "giu"); s = s.replace(re, (m, a, w) => a + w + " ").replace(re, (m, a, w) => a + w + " "); } // дважды: «и в Instagram»
     s = s.replace(/(\d) (?=\d{3}(?!\d))/g, "$1 ").replace(/ ֏/g, " ֏"); // «35 000 ֏» не рвётся
     s = s.replace(/ — /g, " — ");
-    s = s.replace(/(^|[\s(«])(\d{1,3}) (?=[\p{L}])/gu, "$1$2 ").replace(/QR /g, "QR ").replace(/онлайн-(?=запис)/g, "онлайн‑"); // «30 дней», «QR code», «онлайн-запись» не рвутся
+    s = s.replace(/(^|[\s(«])(\d{1,3}) (?=[\p{L}])/gu, "$1$2 ").replace(/QR /g, "QR ").replace(/one-year/g, "one‑year").replace(/1[-‑](й|ին|st) /g, "1‑$1 ").replace(/онлайн-(?=запис)/g, "онлайн‑"); // «30 дней», «QR code», «онлайн-запись» не рвутся
     return s;
   };
   for (const L of Object.keys(T)) for (const k of Object.keys(T[L])) if (!NOTYPO.test(k)) T[L][k] = typo(T[L][k], L);
