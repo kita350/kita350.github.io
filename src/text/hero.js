@@ -2,7 +2,7 @@
 window.T = {
   hy: {
     dmHint: "Գրում եք անունը՝ հաջորդ օրը ուղարկում ենք հղումը։ Չհավանեք՝ ոչինչ չեք վճարում։",
-    lpAria: "Օրինակ. հաճախորդը գրում է 23:47-ին և ինքն է գրանցվում", lpMsg: "Բարև ձեզ, ուրբաթ օրը մատնահարդարման ազատ ժամ կա՞", lpAuto: "Ավտոպատասխան · 23:47", lpAutoT: "Հիմա փակ ենք, բայց ազատ ժամերը կարող եք տեսնել այստեղ", lpBtn: "Գրանցվել առցանց", lpOk: "Գրանցում՝ ուրբաթ 11:00, վարպետ՝ Նարինե", lpToastT: "Հիշեցումն ուղարկված է", lpToastS: "Հինգշաբթի 18:00, Ռուզանը պատասխանեց՝ «Կգամ»",
+    lpAria: "Օրինակ. հյուրը գրում է 23:47-ին և ինքն է ամրագրում", lpMsg: "Բարև ձեզ, դեկտեմբերի 12–14-ը երկտեղանոց սենյակ կա՞։", lpAuto: "Ավտոպատասխան · 23:47", lpAutoT: "Հիմա չենք կարող պատասխանել, բայց ազատ օրերը կարող եք տեսնել այստեղ", lpBtn: "Ամրագրել սենյակ", lpOk: "Ամրագրված է՝ դեկտեմբերի 12–14, երկտեղանոց սենյակ", lpToastT: "Հիշեցումն ուղարկված է", lpToastS: "Դեկտեմբերի 11, Աննան պատասխանեց՝ «Կգանք»",
     _title: "SKIYAR — առցանց ադմինիստրատոր բիզնեսի համար",
     _desc: "Կայք, առցանց գրանցում և հիշեցումներ WhatsApp-ով ձեր բիզնեսի համար՝ հայերեն, ռուսերեն և անգլերեն։ Գներ, օրինակներ և անվճար օրինակ ձեր անունով։",
     navPk: "Փաթեթներ", navDemo: "Ոլորտներ", navFaq: "Հարցեր", navCta: "ԴԵՄՈ", menuAria: "Մենյու", navCtaAria: "Գրել ԴԵՄՈ WhatsApp-ով", langAria: "Կայքի լեզուն",
@@ -21,7 +21,7 @@ window.T = {
   },
   ru: {
     dmHint: "Пишете название — на следующий день присылаем ссылку. Не понравится — ничего не платите.",
-    lpAria: "Пример: клиентка пишет в 23:47 и записывается сама", lpMsg: "Здравствуйте, на маникюр в пятницу есть время?", lpAuto: "Автоответ · 23:47", lpAutoT: "Сейчас закрыты, но свободное время видно здесь", lpBtn: "Записаться онлайн", lpOk: "Запись: пятница 11:00, мастер Нарине", lpToastT: "Напоминание отправлено", lpToastS: "Четверг 18:00, Рузан ответила «Приду»",
+    lpAria: "Пример: гость пишет в 23:47 и бронирует сам", lpMsg: "Здравствуйте, есть номер на двоих с 12 по 14 декабря?", lpAuto: "Автоответ · 23:47", lpAutoT: "Сейчас не можем ответить, но свободные даты видно здесь", lpBtn: "Забронировать номер", lpOk: "Бронь: 12–14 декабря, номер на двоих", lpToastT: "Напоминание отправлено", lpToastS: "11 декабря, Анна ответила «Приедем»",
     _title: "SKIYAR — онлайн-администратор для бизнеса",
     _desc: "Сайт, онлайн-запись и напоминания в WhatsApp для вашего бизнеса на армянском, русском и английском. Цены, примеры и бесплатный пример с вашим названием.",
     navPk: "Пакеты", navDemo: "Ниши", navFaq: "Вопросы", navCta: "ДЕМО", menuAria: "Меню", navCtaAria: "Написать ДЕМО в WhatsApp", langAria: "Язык сайта",
@@ -40,7 +40,7 @@ window.T = {
   },
   en: {
     dmHint: "Send us the name — we send the link the next day. Don’t like it — you pay nothing.",
-    lpAria: "Example: a client writes at 23:47 and books herself", lpMsg: "Hi, any time for a manicure on Friday?", lpAuto: "Auto-reply · 23:47", lpAutoT: "We’re closed now, but you can see free times here", lpBtn: "Book online", lpOk: "Booked: Friday 11:00, with Narine", lpToastT: "Reminder sent", lpToastS: "Thursday 18:00, Ruzan replied “I’ll be there”",
+    lpAria: "Example: a guest writes at 23:47 and books by themselves", lpMsg: "Hello, any room for two from 12 to 14 December?", lpAuto: "Auto-reply · 23:47", lpAutoT: "We can’t reply right now, but you can see free dates here", lpBtn: "Book a room", lpOk: "Booked: 12–14 December, room for two", lpToastT: "Reminder sent", lpToastS: "11 December, Anna replied “We’re coming”",
     _title: "SKIYAR — an online front desk for your business",
     _desc: "Website, online booking and WhatsApp reminders for your business in Armenian, Russian and English. Prices, samples and a free sample with your name.",
     navPk: "Packages", navDemo: "Industries", navFaq: "FAQ", navCta: "DEMO", menuAria: "Menu", navCtaAria: "Send DEMO on WhatsApp", langAria: "Site language",

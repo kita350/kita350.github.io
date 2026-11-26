@@ -627,7 +627,7 @@ p,li,.cap-p,small{text-wrap:pretty}
 /* кнопка формы ДЕМО: пометка не у самого края */
 .ty-btns .btn:has(small){padding-right:20px}
 @media (max-width:899px){ .gor{padding-bottom:28px!important} }
-@media (max-width:340px){ .pkt .soon{font-size:11px!important} }
+@media (max-width:340px){ .pkt .soon{font-size:12px!important} }
 /* подвал: ссылка реагирует только на свой текст, а не на всю ширину колонки */
 .foot-cols a,.fin-c a{width:fit-content;max-width:100%}
 /* «признаки ИИ»: слово ДЕМО не повторяется — префикс в поле убран (ДЕМО уже в заголовке формы и в подписи поля) */
@@ -719,3 +719,23 @@ p,li,.cap-p,small{text-wrap:pretty}
 /* телефон-пример: скриншот обрезан по экрану */
 .nz-ex .p3-screen{overflow:hidden;border-radius:32px}
 .pkt .soon{font-size:12px}
+.biz-pr{white-space:normal!important}
+/* плитки: цена всегда у нижнего края; «Простой счёт» — текст сверху */
+.biz-t span{align-self:start}
+.biz-pr{align-self:end}
+.nz-pr-side{justify-content:flex-start!important}
+/* ===== ТЗ ч.7, мобильный круг 2 ===== */
+/* перечень ниш на телефоне — под кнопками: главная кнопка всегда в первом экране */
+@media (max-width:899px){ .hero .h-for{order:4;margin:16px 0 0} }
+/* армянские названия ниш на узком экране — мельче, без разрыва внутри слова */
+@media (max-width:360px){ [data-lang="hy"] .biz-t b{overflow-wrap:normal;word-break:normal;font-size:13px;letter-spacing:-.01em} }
+/* телефон-пример: без полоски следующего фото внизу скриншота */
+.nz-ex .p3-screen img{clip-path:inset(0 0 16px 0)}
+@media (max-width:899px){ .inapp .hero .h-for{padding-right:60px} }
+@media (max-width:899px){ .hero .h-for{padding-right:60px} }
+.vs-free{display:block;font-weight:600;font-size:12.5px;color:var(--sky);white-space:nowrap}
+/* названия ниш не рвутся посреди слова ни в одном браузере: перенос только по словам, шрифт меньше на узких экранах */
+.biz-t b{overflow-wrap:normal!important;word-break:normal!important;hyphens:none}
+@media (max-width:430px){ .biz-t b{font-size:15px} [data-lang="hy"] .biz-t b{font-size:14px} }
+@media (max-width:360px){ .biz-t b{font-size:13.5px} [data-lang="hy"] .biz-t b{font-size:12.5px} }
+@media (max-width:899px){ .pg-cards td.n::before{overflow-wrap:normal!important;font-size:11.5px} }
