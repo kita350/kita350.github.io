@@ -1,3 +1,4 @@
+import crypto from "crypto";
 // Сборка сайта SKIYAR: src/*.html + src/text/*.js → index.html, ru/index.html, en/index.html (и другие страницы).
 // Тексты вписываются в HTML заранее (видны без JS и поисковикам), стили и скрипты — одним файлом.
 // Запуск: node tools/build.mjs
@@ -87,6 +88,8 @@ for (const P of PAGES) {
   const stamp = (r("assets/tokens.css").match(/^\/\* Hallmark[^\n]*\*\/$/gm) || []).join("\n");
   w(`assets/${name}.css`, (stamp ? stamp + "\n" : "") + P.css.map((c) => `/* ${c} */\n` + min(r(`assets/${c}.css`))).join("\n") + "\n");
   w(`assets/${name}.js`, "/* собрано tools/build.mjs — не править руками */\nwindow.T=" + JSON.stringify(T) + ";\n" + P.js.map((j) => r(`assets/${j}.js`)).join("\n;\n"));
+  // метка версии в адресе: после выкладки браузер не показывает старые стили и скрипты из кэша
+  const ver = crypto.createHash("md5").update(r(`assets/${name}.css`) + r(`assets/${name}.js`)).digest("hex").slice(0, 8);
 
   for (const L of LANGS) {
     const d = T[L], pre = DIR[L] ? "../" : "";
@@ -151,9 +154,9 @@ ${alt}
 <link rel="apple-touch-icon" href="${pre}assets/img/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-latin-800.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-latin-400.woff2">
 ${L === "ru" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-cyrillic-800.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/manrope-cyrillic-400.woff2">` : L === "hy" ? `<link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/noto-arm-armenian-800.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="${pre}assets/img/fonts/noto-arm-armenian-400.woff2">` : ""}
-<link rel="stylesheet" href="${pre}assets/${name}.css">
+<link rel="stylesheet" href="${pre}assets/${name}.css?v=${ver}">
 <script>window.PAGE_LANG="${L}";document.documentElement.classList.add("ph3d")</script>
-<script src="${pre}assets/${name}.js" defer></script>`;
+<script src="${pre}assets/${name}.js?v=${ver}" defer></script>`;
     // старые подключения скриптов из исходника — до вставки нового head
     h = h.replace(/\n<script src="[^"]*"><\/script>/g, "").replace(/\n<script>[\s\S]*?<\/script>/g, "");
     h = h.replace(/<head>[\s\S]*?<\/head>/, `<head>\n${head}\n</head>`);
