@@ -1,7 +1,7 @@
 // Проверка ссылок собранного сайта на локальном сервере: node tools/check-links.mjs [http://127.0.0.1:8350]
 // Обходит главные страницы и демо, проверяет внутренние ссылки, картинки, стили и скрипты (код 200).
 const BASE = process.argv[2] || "http://127.0.0.1:8350";
-const START = ["/", "/ru/", "/en/", "/packages.html", "/ru/packages.html", "/en/packages.html", "/privacy.html",
+const START = ["/", "/ru/", "/en/", "/packages.html", "/ru/packages.html", "/en/packages.html", "/privacy.html", "/guesthouse.html", "/ru/restaurant.html", "/en/autoservice.html", "/autoservice.html", "/ru/autoservice.html", "/restaurant.html",
   "/demo/salon/", "/demo/nails/", "/demo/barber/", "/demo/hotel/", "/demo/restaurant/", "/demo/restaurant/menu.html", "/demo/start/", "/demo/reminder/"];
 const seen = new Map();
 const bad = [];

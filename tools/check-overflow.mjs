@@ -5,7 +5,7 @@ import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 const BASE = process.argv[2] || "http://127.0.0.1:8350";
-const PAGES = ["/", "/ru/", "/en/", "/packages.html", "/ru/packages.html", "/en/packages.html", "/404.html"];
+const PAGES = ["/", "/ru/", "/en/", "/packages.html", "/ru/packages.html", "/en/packages.html", "/404.html", "/guesthouse.html", "/ru/guesthouse.html", "/en/guesthouse.html", "/restaurant.html", "/ru/restaurant.html", "/en/restaurant.html", "/autoservice.html", "/ru/autoservice.html", "/en/autoservice.html"];
 const port = 9500 + Math.floor(Math.random() * 300);
 const ch = spawn("C:/Program Files/Google/Chrome/Application/chrome.exe", ["--headless=new", "--disable-gpu", `--remote-debugging-port=${port}`, `--user-data-dir=${mkdtempSync(join(tmpdir(), "o-"))}`, "about:blank"], { stdio: "ignore" });
 const sl = (ms) => new Promise((r) => setTimeout(r, ms));

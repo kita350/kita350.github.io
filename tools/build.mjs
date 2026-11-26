@@ -32,6 +32,8 @@ if (fs.existsSync(path.join(ROOT, "src/packages.html"))) PAGES.push({
 // Страницы ниш (ТЗ ч.7): один шаблон src/niche.html, тексты src/text/nz-<ниша>.js (ключи <nk>_*), адрес /<out без .html>
 const NICHES = [
   { out: "guesthouse.html", nk: "gh", niche: 2, demo: "hotel/", shot: "hotel", text: "nz-gh" },
+  { out: "restaurant.html", nk: "rs", niche: 1, demo: "restaurant/", shot: "rest", text: "nz-rs" },
+  { out: "autoservice.html", nk: "au", niche: 3, demo: "", shot: "", text: "nz-au", mock: true },
 ];
 for (const N of NICHES) if (fs.existsSync(path.join(ROOT, `src/text/${N.text}.js`))) PAGES.push({
   src: "src/niche.html", out: N.out, og: "og", nz: N, tk: "_titleNz", dk: "_descNz",
@@ -63,14 +65,15 @@ for (const P of PAGES) {
   const T = ctx.window.T;
   // типографика: неразрывный пробел после коротких слов (нет висячих предлогов), неразрывный дефис в «WhatsApp-ով», «гель-лак».
   // Тексты сообщений для WhatsApp не трогаем.
-  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|waHello|inAskMsg|tyWaMsg)$/;
-  const SHORT = { ru: "в|во|и|а|но|на|до|без|с|со|к|ко|о|об|у|по|за|от|из|не|ни|для|что|как|или|все|при|под|над", en: "a|an|the|to|in|of|on|at|by|for|and|or|is|it|no|your|our|we", hy: "և" };
+  const NOTYPO = /^(caWa|pWa|pkWaAi|pkWaOn|pkWaStart|waHello|inAskMsg|tyWaMsg|bzWa\d|[a-z]{2}_wa|[a-z]{2}_waPk)$/;
+  const SHORT = { ru: "в|во|и|а|но|на|до|без|с|со|к|ко|о|об|у|по|за|от|из|не|ни|для|что|как|или|все|при|под|над", en: "a|an|the|to|in|of|on|at|by|for|and|or|is|it|no|your|our|we", hy: "և|ու" };
   const typo = (v, L) => {
     if (typeof v !== "string") return Array.isArray(v) ? v.map((x) => typo(x, L)) : v;
     let s = v.replace(/([A-Za-z])-(ով|ում|ից|ի|ը|ն|ու)(?![\p{L}])/gu, "$1‑$2").replace(/գել-լաք/gi, (m) => m.replace("-", "‑")).replace(/ИИ-/g, "ИИ‑").replace(/гель-лак/gi, (m) => m.replace("-", "‑"));
     if (SHORT[L]) { const re = new RegExp(`(^|[\\s >(«"—])(${SHORT[L]}) (?=[^\\s<])`, "giu"); s = s.replace(re, (m, a, w) => a + w + " ").replace(re, (m, a, w) => a + w + " "); } // дважды: «и в Instagram»
     s = s.replace(/(\d) (?=\d{3}(?!\d))/g, "$1 ").replace(/ ֏/g, " ֏"); // «35 000 ֏» не рвётся
     s = s.replace(/ — /g, " — ");
+    s = s.replace(/(^|[\s(«])(\d{1,3}) (?=[\p{L}])/gu, "$1$2 ").replace(/QR /g, "QR ").replace(/онлайн-(?=запис)/g, "онлайн‑"); // «30 дней», «QR code», «онлайн-запись» не рвутся
     return s;
   };
   for (const L of Object.keys(T)) for (const k of Object.keys(T[L])) if (!NOTYPO.test(k)) T[L][k] = typo(T[L][k], L);
@@ -85,6 +88,13 @@ for (const P of PAGES) {
     const t = (k) => (d[k] != null ? d[k] : T.ru[k] != null ? T.ru[k] : "");
     const url = SITE + "/" + DIR[L] + (P.out === "index.html" ? "" : P.out);
     let h = r(P.src);
+    if (P.nz && P.nz.mock) { // ниша без демо: вместо скриншота — макет экрана записи, кнопки — к примеру и в WhatsApp
+      h = h.replace(/<img data-shot="NZSHOT"[^>]*>/, '<div class="mk"><span class="mk-tag" data-t="n_mkTag"></span><h4 data-t="n_mkH"></h4>'
+        + [1, 2, 3].map((i) => `<div class="mk-f"><b data-t="n_mk${i}"></b><small data-t="n_mk${i}p"></small></div>`).join("")
+        + '<div class="mk-tm"><small data-t="n_mkT"></small><p><span>09:00</span><span class="on">10:30</span><span>14:00</span></p></div><p class="mk-note" data-t="n_mkN"></p><div class="mk-btn" data-t="n_mkBtn"></div></div>')
+        .replace(/<a class="btn btn-line" data-demo="NZDEMO" target="_blank" rel="noopener"/, '<a class="btn btn-line" href="#example"')
+        .replace(/<a class="btn btn-main" data-demo="NZDEMO"/, '<a class="btn btn-main" data-wa="n_wa"');
+    }
     if (P.nz) { // шаблон ниши: ключи n_* → <nk>_*, номер ниши в телефоне, демо и скриншот на языке страницы
       h = h.replace(/data-(t|t-html|wa)="n_/g, `data-$1="${P.nz.nk}_`).replace(/NZNICHE/g, String(P.nz.niche)).replace(/NZDEMO/g, P.nz.demo)
         .replace(/shot-NZSHOT-hy\.webp/g, `shot-${P.nz.shot}-${L}.webp`).replace(/NZSHOT/g, P.nz.shot);
