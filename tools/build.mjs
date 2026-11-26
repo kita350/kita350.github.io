@@ -17,7 +17,7 @@ const w = (p, s) => { fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive
 const PAGES = [
   {
     src: "src/home.html", out: "index.html", og: "og",
-    text: ["hero", "niche", "biz", "story", "gor", "bento", "try", "ind", "calc", "pk", "end"],
+    text: ["hero", "niche", "biz", "story", "gor", "bento", "try", "ind", "calc", "pk", "end", "nz-au"],
     css: ["fonts", "tokens", "site", "home", "story", "bento", "try", "demo-fonts", "ind", "calc", "pk", "end", "v3", "v4", "v5"],
     js: ["site", "story", "try", "ind", "calc", "pk", "fab", "live", "niche", "phone3d", "phone3d-ind", "phone3d-story", "chars", "reveal"],
   },
