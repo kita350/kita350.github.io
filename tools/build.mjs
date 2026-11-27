@@ -83,6 +83,9 @@ for (const P of PAGES) {
     return s;
   };
   for (const L of Object.keys(T)) for (const k of Object.keys(T[L])) if (!NOTYPO.test(k)) T[L][k] = typo(T[L][k], L);
+  // заголовки: последнее короткое слово не остаётся одно на строке (неразрывный пробел перед ним)
+  const HK = new Set([...r(P.src).matchAll(/<h[1-4][^>]*\sdata-t="(\w+)"/g)].map((m) => (P.nz ? m[1].replace(/^n_/, P.nz.nk + "_") : m[1])));
+  for (const L of Object.keys(T)) for (const k of HK) { const v = T[L][k]; if (typeof v === "string" && !v.includes("<") && v.trim().split(/\s+/).length >= 3) T[L][k] = v.replace(/ (\S{1,14})$/, "\u00a0$1"); }
   const name = P.out.replace(/\.html$/, "");
   // штамп Hallmark (первые строки tokens.css) переносим в начало собранного CSS: min() убирает комментарии
   const stamp = (r("assets/tokens.css").match(/^\/\* Hallmark[^\n]*\*\/$/gm) || []).join("\n");
